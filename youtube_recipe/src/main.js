@@ -11,7 +11,7 @@ import Home from './views/Home.vue';
 import Result from './views/Result.vue';
 import About from './views/About.vue';
 import ErrorPage from './views/Error.vue';
-
+import NoResult from '.views/NoResult.vue';
 
 
 const routes = [
@@ -39,6 +39,11 @@ const routes = [
         path: '/:catchAll(.*)', // 404 에러 페이지 설정
         component: ErrorPage,
     },
+    {
+        path: '/no-result',
+        name: 'NoResult',
+        component: () => import('./views/NoResult.vue'),
+    }
 ];
 
 const router = createRouter({
