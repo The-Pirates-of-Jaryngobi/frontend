@@ -3,16 +3,15 @@ import 'bootstrap/dist/css/bootstrap.css'
 
 import { createApp } from 'vue'
 //import { createPinia } from 'pinia'
+
 import { createRouter, createWebHistory } from 'vue-router';
+//import router from './router' // 위 방식으로 라우터 설정
 
 import App from './App.vue'
-//import router from './router'
 import Home from './views/Home.vue';
 import Result from './views/Result.vue';
 import About from './views/About.vue';
 import ErrorPage from './views/Error.vue';
-import NoResult from '.views/NoResult.vue';
-
 
 const routes = [
     {
@@ -40,7 +39,7 @@ const routes = [
         component: ErrorPage,
     },
     {
-        path: '/no-result',
+        path: '/noresult',
         name: 'NoResult',
         component: () => import('./views/NoResult.vue'),
     }
@@ -48,7 +47,10 @@ const routes = [
 
 const router = createRouter({
     history: createWebHistory(),
-    routes,
+    routes: [
+      { path: '/', component: Home }, // '/home' 경로에 Home 컴포넌트를 매핑
+      { path: '/result/:inputData', component: Result }, // '/result' 경로에 Result 컴포넌트를 매핑하고, inputData라는 동적 매개변수를 정의
+    ]
 });
 
 const app = createApp(App);
