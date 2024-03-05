@@ -3,9 +3,7 @@ import 'bootstrap/dist/css/bootstrap.css'
 
 import { createApp } from 'vue'
 //import { createPinia } from 'pinia'
-
 import { createRouter, createWebHistory } from 'vue-router';
-//import router from './router' // 위 방식으로 라우터 설정
 
 import App from './App.vue'
 import Home from './views/Home.vue';
