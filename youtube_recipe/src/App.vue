@@ -1,12 +1,21 @@
 <template>
+  <header>
+    <HeaderWhite />
+  </header>
   <div id="app">
     <RouterView />
   </div>
+  <footer>
+    <FooterBlack />
+  </footer>
 </template>
 
 
 <script setup>
 import { RouterView } from 'vue-router'
+
+import HeaderWhite from './components/HeaderWhite.vue';
+import FooterBlack from './components/FooterBlack.vue';
 </script>
 
 

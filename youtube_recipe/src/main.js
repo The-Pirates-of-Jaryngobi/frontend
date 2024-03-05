@@ -10,6 +10,7 @@ import Home from './views/Home.vue';
 import Result from './views/Result.vue';
 import About from './views/About.vue';
 import ErrorPage from './views/Error.vue';
+import NoResult from './views/NoResult.vue';
 
 const routes = [
     {
@@ -39,15 +40,21 @@ const routes = [
     {
         path: '/noresult',
         name: 'NoResult',
-        component: () => import('./views/NoResult.vue'),
+        //component: () => import('./views/NoResult.vue'),
+        component: Result,
     }
 ];
 
 const router = createRouter({
     history: createWebHistory(),
     routes: [
-      { path: '/', component: Home }, // '/home' 경로에 Home 컴포넌트를 매핑
-      { path: '/result/:inputData', component: Result }, // '/result' 경로에 Result 컴포넌트를 매핑하고, inputData라는 동적 매개변수를 정의
+    // 라우터 경로와 컴포넌트를 매핑하는 설정
+    // 예: { path: '/home', component: Home }
+        { path: '/', component: Home }, // '/home' 경로에 Home 컴포넌트를 매핑
+        { path: '/result/:inputData', component: Result }, // '/result' 경로에 Result 컴포넌트를 매핑하고, inputData라는 동적 매개변수를 정의
+        { path: '/noresult', component: NoResult },
+        { path: '/about', component: About },
+        { path: '/error', component: ErrorPage },
     ]
 });
 
