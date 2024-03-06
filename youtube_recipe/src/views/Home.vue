@@ -1,37 +1,27 @@
+<!-- Home.vue -->
 <template>
-    <div>
-        <input v-model="inputData" type="text" placeholder="김치찌개">
-        <button @click="$router.push(`/result/${inputData}`)">검색</button>
-    </div>
-    <!--<NoResult v-if="showNoResult" />-->
+    <HomeHero @input-event="Search" />
 </template>
 
 <script>
-//import HeaderWhite from '../components/HeaderWhite.vue';
+import HomeHero from '../components/HomeHero.vue';
 
 export default {
-    data() {
-        return {
-        inputData: ''
-        };
+    components: {
+        HomeHero,
     },
     methods: {
-        search() {
-        // 입력 데이터가 비어 있는 경우 NoResult 페이지로 이동 (에러는 안 나지만, 작동 안 되고 있어서 수정 필요)
-        if (this.inputData.trim() === '') {
-            this.$router.push('/noresult');
-        } else {
-            // 입력 데이터가 있는 경우 검색 결과 페이지로 이동
-            this.$router.push({ name: 'Result', params: { inputData: this.inputData } });
+        Search(inputData) {
+            console.log('검색어 :', inputData); // 확인용 코드
+
+            if (inputData.trim() === '') {
+                this.$router.push('/noresult');
+            } else {
+                this.$router.push({ name: 'Result', params: { inputData: inputData } });
+            }
         }
-        }
-    }/*,
-    components: {
-        HeaderWhite
-    }*/
+    }
 };
-
-
 
 /* 백엔드 API 연결하면 테스트해보기 1
 
@@ -107,4 +97,4 @@ export default {
 
 </script>
 
-
+../components/HomeHero.vue

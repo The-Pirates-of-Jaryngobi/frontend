@@ -1,15 +1,12 @@
 <template>
     <header></header>
-    <div>
-        <h2>검색 결과</h2>
-        <p>입력한 검색어: {{ inputData }} </p> 
-        <!--{{ $route.params.searchTerm }}</p>-->
-    </div>
+    <ResultHero :inputData="inputData" :searchResults="searchResults" />
+    <!--{{ $route.params.searchTerm }}</p>-->
 </template>
 
 <script>
 //import HeaderBlack from './components/HeaderBlack.vue'
-//import Hero from './components/HeroResult.vue'
+import ResultHero from '../components/ResultHero.vue';
 //import Footer from './components/Footer.vue'
 
 export default {
@@ -27,7 +24,10 @@ export default {
             ];
             return searchData.filter(item => item.title.includes(this.inputData)); // searchTerm -> inputData로 수정
         },
-    },
+    }, 
+    components: {
+        ResultHero,
+    }
 };
 </script>
 
