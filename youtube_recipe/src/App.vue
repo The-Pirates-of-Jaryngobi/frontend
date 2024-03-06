@@ -1,73 +1,84 @@
 <template>
+  <header>
+    <HeaderWhite />
+  </header>
   <div id="app">
-    <RecipeHeader v-bind:propsdata="recipeName"></RecipeHeader>
-    <RecipeInput v-on:addRecipe="addRecipe" v-on:addRecipeName='addRecipeName'></RecipeInput>
-    <RecipeList v-bind:propsdata="recipeItems"></RecipeList>
-    <!-- <RecipeFooter v-on:removeAll="clearAll"></RecipeFooter> -->
+    <RouterView />
   </div>
+  <footer>
+    <FooterBlack />
+  </footer>
 </template>
 
-<script>
-import RecipeHeader from './components/RecipeHeader.vue'
-import RecipeInput from './components/RecipeInput.vue'
-import RecipeList from './components/RecipeList.vue'
-import RecipeFooter from './components/RecipeFooter.vue'
 
-export default {
-  data() {
-    return {
-      recipeName : '메뉴를 입력하세요',
-      recipeItems: ['레시피', 'api', '요청한','응답으로','리스트','채우기'] //api 요청으로 받은 응답으로 리스트 생성
-    }
-  },
-  // created() {
- 
-  //   if (localStorage.length > 0) {
-  //     for (var i = 0; i < localStorage.length; i++) {
-  //       this.recipeItems.push(localStorage.key(i))
-  //     }
-  //   }
-  // },
+<script setup>
+import { RouterView } from 'vue-router'
 
-  methods: {
-    addRecipe(recipe) {
-      //recipe로 요청을 보내 응답을 받는 함수형태로 구현
-      // localStorage.setItem(recipe, recipe)
-      // this.recipeItems = ['응답받은 데이터를 리스트로']
-      // this.recipeItems.push(recipeItem) //RecipeInput과 연동
-    },
-    addRecipeName(recipe) {
-      this.recipeName = recipe
-    },
-
-    clearAll() {
-      localStorage.clear()
-      this.recipeItems = []
-    }
-  },
-
-  components: {
-    RecipeHeader: RecipeHeader,
-    RecipeInput: RecipeInput,
-    RecipeList: RecipeList,
-    RecipeFooter: RecipeFooter
-  }
-}
+import HeaderWhite from './components/HeaderWhite.vue';
+import FooterBlack from './components/FooterBlack.vue';
 </script>
 
-<style>
-body {
+
+<style scoped>
+header {
+  line-height: 1.5;
+  max-height: 100vh;
+}
+
+.logo {
+  display: block;
+  margin: 0 auto 2rem;
+}
+
+nav {
+  width: 100%;
+  font-size: 12px;
   text-align: center;
-  background-color: #f6f6f8;
+  margin-top: 2rem;
 }
-input {
-  border-style: groove;
-  width: 200px;
+
+nav a.router-link-exact-active {
+  color: var(--color-text);
 }
-button {
-  border-style: groove;
+
+nav a.router-link-exact-active:hover {
+  background-color: transparent;
 }
-.shadow {
-  box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.03);
+
+nav a {
+  display: inline-block;
+  padding: 0 1rem;
+  border-left: 1px solid var(--color-border);
+}
+
+nav a:first-of-type {
+  border: 0;
+}
+
+@media (min-width: 1024px) {
+  header {
+    display: flex;
+    place-items: center;
+    padding-right: calc(var(--section-gap) / 2);
+  }
+
+  .logo {
+    margin: 0 2rem 0 0;
+  }
+
+  header .wrapper {
+    display: flex;
+    place-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  nav {
+    text-align: left;
+    margin-left: -1rem;
+    font-size: 1rem;
+
+    padding: 1rem 0;
+    margin-top: 1rem;
+  }
 }
 </style>
