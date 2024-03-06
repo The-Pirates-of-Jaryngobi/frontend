@@ -1,6 +1,7 @@
-<!-- Home.vue -->
 <template>
-    <HomeHero @input-event="Search" />
+    <div>
+        <HomeHero @input-event="Search" />
+    </div>
 </template>
 
 <script>

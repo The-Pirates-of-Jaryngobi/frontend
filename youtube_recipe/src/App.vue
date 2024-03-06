@@ -1,14 +1,10 @@
 <template>
   <v-app>
-    <header>
-      <HeaderWhite />
-    </header>
+    <HeaderWhite />
     <v-main>  <!--div id="app" 대신 입력-->
       <RouterView />
     </v-main>
-    <footer>
-      <FooterBlack />
-    </footer>
+    <FooterBlack />
   </v-app>
 </template>
 
@@ -30,3 +26,29 @@ export default defineComponent({
   },
 });
 </script>
+
+<style>
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+v-main {
+  position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+
+footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+</style>

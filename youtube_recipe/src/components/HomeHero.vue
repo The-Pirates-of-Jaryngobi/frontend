@@ -54,4 +54,11 @@ export default {
     border-radius: 10px;
     margin-right: 10px;
 }
+
+.container {
+    display: grid;
+    place-content: center;
+    height: 100vh; /* 화면 높이의 100%로 설정하여 화면 중앙에 배치합니다. */
+}
+
 </style>
