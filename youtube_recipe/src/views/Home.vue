@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="content">
         <HomeHero @input-event="Search" />
     </div>
 </template>
@@ -99,3 +99,11 @@ export default {
 </script>
 
 ../components/HomeHero.vue
+
+<style>
+.content {
+    margin-top: 40px; /* 헤더와 콘텐츠 사이의 간격 설정 */
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+</style>
