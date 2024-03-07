@@ -1,5 +1,5 @@
 <template>
-    <v-main class="d-flex align-center justify-center hero main-hero">
+    <v-main class="d-flex align-center justify-center hero">
         <h1>최저가 유튜브 레시피를<br><span style="font-weight: 400;">검색해보세요</span></h1>
         <div class="input-btn">
             <!-- 현재 표시할 placeholder를 배열에서 가져옴 -->
@@ -40,7 +40,7 @@ export default {
 
 <style>
 
-.hero {
+.home-hero {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -50,15 +50,13 @@ export default {
     color: #111;
     text-align: center;
     padding-top: 20px;
-}
 
-.main-hero {
     background-image: url("../assets/main_bg.svg");
     background-position: center; /* 이미지를 중앙으로 위치 */
     background-size: cover; /* 배경 이미지가 컨테이너를 꽉 채우도록 설정 */
 }
 
-.main-hero h1 {
+.home-hero h1 {
     font-size: 5em;
     font-weight: 900;
 }
@@ -86,6 +84,7 @@ export default {
         background-size: 1000px; /* 화면 너비가 1001px 이상일 경우의 최대 배경 이미지 크기 설정 */
     }
 }
+
 
 @media (max-width: 768px) {
     .menu-input {

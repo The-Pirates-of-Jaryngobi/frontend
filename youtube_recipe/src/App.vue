@@ -28,18 +28,6 @@ export default defineComponent({
 
 <style>
 
-.gasoek-one-regular {
-  font-family: "Gasoek One", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.black-han sans-regular {
-  font-family: "Black Han Sans", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
 v-main {
   position: relative;
   width: 100%;
