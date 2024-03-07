@@ -13,6 +13,7 @@ import About from './views/About.vue';
 import ErrorPage from './views/Error.vue';
 import NoResult from './views/NoResult.vue';
 
+
 const router = createRouter({
     history: createWebHistory(),
     routes: [

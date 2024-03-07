@@ -1,10 +1,9 @@
 <template>
   <v-app>
+    <!--<v-app-bar>-->
     <HeaderWhite />
-    <v-main>  <!--div id="app" 대신 입력-->
-      <RouterView />
-    </v-main>
-    <FooterBlack />
+    <RouterView />
+    <!--<FooterBlack />-->
   </v-app>
 </template>
 
@@ -29,26 +28,22 @@ export default defineComponent({
 
 <style>
 
-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
+.gasoek-one-regular {
+  font-family: "Gasoek One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.black-han sans-regular {
+  font-family: "Black Han Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 v-main {
   position: relative;
-    bottom: 0;
-    left: 0;
-    width: 100%;
+  width: 100%;
 }
 
-
-footer {
-    position: relative;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-}
 
 </style>

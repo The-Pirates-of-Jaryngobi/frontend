@@ -1,10 +1,7 @@
 <template>
-    <div class="content">
-
-        <ResultHero :inputData="inputData" :searchResults="searchResults" />
-        <ResultDetail :inputData="inputData" :searchResults="searchResults" />
-        <!--{{ $route.params.searchTerm }}</p>-->
-    </div>
+    <ResultHero :inputData="inputData" :searchResults="searchResults" />
+    <ResultDetail :inputData="inputData" :searchResults="searchResults" />
+    <!--{{ $route.params.searchTerm }}</p>-->
 </template>
 
 <script>
@@ -46,9 +43,4 @@ export default {
 /* h1 {
     color: #333;
 } */
-.content {
-    margin-top: 40px; /* 헤더와 콘텐츠 사이의 간격 설정 */
-    padding: 20px;
-    background-color: #f4f4f4;
-}
 </style>
