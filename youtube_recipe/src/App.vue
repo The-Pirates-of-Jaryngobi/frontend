@@ -3,7 +3,7 @@
     <!--<v-app-bar>-->
     <HeaderWhite />
     <RouterView />
-    <!--<FooterBlack />-->
+    <FooterBlack />
   </v-app>
 </template>
 
