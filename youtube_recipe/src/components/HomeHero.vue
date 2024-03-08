@@ -65,6 +65,7 @@ export default {
 
 .input-btn {
     margin-top: 4em;
+    display: flex;
 }
 
 .menu-input {
