@@ -21,12 +21,10 @@ footer {
     width: 100%;
 }
 
-a,
-.green {
-  text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
-  padding: 3px;
+a {
+  text-decoration: none; /* 링크의 밑줄 제거 */
+  color: inherit; /* 링크의 기본 색상 유지 */
+  cursor: default; /* 기본 커서 설정 */
 }
 
 @media (hover: hover) {

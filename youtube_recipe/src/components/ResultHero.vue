@@ -3,21 +3,26 @@
     <!--<div class="result-hero-bg align-center justify-center"></div>-->
     <div class="result-hero">
         <h1><span>{{ inputData }}</span><br>최저가 레시피</h1>
-        <h2 v-for="result in searchResults" :key="result.id">₩ {{ result.price }}</h2>
+        <h2>₩ {{ searchResults.total_price }}</h2>
         <p class="lb">recipe</p>
         <p class="rb">price</p>
     </div>
     <div class="youtube">
-        <div class="youtube-img"><img src="../assets/youtube_test.png" alt="youtube recipe" width="100%"/></div>
+        <a :href="searchResults.youtube_url" target="_blank" class="link-deco">
+            <div class="youtube-img"><img :src="searchResults.youtube_thumbnail"/></div>
+        </a>
         <div class="youtube-info">
-            <div><h3>계란말이 레시피 youtube title</h3></div>
+            <a :href="searchResults.youtube_url" target="_blank" class="link-deco">
+                <div class="youtube-title"><h3>{{ searchResults.youtube_title }}</h3></div>
+            </a>
             <div class="youtube-info-additional">
                 <div class="youtube-channel">
-                    <img src="../assets/logo.svg" width="30px" height="30px"/>
-                    <span class="channel-name">channel</span>
-                    <span>구독자</span>
+                    <img class="channel-logo" :src="searchResults.chaneel_img"/>
+                    <div class="channel-name">{{ searchResults.channel_name }}</div>
+                    <!--<div class="channel-fan">구독자 수&nbsp;</div>-->
                 </div>
-                <div><span>게시일</span> 2024-03-07</div>
+                <div class="youtube-upload"><span>게시일</span>2024-03-07</div>
+                <!--<div class="youtube-upload"><span>게시일</span>{{ searchResults.upload_date }}</div>-->
             </div>
         </div>
     </div>
@@ -32,7 +37,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 /*
 .result-hero-bg {
     background-image: url("../assets/result_bg_raw.png");
@@ -46,10 +51,16 @@ export default {
 }
 */
 
+.link-deco {
+    text-decoration: none; /* 링크에 밑줄을 제거합니다. */
+    color: inherit; /* 링크 색상을 상위 요소에서 상속합니다. */
+}
+
 .result-hero {
-    background-image: url("../assets/result_bg_raw.png");
+    background-image: url("../assets/result_bg.svg");
+    background-color: #403f4c;
     background-size: cover; /* 배경 이미지가 컨테이너를 꽉 채우도록 설정 */
-    filter: grayscale(1);
+    filter: grayscale(0.1);
     top: 0px;
 
     display: flex;
@@ -69,19 +80,20 @@ export default {
 }
 
 .result-hero h1 {
-    font-family: "Gasoek One", sans-serif;
-    font-weight: 300;
+    font-family: "Black Han Sans", sans-serif;
+    /*font-family: "Noto Sans KR", sans-serif; */
+    font-weight: 200;
     font-style: normal;
     font-size: 4.8em;
-    line-height: 1.2;
+    line-height: 1;
     color: white;
     z-index: 3;
     max-width: 90%; /* 텍스트 컨테이너의 최대 너비를 설정합니다. */
 }
 
-.black-hans {
+.result-hero h1 span {
     font-family: "Black Han Sans", sans-serif;
-    font-weight: 300;
+    font-weight: 200;
     font-style: normal;
 }
 
@@ -115,21 +127,31 @@ export default {
 
 .youtube {
     z-index: 5;
-    max-width: 60%;
+    max-width: 65%;
     top: -18vh;
 
     display: flex;
     flex-direction: column;
     margin: 0 auto; /* 좌우 마진을 자동으로 설정하여 가운데 정렬합니다. */
     position: relative;
-    z-index: 2; 
+    padding-top: 10px;
 }
 
 .youtube-img {
+    width: 100%;
     align-items: center; /* 컨텐츠를 가로 방향으로 중앙 정렬합니다. */
+    border-radius: 5px;
+    filter: drop-shadow(6px 6px 6px rgba(150, 150, 150, 0.4));
 }
 
-.youtube-info {
+.youtube-img img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.youtube-title {
+    font-size: 1.35em;
+    font-weight: 700;
     font-family: "Noto Sans KR", sans-serif; 
     color: #111;
     width: 100%;
@@ -140,18 +162,31 @@ export default {
     word-break: break-word; /* 단어 중간에서도 줄바꿈을 허용합니다 (필요 시). */
 }
 
-.youtube-info h3 {
-    font-size: 1.4em;
-    font-weight: 700;
-}
-
 .youtube-info-additional {
-    justify-content: center; 
-    margin-top: 10px;
+    align-items: center;
+    display: flex;
+    flex: none;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+    width: 100%;
+    margin-top: 15px;
 }
 
 .youtube-channel {
-    
+    gap: 8px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.youtube-channel .channel-logo {
+    width: 28px;
+    height: 28px;
+    border-radius: 100px;
 }
 
 .youtube-channel .channel-name {
@@ -159,8 +194,33 @@ export default {
     font-weight: 600;
 }
 
+.youtube-channel .channel-fan {
+    font-size: 0.85em;
+    font-weight: 400;
+    color: #999;
+    margin-left: 5px;
+}
+
+.youtube-upload {
+    font-size: 1em;
+    font-weight: 500;
+    color: #111;
+    display: flex;
+}
+
+.youtube-upload span {
+    color: #333;
+    font-weight: 300;
+    margin-right: 5px;
+}
+
 
 @media (max-width: 600px) {
+
+    .result-hero {
+        padding: 20vh 0 21vh 0;
+}
+
     .result-hero h1 {
         font-size: 3em; /* 작은 화면에서는 글자 크기를 조정합니다. */
     }
@@ -177,6 +237,16 @@ export default {
 
     .rb {
         display: none;
+    }
+
+    .youtube-title {
+        text-align: center;
+    }
+
+    .youtube-info-additional {
+        flex-direction: column;
+        margin-top: 20px;
+        gap : 15px;
     }
 }
 

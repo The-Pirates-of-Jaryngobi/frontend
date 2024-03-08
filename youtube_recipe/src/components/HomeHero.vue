@@ -1,11 +1,11 @@
 <template>
-    <v-main class="d-flex align-center justify-center hero">
+    <v-main class="d-flex align-center justify-center home-hero">
         <h1>최저가 유튜브 레시피를<br><span style="font-weight: 400;">검색해보세요</span></h1>
         <div class="input-btn">
             <!-- 현재 표시할 placeholder를 배열에서 가져옴 -->
-            <input v-model="inputData" type="text" :placeholder="placeholders[currentIndex]" class="menu-input" @keyup.enter="Search">
-            <!-- 버튼 클릭 시 search 메서드 실행-->
-            <v-btn @click="Search" variant="elevated" size="x-large" rounded="lg" color="#E84855">Search</v-btn>
+            <input v-model="inputData" type="text" :placeholder="placeholders[currentIndex]" class="menu-input" @keyup.enter="searchResult">
+            <!-- 버튼 클릭 시 searchResult 메서드 실행-->
+            <v-btn @click="searchResult" variant="elevated" size="x-large" rounded="lg" color="#E84855">Search</v-btn>
         </div>
     </v-main>
 </template>
@@ -20,26 +20,27 @@ export default {
         };
     },
     methods: {
-        Search() {
+        searchResult() {
             this.$emit('input-event', this.inputData);
-        }
+        },
     },
     mounted() {
         setInterval(() => {
-            this.currentIndex = (this.currentIndex + 1) % this.placeholders.length;
+        this.currentIndex = (this.currentIndex + 1) % this.placeholders.length;
         }, 2000);
-    },
+    }/*,
+    input에 입력할 때마다 콘솔에서 확인하는 코드
     watch: {
-        // inputData가 변경될 때마다 실행
         inputData(newValue, oldValue) {
             console.log('inputData changed:', newValue);
         }
     }
+    */
 }
 </script>
 
-<style>
 
+<style scoped>
 .home-hero {
     display: flex;
     flex-direction: column;
