@@ -13,37 +13,55 @@
             transform: none;
           "
           data-framer-component-type="RichTextContainer"
-        >
-        </div>
+        ></div>
       </div>
     </div>
     <div class="framer-1t68kop" data-framer-name="Vertical" name="Vertical">
-      <div
-        class="framer-dtxfg1"
-        style="
-          outline: none;
-          display: flex;
-          flex-direction: column;
-          justify-content: flex-start;
-          flex-shrink: 0;
-          transform: none;
-        "
-        data-framer-component-type="RichTextContainer"
-      >
-        <p
-          style="
-            --font-selector: R0Y7U2NoaWJzdGVkIEdyb3Rlc2stNzAw;
-            --framer-font-family: 'Schibsted Grotesk', 'Schibsted Grotesk Placeholder', sans-serif;
-            --framer-font-weight: 700;
-            --framer-letter-spacing: -0.025em;
-            --framer-line-height: 1.5em;
-            --framer-text-alignment: left;
-            --framer-text-color: rgb(255, 255, 255);
-          "
-          class="framer-text"
-        >
-          Grepp, Data Engineering DevCourse
-        </p>
+      <div>
+        <div style="float: left; width: 40%">
+          <p
+            style="
+              --font-selector: R0Y7U2NoaWJzdGVkIEdyb3Rlc2stNzAw;
+              --framer-font-family: 'Schibsted Grotesk', 'Schibsted Grotesk Placeholder', sans-serif;
+              --framer-font-weight: 700;
+              --framer-letter-spacing: -0.025em;
+              --framer-line-height: 1.5em;
+              --framer-text-alignment: left;
+              --framer-text-color: rgb(255, 255, 255);
+            "
+            class="framer-text"
+          >
+            <strong>Grepp, Data Engineering DevCourse</strong>
+          </p>
+          <p>&nbsp;</p>
+          <p class="framer-text p-tag"><strong>Whysion</strong> - PM, ETL, Front-end</p>
+          <p class="framer-text p-tag"><strong>Dr.meteor</strong> - Tech Leading, ML</p>
+          <p class="framer-text p-tag"><strong>MinhoeKim</strong> - ETL, Front-end</p>
+          <p class="framer-text p-tag"><strong>RomkDB</strong> - Infra, Backend</p>
+          <p class="framer-text p-tag"><strong>Jaehoe-99</strong> - PM, ETL, Front-end</p>
+        </div>
+        <div style="float: left; width: 50%">
+          <p
+            style="
+              --font-selector: R0Y7U2NoaWJzdGVkIEdyb3Rlc2stNzAw;
+              --framer-font-family: 'Schibsted Grotesk', 'Schibsted Grotesk Placeholder', sans-serif;
+              --framer-font-weight: 700;
+              --framer-letter-spacing: -0.025em;
+              --framer-line-height: 1.5em;
+              --framer-text-alignment: left;
+              --framer-text-color: rgb(255, 255, 255);
+            "
+            class="framer-text"
+          >
+            <strong>Data sources</strong>
+          </p>
+          <p>&nbsp;</p>
+          <p class="framer-text p-tag">Youtube API</p>
+          <p class="framer-text p-tag">Coupang</p>
+          <p class="framer-text p-tag">식품의약품안전처</p>
+          <p class="framer-text p-tag">소스산업화센터</p>
+          <p class="framer-text p-tag">Lampcook</p>
+        </div>
       </div>
     </div>
     <div class="framer-1c93xxu" data-border="true" data-framer-name="Copyright" name="Copyright">
@@ -71,6 +89,21 @@
         >
           © 2024 The Pirates of Jaryngobi
         </p>
+        <button
+          onclick="https://github.com/orgs/The-Pirates-of-Jaryngobi/repositories"
+          style="text-align: right"
+          type="button"
+        >
+          <div>
+            <a href="https://github.com/orgs/The-Pirates-of-Jaryngobi/repositories">
+              <img
+                src="..\..\public\favicon.ico"
+                style="width: 32px; height: 32px"
+                alt="대체 텍스트"
+              />
+            </a>
+          </div>
+        </button>
       </div>
     </div>
   </footer>
@@ -84,7 +117,7 @@ export default {
 </script>
 <style scoped>
 footer {
-  position: fixed;
+  /* position: fixed; */
   bottom: 0;
   left: 0;
   width: 100%;
@@ -109,10 +142,11 @@ footer {
 /* 텍스트 스타일 */
 .framer-text {
   font-family: 'Schibsted Grotesk', sans-serif; /* 폰트 */
-  font-weight: 700; /* 폰트 두께 */
+  font-weight: 400; /* 폰트 두께 */
   letter-spacing: -0.025em; /* 글자 간격 */
   line-height: 1.5em; /* 줄 간격 */
-  text-align: center; /* 텍스트 정렬 */
+  text-align: left; /* 텍스트 정렬 */
+  margin-left: 50px;
 }
 
 /* 저작권 정보 */
@@ -120,6 +154,22 @@ footer {
   border-top: 1px solid #fff; /* 윗 테두리 */
   margin-top: 20px; /* 위쪽 여백 */
   padding-top: 20px; /* 위쪽 안쪽 여백 */
-  text-align: center; /* 텍스트 정렬 */
+  text-align: cenleftter; /* 텍스트 정렬 */
+}
+
+.p-tag {
+  --font-selector: R0Y7U2NoaWJzdGVkIEdyb3Rlc2stNzAw;
+  --framer-font-family: 'Schibsted Grotesk', 'Schibsted Grotesk Placeholder', sans-serif;
+  --framer-font-weight: 700;
+  --framer-letter-spacing: -0.025em;
+  --framer-line-height: 50em;
+  --framer-text-alignment: left;
+  --framer-text-color: rgb(255, 255, 255);
+}
+.button-container {
+  text-align: right;
+}
+p {
+  line-height: 1.5em; /* Adjust the value as needed */
 }
 </style>

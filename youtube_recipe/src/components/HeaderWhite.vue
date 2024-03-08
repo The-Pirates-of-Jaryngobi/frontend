@@ -4,6 +4,7 @@
   <header
     class="v-toolbar v-toolbar--flat v-toolbar--density-default v-theme--light v-locale--is-ltr v-app-bar"
     style="
+      background-color: rgba(255, 255, 255);
       top: 0px;
       z-index: 1004;
       transform: translateY(0%);
@@ -14,10 +15,10 @@
   >
     <div class="v-toolbar__content" style="height: 64px">
       <div class="v-container v-locale--is-ltr mx-auto d-flex align-center justify-center">
-        <div
-          class="v-avatar v-theme--light bg-grey-darken-1 v-avatar--density-default v-avatar--variant-flat me-4"
-          style="width: 32px; height: 32px"
-        ></div>
+        <div>
+          <img src="..\..\public\favicon.ico" style="width: 32px; height: 32px" alt="대체 텍스트" />
+        </div>
+
         <button
           type="button"
           @click="goToPage('/')"
@@ -27,12 +28,12 @@
             ><strong>The Cheapest Youtube Recipe </strong>
           </span>
         </button>
-        <button
+        <!-- <button
           type="button"
           class="v-btn v-theme--light v-btn--density-default v-btn--size-default v-btn--variant-text"
         >
           <span class="v-btn__content" data-no-activator="">Messages</span>
-        </button>
+        </button> -->
         <button
           type="button"
           class="v-btn v-theme--light v-btn--density-default v-btn--size-default v-btn--variant-text"
@@ -43,8 +44,9 @@
           type="button"
           class="v-btn v-theme--light v-btn--density-default v-btn--size-default v-btn--variant-text"
         >
-          <span class="v-btn__content" data-no-activator="">Updates</span>
+          <span class="v-btn__content" data-no-activator="">About</span>
         </button>
+
         <div class="v-spacer"></div>
         <div class="v-responsive" style="max-width: 160px">
           <div class="v-responsive__sizer"></div>
@@ -79,10 +81,10 @@
                       </div>
                     </div>
                   </div>
-                  <!-- <div class="v-field__field" data-no-activator="">
-                                    <label class="v-label v-field-label" for="input-5">Search</label>
-                                    <input size="1" type="text" id="input-5" aria-describedby="input-5-messages" class="v-field__input">
-                                </div> -->
+                  <!-- <div class="v-field__field" data-no-activator=""> -->
+                  <!-- <label class="v-label v-field-label" for="input-5">Search</label>
+                                    <input size="1" type="text" id="input-5" aria-describedby="input-5-messages" class="v-field__input"> -->
+                  <!-- </div> -->
                 </div>
               </div>
             </div>
@@ -133,8 +135,8 @@ body {
 
 /* Header styles */
 header {
-  background-color: #fff; /* Header background color */
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Header shadow */
+  background-color: rgba(255, 255, 255, 0); /* Header background color with transparency */
+  box-shadow: 0px 2px 4px rgba(132, 121, 121, 0.1); /* Header shadow */
   width: 100%;
   position: fixed;
   top: 0;
@@ -170,7 +172,6 @@ header {
   width: 32px;
   height: 32px;
 }
-
 
 .v-btn {
   background-color: transparent;

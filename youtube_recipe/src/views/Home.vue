@@ -115,6 +115,6 @@ h1 {
 .content {
 margin-top: 40px; /* 헤더와 콘텐츠 사이의 간격 설정 */
 padding: 20px;
-background-color: #f4f4f4;
+background-color: #ffffff;
 }
 </style>
