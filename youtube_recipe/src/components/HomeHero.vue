@@ -3,7 +3,7 @@
         <h1>최저가 유튜브 레시피를<br><span style="font-weight: 400;">검색해보세요</span></h1>
         <div class="input-btn">
             <!-- 현재 표시할 placeholder를 배열에서 가져옴 -->
-            <input v-model="inputData" type="text" :placeholder="placeholders[currentIndex]" class="menu-input" @keyup.enter="searchResult">
+            <input v-model="menu_name" type="text" :placeholder="placeholders[currentIndex]" class="menu-input" @keyup.enter="searchResult">
             <!-- 버튼 클릭 시 searchResult 메서드 실행-->
             <v-btn @click="searchResult" variant="elevated" size="x-large" rounded="lg" color="#E84855">Search</v-btn>
         </div>
@@ -14,28 +14,26 @@
 export default {
     data() {
         return {
-            inputData: '',
+            menu_name: '',
             placeholders: ['김치찌개', '계란말이', '된장찌개'], // placeholder를 순서대로 담은 배열
             currentIndex: 0 // 현재 placeholder의 인덱스
         };
     },
     methods: {
         searchResult() {
-            this.$emit('input-event', this.inputData);
+            this.$emit('input-event', this.menu_name);
         },
     },
     mounted() {
         setInterval(() => {
         this.currentIndex = (this.currentIndex + 1) % this.placeholders.length;
         }, 2000);
-    }/*,
-    input에 입력할 때마다 콘솔에서 확인하는 코드
+    },
     watch: {
-        inputData(newValue, oldValue) {
-            console.log('inputData changed:', newValue);
+        menu_name(newValue, oldValue) {
+            console.log('menu_name changed:', newValue);
         }
     }
-    */
 }
 </script>
 

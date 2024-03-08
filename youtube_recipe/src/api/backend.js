@@ -1,9 +1,9 @@
 import axios from 'axios'
 
-export async function checkDataInDB(inputData) {
+export async function checkDataInDB(menu_name) {
     try {
         const response = await axios.post('http://43.200.244.163/app/search/', {
-            data: inputData
+            data: menu_name
         });
         return response.data.exists;
     } catch (error) {
@@ -19,12 +19,12 @@ export default {
             try {
                 // 데이터베이스에 있는지 확인하기 위해 백엔드 API 호출
                 const response = await this.$axios.post('http://43.200.244.163/app/search/', {
-                    data: this.inputData
+                    data: this.menu_name
                 });
 
                 if (response.data.exists) {
                     // 데이터베이스에 있으면 Result 페이지로 이동
-                    this.$router.push({ name: 'Result', params: { inputData: this.inputData } });
+                    this.$router.push({ name: 'Result', params: { menu_name: this.menu_name } });
                 } else {
                     // 데이터베이스에 없으면 NoResult 페이지로 이동
                     this.$router.push('/noresult');

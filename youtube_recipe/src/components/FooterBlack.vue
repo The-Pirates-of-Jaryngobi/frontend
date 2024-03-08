@@ -33,7 +33,7 @@
 .footer-container {
   background-color: #403f4c;
   font-family: "Noto Sans KR", sans-serif;
-  font-size: 300;
+  font-weight: 300;
   color: #ffffff;
   line-height: 2.2em;
   display: flex;
@@ -73,5 +73,15 @@
   max-width: 1000px;
   width: 100%;
   justify-content: space-between;
+}
+
+@media (max-width:600px) {
+  .footer-column {
+    flex-direction: column;
+    gap: 40px;
+  }
+  .footer-container {
+    padding: 50px;
+  }
 }
 </style>

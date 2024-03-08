@@ -2,7 +2,7 @@
     <div class="ingredient">
         <h2>Ingredients</h2>
         <div class="ingredient-info">
-            {{ inputData }} 레시피에 들어가는 재료를 소개합니다. <br>본 재료 외에는 
+            {{ menu_name }} 레시피에 들어가는 재료를 소개합니다. <br>본 재료 외에는 
             <span v-if="searchResults.ingredient_list_without_unit.length > 0">
                 <span v-for="(ingredient, index) in searchResults.ingredient_list_without_unit" :key="index" class="bold"> {{ ingredient.ingredient_name }} </span>
             이(가) 레시피에 포함됩니다.
@@ -23,21 +23,13 @@
                 </v-col>
             </v-row>
         </v-container>
-        <!--
-        <ul v-if="searchResults.ingredient_list_without_unit.length > 0">
-            <li v-for="(ingredient, index) in searchResults.ingredient_list_without_unit" :key="index">
-                {{ ingredient.ingredient_name }}
-            </li>
-        </ul>
-        <div v-else></div>
-        -->
     </div>
 </template>
 
 <script>
 export default {
     props: {
-        inputData: String, // inputData props를 정의
+        menu_name: String, // inputData props를 정의
         searchResults: Object // searchResults props를 정의
     },
 }
@@ -89,11 +81,13 @@ export default {
     padding-top: 12%;
     box-shadow: none;
     border-radius: 20px;
-    min-width: 160px;
+    min-width: 260px;
     margin: 20px 0;
     transition: box-shadow 0.3s ease;
     filter: grayscale(100%);
+    flex: 1;
 }
+
 
 .ingredient-card:hover {
     box-shadow: 0 8px 16px rgba(50, 50, 50, 0.2);

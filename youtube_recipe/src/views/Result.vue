@@ -1,13 +1,11 @@
 <template>
-    <ResultHero :inputData="inputData" :searchResults="searchResults" />
-    <ResultDetail :inputData="inputData" :searchResults="searchResults" />
+    <ResultHero :menu_name="menu_name" :searchResults="searchResults" />
+    <ResultDetail :menu_name="menu_name" :searchResults="searchResults" />
 </template>
 
 <script>
-//import HeaderBlack from './components/HeaderBlack.vue'
 import ResultHero from '../components/ResultHero.vue';
 import ResultDetail from '../components/ResultDetail.vue';
-//import Footer from './components/Footer.vue'
 
 export default {
     props: {
@@ -17,9 +15,9 @@ export default {
         }
     },
     computed: {
-        // 라우터 파라미터로부터 inputData를 가져오기
-        inputData() {
-            return this.$route.params.inputData;
+        // 라우터 파라미터로부터 menu_name를 가져오기
+        menu_name() {
+            return this.$route.params.menu_name;
         },
         // 검색 결과를 반환
         searchResults() {
@@ -32,11 +30,11 @@ export default {
                 "youtube_title": "미친 색감!! 예쁜 계란말이 만들기 | 계란만 있으면 됩니다(4K)", // 유튜브 제목
                 "channel_name": "B의 식탁 [B's table]", // 채널명
                 "chaneel_img": "https://yt3.ggpht.com/d-TwBHsjfeApT3dKUBR2UUlILyXdwc8vCIX3NV8CHDMp29jg2MPYL4fMLQDqzFC2UE2hkjOi=s88-c-k-c0x00ffffff-no-rj", // 채널 이미지
-                "total_price": 800.0, // 최종 가격
+                "total_price": 985.0, // 최종 가격
                 "ingredient_list": [
                     {
                         "ingredient_name": "계란", // 재료명
-                        "ingredient_unit_price": "10", // 상품 1g 단위당 가격
+                        "ingredient_unit_price": "184", // 상품 1g 단위당 가격
                         "ingredient_price": 500.0, // 상품 가격
                         "ingredient_volume": 5.0, // 재료 용량
                         "ingredient_unit": "개", // 재료 단위
@@ -45,12 +43,21 @@ export default {
                     },
                     {
                         "ingredient_name": "소금", // 재료명
-                        "ingredient_unit_price": "5", // 상품 1g 단위당 가격
-                        "ingredient_price": 10.0, // 상품 가격
+                        "ingredient_unit_price": "21.89", // 상품 1g 단위당 가격
+                        "ingredient_price": 2080.0, // 상품 가격
                         "ingredient_volume": 3.0, // 재료 용량
                         "ingredient_unit": "g", // 재료 단위
                         "ingredient_url": "https://www.coupang.com/vp/products/1483853018?itemId=1044731006&vendorItemId=5506013843&pickType=COU_PICK&q=%EC%86%8C%EA%B8%88&itemsCount=36&searchId=9d20207defb44e6e94c70c6391ff873f&rank=2&isAddedCart=", // 상품 url
                         "ingredient_img": "https://thumbnail8.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/2019/10/23/21/7/5a32065e-20c7-437e-87ba-ee827a601288.jpg" // 상품 이미지
+                    },
+                    {
+                        "ingredient_name": "설탕", // 재료명
+                        "ingredient_unit_price": "1.63", // 상품 1g 단위당 가격
+                        "ingredient_price": 24490.0, // 상품 가격
+                        "ingredient_volume": 3.0, // 재료 용량
+                        "ingredient_unit": "g", // 재료 단위
+                        "ingredient_url": "https://www.coupang.com/vp/products/7139315300?itemId=16584760&vendorItemId=3005825349&q=%EC%84%A4%ED%83%95&itemsCount=36&searchId=9d008b206e1b4877a028d58636c5835b&rank=6&isAddedCart=", // 상품 url
+                        "ingredient_img": "https://thumbnail7.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/1150455489522113-a56336d3-5f99-4469-8457-4aedb5e93eff.jpg" // 상품 이미지
                     }
                 ], // 레시피에 들어가는 재료 정보 리스트
                 "ingredient_list_without_unit": [

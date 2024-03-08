@@ -3,7 +3,7 @@
     <div class="header-container">
       <div class="header-gotohome text-white-shadow">
         <router-link to="/" class="router-link">
-          <img src="../assets/logo.svg" style="width: auto; height: 24px;" />
+          <img src="../assets/logo.svg" target="blank" style="width: auto; height: 24px;" />
           <span>The Cheapest Youtubu Recipe</span>
         </router-link>
       </div>

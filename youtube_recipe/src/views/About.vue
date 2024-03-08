@@ -1,28 +1,39 @@
 <template>
-    <v-main class="d-flex align-center justify-center no-hero">
-        <h1>팀 자린고비 입니다.</h1>
-        <p>:)</p>
-    </v-main>
+    <AboutHero />
+    <welcome />
+    <div class="about-detail">
+        <dataCriteria />
+        <verticalLine />
+        <contactUs />
+    </div>
 </template>
 
+<script>
+import AboutHero from '../components/AboutHero.vue';
+import contactUs from '../components/contactUs.vue';
+import welcome from '../components/welcome.vue';
+import dataCriteria from '../components/dataCriteria.vue';
+import verticalLine from '../components/verticalLine.vue';
+import faq from '../components/faq.vue';
+
+export default {
+    components: {
+        AboutHero,
+        contactUs,
+        welcome,
+        dataCriteria,
+        verticalLine,
+        faq,
+    },
+}
+</script>
+
 <style scoped>
-.no-hero {
+.about-detail {
     display: flex;
     flex-direction: column;
-    width: 100%;
-    height: 100vh;
-    line-height: 1.2;
-    text-align: center;
-}
-
-.no-hero h1 {
-    font-family: "Noto Sans KR", sans-serif; 
-    font-size: 1.2rem;
-    color: #111;
-}
-
-.no-hero p {
-    margin-top: 10px;
-    color: #333;
+    align-items: center;
+    padding: 20vh 10vw;
+    gap: 80px;
 }
 </style>

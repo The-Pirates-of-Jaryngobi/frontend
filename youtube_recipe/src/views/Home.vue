@@ -12,146 +12,45 @@ export default {
         HomeHero,
     },
     methods: {
-        searchResult(inputData) {
-            console.log('검색어 :', inputData); // 확인용 코드
+        searchResult(menu_name) {
+            console.log('검색어 :', menu_name); // 확인용 코드
             
-            if (inputData.trim() === '') {
+            if (menu_name.trim() === '') {
                 this.$router.push('/noresult');
             } else {
-                this.$router.push({ name: 'Result', params: { inputData: inputData } });
+                this.$router.push({ name: 'Result', params: { menu_name: menu_name } });
             }
         }
     }
-    /* 백엔드 API 연결되면 확인할 코드! isindb.js도 확인 필요
-    methods: {
-        async searchResult(inputData) {
-            try {
-                const responseData = await checkDataInDB(inputData);
-                this.$router.push({ 
-                        name: 'Result',
-                        params: { 
-                            inputData: inputData,
-                            responseData: responseData
-                    }
-                });
-            } catch (error) {
-                console.error('에러 발생:', error);
-                this.$router.push('/error');
-            }
-        },
-        async searchResult(inputData) {
-            try {
-                if (this.inputData.trim() === '') {
-                    this.$router.push('/noresult');
-                } else {
-                    const isDataInDB = await checkDataInDB(this.inputData);
-                    if (isDataInDB) {
-                        this.$router.push({ 
-                            name: 'Result',
-                            params: { 
-                                inputData: inputData,
-                                responseData: response.data
-                            }
-                        });
-                    } else {
-                        this.$router.push('/noresult');
-                    }
-                }
-            } catch (error) {
-                console.error('에러 발생:', error);
-                this.$router.push('/error');
-            }
-        },
-        async searchResult() {
-            try {
-                const isDataInDB = await checkDataInDB(this.inputData);
-                const route = isDataInDB ? `/result/${this.inputData}` : '/noresult';
-                this.$router.push(route);
-            } catch (error) {
-                console.error('에러 발생:', error);
-                this.$router.push('/error');
-            }
-        }
-    }
-    */
 };
 
-/* 백엔드 API 연결하면 테스트해보기 1 - old
-import axios from 'axios';
+/*
+import HomeHero from '../components/HomeHero.vue';
 
 export default {
-    data() {
-        return {
-            inputData: '',
-            showNoResult: false
-        };
-    },
-    methods: {        
-        async search() {
-            if (this.inputData === '') {
-                this.showNoResult = true;
-            } else {
-                // 검색어를 백엔드 API로 전달하여 데이터베이스에서 결과 확인
-                const response = await fetch(`/api/search?term=${this.inputData}`);
-                const data = await response.json();
-                
-                if (data.length === 0) {
-                    this.$router.push({ name: 'NoResult' }); // 검색 결과가 없을 때 NoResult.vue로 이동
-                } else {
-                    this.$router.push({ name: 'Result', params: { inputData: this.inputData } });
-                }
-            }
-        }
-    },
     components: {
-        NoResult
-    }
-};
-
-*/
-
-
-/* 백엔드 API 연결하면 테스트해보기 2 -old
-
-export default {
-    data() {
-        return {
-        inputData: ''
-        };
+        HomeHero,
     },
     methods: {
-        searchResult() {
-            // 입력 데이터 확인 후 Result 페이지로 이동 또는 NoResult 페이지로 이동
-            if (this.inputData.trim() === '') {
+        searchResult(menu_name) {
+            console.log('검색어 :', menu_name); // 확인용 코드
+            
+            if (menu_name.trim() === '') {
                 this.$router.push('/noresult');
             } else {
-                // 실제로 DB에 있는지 여부를 확인하여 처리하는 로직이 필요합니다.
-                const isDataInDB = this.checkDataInDB(this.inputData);
-                if (isDataInDB) {
-                    this.$router.push(`/result/${this.inputData}`); 
+                // 검색 결과 중에서 menu_name과 일치하는 항목을 찾습니다.
+                const matchedResult = this.searchResults.find(result => result.menu_name === menu_name);
+                
+                if (matchedResult) {
+                    // 일치하는 검색 결과가 있으면 해당 결과로 라우팅합니다.
+                    this.$router.push({ name: 'Result', params: { menu_name: menu_name } });
                 } else {
+                    // 일치하는 검색 결과가 없으면 'noresult' 페이지로 이동합니다.
                     this.$router.push('/noresult');
                 }
             }
-        },
-        async checkDataInDB(data) {
-            try {
-                const response = await axios.post('http://your-backend-api-url/check', {
-                data: this.inputData
-                });
-                // 백엔드에서 받은 응답에 따라 searchResult 설정
-                this.searchResult = response.data.exists;
-            } catch (error) {
-                console.error('데이터베이스 확인 실패:', error);
-                // 에러 발생 시 searchResult를 null로 설정
-                this.searchResult = null;
-            }
         }
-    };
-
+    }
+};
 */
 </script>
-
-<style>
-
-</style>

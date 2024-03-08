@@ -13,6 +13,14 @@ import About from './views/About.vue';
 import ErrorPage from './views/Error.vue';
 import NoResult from './views/NoResult.vue';
 
+const scrollBehavior = (to, from, savedPosition) => {
+    if (savedPosition) {
+        return savedPosition;
+    } else {
+        return { left: 0, top: 0 };
+    }
+};
+
 const router = createRouter({
     history: createWebHistory(),
     routes: [
@@ -24,7 +32,7 @@ const router = createRouter({
             component: Home 
         },
         { 
-            path: '/result/:inputData', 
+            path: '/result/:menu_name', 
             name: 'Result',
             component: Result 
         },
@@ -51,7 +59,8 @@ const router = createRouter({
             path: '/:catchAll(.*)', 
             component: ErrorPage 
         },
-    ]
+    ],
+    scrollBehavior, // scrollBehavior 함수를 router 설정에 추가
 });
 
 // Vuetify 설정
