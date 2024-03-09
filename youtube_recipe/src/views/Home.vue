@@ -18,12 +18,13 @@ export default {
             menu_name: '', // menu_name 데이터 추가
             placeholders: ['김치찌개', '계란말이', '된장찌개'],
             currentIndex: 0,
+            menuList: ['계란말이', '닭갈비'],
         };
     },
     methods: {
         searchResult() {
             console.log('검색어 :', this.menu_name);
-
+/*
             const menuList = {
                 '계란말이': {
                     "youtube_url": "https://www.youtube.com/watch?v=oI9yhGS8IpA&pp=ygUM6rOE656A66eQ7J20", // 유튜브 영상 링크
@@ -67,15 +68,9 @@ export default {
                     "youtube_url": "https://www.youtube.com/watch?v=Q7d8RLOhng0", "youtube_thumbnail": "https://i.ytimg.com/vi/Q7d8RLOhng0/maxresdefault.jpg", "youtube_title": "\ub2ed\uac08\ube44 \ub3c8\uc8fc\uace0 \uc0ac\uba39\uc9c0 \ub9d0\uace0 \ub9cc\ub4dc\uc138\uc694!!\ucd98\ucc9c\ub2ed\uac08\ube44 \ub9cc\ud07c \ub9db\uc788\ub294 \ub2ed\uac08\ube44 \ub808\uc2dc\ud53c", "youtube_uploaded_date": "2020-07-15", "channel_name": "\ubc25\uc0c1\ucc28\ub824\uc8fc\ub294\ub0a8\uc790", "channel_img": "https://yt3.ggpht.com/ytc/AIf8zZSMn3FSMz-JzjG7e1gvF6ij1yHAhZ7PomWt_QPk=s88-c-k-c0x00ffffff-no-rj", "total_price": 2592.0, "ingredient_list": [{"ingredient_name": "\ub2ed\ub2e4\ub9ac\uc0b4", "ingredient_unit_price": 3.81, "ingredient_price": 45700, "ingredient_volume": 400.0, "ingredient_unit": "g", "ingredient_url": "https://www.coupang.com/vp/products/7141699477?itemId=17931917695&vendorItemId=85093894059", "ingredient_img": "https://thumbnail6.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/2023/02/10/18/3/6bd4518c-5277-47eb-8f4f-d82190dc074e.jpg"}, {"ingredient_name": "\uc591\ud30c", "ingredient_unit_price": 1.65, "ingredient_price": 16540, "ingredient_volume": 180.0, "ingredient_unit": "g", "ingredient_url": "https://www.coupang.com/vp/products/6258806325?itemId=19223783161&vendorItemId=86340471165", "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif"}, {"ingredient_name": "\ub300\ud30c", "ingredient_unit_price": 2.39, "ingredient_price": 23900, "ingredient_volume": 0.0, "ingredient_unit": "g", "ingredient_url": "https://www.coupang.com/vp/products/7463554652?itemId=19459376019&vendorItemId=75939343495", "ingredient_img": "https://thumbnail9.coupangcdn.com/thumbnails/remote/230x230ex/image/vendor_inventory/af0b/5b5322a49d3ffc877a65e0324c0e9a39ccd0673059525678f3853dbf5690.jpg"}, {"ingredient_name": "\uc0ac\uacfc", "ingredient_unit_price": 5.53, "ingredient_price": 49800, "ingredient_volume": 100.0, "ingredient_unit": "g", "ingredient_url": "https://www.coupang.com/vp/products/7786388385?itemId=21055461157&vendorItemId=3077142648", "ingredient_img": "https://thumbnail9.coupangcdn.com/thumbnails/remote/230x230ex/image/vendor_inventory/4bec/8271603d126db8710e636579063a53e2e19693fa81d7afd7ee1139122963.JPG"}, {"ingredient_name": "\uae7b\uc78e", "ingredient_unit_price": 21.9, "ingredient_price": 21900, "ingredient_volume": 0.0, "ingredient_unit": "g", "ingredient_url": "https://www.coupang.com/vp/products/7420408904?itemId=19247471001&vendorItemId=86363313512", "ingredient_img": "https://thumbnail8.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/3391359859455750-b30483d9-de31-44c8-a9df-8c0577d0e9cc.jpg"}, {"ingredient_name": "\uace0\uad6c\ub9c8", "ingredient_unit_price": 2.18, "ingredient_price": 10900, "ingredient_volume": 100.0, "ingredient_unit": "g", "ingredient_url": "https://www.coupang.com/vp/products/7598703729?itemId=20095813478&vendorItemId=83643408403", "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif"}], "ingredient_list_without_unit": ["\ub300\ud30c", "\uae7b\uc78e"]
                 }
             };
-
-            if (this.menu_name in menuList) {
-                this.$router.push({
-                    name: 'Result',
-                    params: {
-                        menu_name: this.menu_name,
-                        searchResult: menuList[this.menu_name]
-                    }
-                });
+*/
+            if (this.menuList.includes(this.menu_name)) {
+                this.$router.push({ name: 'Result', params: { menu_name: this.menu_name } });
             } else {
                 this.$router.push({ name: 'NoResult' });
             }

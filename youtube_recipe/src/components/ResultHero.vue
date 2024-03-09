@@ -21,8 +21,7 @@
                     <div class="channel-name">{{ searchResult.channel_name }}</div>
                     <!--<div class="channel-fan">구독자 수&nbsp;</div>-->
                 </div>
-                <div class="youtube-upload"><span>게시일</span>2023. 1. 13</div>
-                <!--<div class="youtube-upload"><span>게시일</span>{{ searchResult.upload_date }}</div>-->
+                <div class="youtube-upload"><span>게시일</span>{{ searchResult.youtube_uploaded_date }}</div>
             </div>
         </div>
     </div>

@@ -32,7 +32,7 @@ const router = createRouter({
             component: Home 
         },
         {
-            path: '/result',
+            path: '/result:menu_name',
             name: 'Result',
             component: Result,
             props: true,
