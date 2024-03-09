@@ -1,7 +1,7 @@
 <template>
     <div class="left-align area-margin">
-        <h2>사이트 이용 중 개선이 필요하거나 제안할 내용이 있다면 편하게 알려주세요.</h2>
-        <v-btn @click="contactUs" variant="elevated" size="x-large" rounded="lg" color="#E84855">Contact us</v-btn>
+        <h2>Thank you.</h2>
+        <div><p>요리를 하는 모든 순간이 행복하기를 바라며, 이 서비스가 여러분의 요리 시간을 더욱 가치 있고 즐거운 시간으로 만들어 드리길 바랍니다. 🥂</p></div>
     </div>
 </template>
 

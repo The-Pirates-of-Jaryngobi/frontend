@@ -9,7 +9,7 @@
         <div class="pd30"></div>
         <faq />
         <contactUs />
-    </div>
+        </div>
 </template>
 
 <script>

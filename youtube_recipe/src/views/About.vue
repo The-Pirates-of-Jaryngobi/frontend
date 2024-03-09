@@ -5,6 +5,8 @@
         <dataCriteria />
         <verticalLine />
         <contactUs />
+        <faq />
+        <thanks />
     </div>
 </template>
 
@@ -15,6 +17,7 @@ import welcome from '../components/welcome.vue';
 import dataCriteria from '../components/dataCriteria.vue';
 import verticalLine from '../components/verticalLine.vue';
 import faq from '../components/faq.vue';
+import thanks from '../components/thanks.vue';
 
 export default {
     components: {
@@ -24,6 +27,7 @@ export default {
         dataCriteria,
         verticalLine,
         faq,
+        thanks,
     },
 }
 </script>
@@ -36,4 +40,5 @@ export default {
     padding: 20vh 10vw;
     gap: 80px;
 }
+
 </style>

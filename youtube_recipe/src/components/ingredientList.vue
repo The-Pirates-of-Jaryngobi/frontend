@@ -11,7 +11,7 @@
         </div>
         <v-container class="pd-0">
             <v-row justify="center">
-                <v-col v-for="ingredient in searchResult.ingredient_list" :key="ingredient.ingredient_name">
+                <v-col cols="12" sm="6" v-for="ingredient in searchResult.ingredient_list" :key="ingredient.ingredient_name">
                     <a :href="ingredient.ingredient_url" target="_blank" class="link-deco">
                         <v-card class="ingredient-card">
                             <img :src="ingredient.ingredient_img" class="coupang-img" alt="ingredient image"/>
@@ -122,6 +122,7 @@ export default {
 }
 
 .ingredient-title {
+    white-space: normal;
     font-family: "Gasoek One", sans-serif;
     font-weight: 300;
     font-size: 1.5em;
