@@ -1,7 +1,7 @@
 <template>
     <div class="result-detail">
         <verticalLine />
-        <ingredientList :menu_name="menu_name" :searchResults="searchResults" />
+        <ingredientList :menu_name="menu_name" :searchResult="searchResult" />
         <div class="pd30"></div>
         <verticalLine />
         <div class="pd30"></div>
@@ -22,7 +22,7 @@ import faq from '../components/faq.vue';
 export default {
     props: {
         menu_name: String, // menu_name props를 정의
-        searchResults: Object // searchResults props를 정의
+        searchResult: Object // searchResult props를 정의
     },
     components: {
         verticalLine,

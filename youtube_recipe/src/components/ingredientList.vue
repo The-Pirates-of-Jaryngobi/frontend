@@ -3,14 +3,14 @@
         <h2>Ingredients</h2>
         <div class="ingredient-info">
             {{ menu_name }} 레시피에 들어가는 재료를 소개합니다. <br>본 재료 외에는 
-            <span v-if="searchResults.ingredient_list_without_unit.length > 0">
-                <span v-for="(ingredient, index) in searchResults.ingredient_list_without_unit" :key="index" class="bold"> {{ ingredient.ingredient_name }} </span>
+            <span v-if="searchResult.ingredient_list_without_unit.length > 0">
+                <span v-for="(ingredient, index) in searchResult.ingredient_list_without_unit" :key="index" class="bold"> {{ ingredient.ingredient_name }} </span>
             이(가) 레시피에 포함됩니다.
             </span>
         </div>
         <v-container class="pd-0">
             <v-row justify="center">
-                <v-col v-for="ingredient in searchResults.ingredient_list" :key="ingredient.ingredient_name">
+                <v-col v-for="ingredient in searchResult.ingredient_list" :key="ingredient.ingredient_name">
                     <a :href="ingredient.ingredient_url" target="_blank" class="link-deco">
                         <v-card class="ingredient-card">
                             <img :src="ingredient.ingredient_img" class="coupang-img" alt="ingredient image"/>
@@ -30,7 +30,7 @@
 export default {
     props: {
         menu_name: String, // inputData props를 정의
-        searchResults: Object // searchResults props를 정의
+        searchResult: Object // searchResult props를 정의
     },
 }
 </script>

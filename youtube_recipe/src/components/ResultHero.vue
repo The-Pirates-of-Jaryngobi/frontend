@@ -3,26 +3,26 @@
     <!--<div class="result-hero-bg align-center justify-center"></div>-->
     <div class="result-hero">
         <h1><span>{{ menu_name }}</span><br>최저가 레시피</h1>
-        <h2>₩ {{ searchResults.total_price }}</h2>
+        <h2>₩ {{ searchResult.total_price }}</h2>
         <p class="lb">recipe</p>
         <p class="rb">price</p>
     </div>
     <div class="youtube">
-        <a :href="searchResults.youtube_url" target="_blank" class="link-deco">
-            <div class="youtube-img"><img :src="searchResults.youtube_thumbnail"/></div>
+        <a :href="searchResult.youtube_url" target="_blank" class="link-deco">
+            <div class="youtube-img"><img :src="searchResult.youtube_thumbnail"/></div>
         </a>
         <div class="youtube-info">
-            <a :href="searchResults.youtube_url" target="_blank" class="link-deco">
-                <div class="youtube-title"><h3>{{ searchResults.youtube_title }}</h3></div>
+            <a :href="searchResult.youtube_url" target="_blank" class="link-deco">
+                <div class="youtube-title"><h3>{{ searchResult.youtube_title }}</h3></div>
             </a>
             <div class="youtube-info-additional">
                 <div class="youtube-channel">
-                    <img class="channel-logo" :src="searchResults.chaneel_img"/>
-                    <div class="channel-name">{{ searchResults.channel_name }}</div>
+                    <img class="channel-logo" :src="searchResult.chaneel_img"/>
+                    <div class="channel-name">{{ searchResult.channel_name }}</div>
                     <!--<div class="channel-fan">구독자 수&nbsp;</div>-->
                 </div>
                 <div class="youtube-upload"><span>게시일</span>2023. 1. 13</div>
-                <!--<div class="youtube-upload"><span>게시일</span>{{ searchResults.upload_date }}</div>-->
+                <!--<div class="youtube-upload"><span>게시일</span>{{ searchResult.upload_date }}</div>-->
             </div>
         </div>
     </div>
@@ -32,7 +32,7 @@
 export default {
     props: {
         menu_name: String, // menu_name props를 정의
-        searchResults: Object // searchResults props를 정의
+        searchResult: Object // searchResult props를 정의
     }
 };
 </script>

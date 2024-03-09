@@ -31,10 +31,11 @@ const router = createRouter({
             name: 'Home', 
             component: Home 
         },
-        { 
-            path: '/result/:menu_name', 
+        {
+            path: '/result',
             name: 'Result',
-            component: Result 
+            component: Result,
+            props: true,
         },
         { 
             path: '/about',
@@ -60,8 +61,9 @@ const router = createRouter({
             component: ErrorPage 
         },
     ],
-    scrollBehavior, // scrollBehavior 함수를 router 설정에 추가
+    scrollBehavior,
 });
+
 
 // Vuetify 설정
 const vuetify = createVuetify({
