@@ -1,23 +1,28 @@
 <template>
-    <div class="noresult">
-        <h3>검색 결과가 없습니다.</h3>
+    <v-main class="d-flex align-center justify-center no-hero">
+        <h1>검색 결과가 없습니다.</h1>
         <p>다른 검색어를 시도해보세요.</p>
-    </div>
+    </v-main>
 </template>
 
-<style>
-.noresult {
+<style scoped>
+.no-hero {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    line-height: 1.2;
     text-align: center;
-    margin-top: 20px;
 }
 
-.noresult h3 {
+.no-hero h1 {
+    font-family: "Noto Sans KR", sans-serif; 
     font-size: 1.2rem;
-    color: #333;
+    color: #111;
 }
 
-.noresult p {
+.no-hero p {
     margin-top: 10px;
-    color: #666;
+    color: #333;
 }
 </style>
