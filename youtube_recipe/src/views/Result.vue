@@ -42,7 +42,7 @@ export default {
                         "ingredient_img": "https://thumbnail9.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/87707671798877-fcaf7e3a-5aed-4bfc-8bac-b1a692abfa4e.jpg" // 상품 이미지
                     },
                     {
-                        "ingredient_name": "소금", // 재료명
+                        "ingredient_name": "맛소금", // 재료명
                         "ingredient_unit_price": "21.89", // 상품 1g 단위당 가격
                         "ingredient_price": 2080.0, // 상품 가격
                         "ingredient_volume": 3.0, // 재료 용량
