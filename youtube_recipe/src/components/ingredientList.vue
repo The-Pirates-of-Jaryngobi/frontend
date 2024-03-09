@@ -2,10 +2,11 @@
     <div class="ingredient">
         <h2>Ingredients</h2>
         <div class="ingredient-info">
-            {{ menu_name }} 레시피에 들어가는 재료를 소개합니다. <br>본 재료 외에는 
+            {{ menu_name }} 레시피에 들어가는 재료를 소개합니다. <br>
             <span v-if="searchResult.ingredient_list_without_unit.length > 0">
+                본 재료 외에는 
                 <span v-for="(ingredient, index) in searchResult.ingredient_list_without_unit" :key="index" class="bold"> {{ ingredient.ingredient_name }} </span>
-            이(가) 레시피에 포함됩니다.
+                이(가) 레시피에 포함됩니다.
             </span>
         </div>
         <v-container class="pd-0">
@@ -14,9 +15,9 @@
                     <a :href="ingredient.ingredient_url" target="_blank" class="link-deco">
                         <v-card class="ingredient-card">
                             <img :src="ingredient.ingredient_img" class="coupang-img" alt="ingredient image"/>
-                            <v-card-title class="ingredient-title">{{ ingredient.ingredient_name }} {{ ingredient.ingredient_volume }}{{ ingredient.ingredient_unit }}</v-card-title>
+                            <v-card-title class="ingredient-title">{{ ingredient.ingredient_name }} {{ roundPrice(ingredient.ingredient_volume) }}{{ ingredient.ingredient_unit }}</v-card-title>
                             <v-card-text class="ingredient-text">
-                                <div>{{ ingredient.ingredient_unit_price * ingredient.ingredient_volume }}원</div>
+                                <div>{{ roundPrice(ingredient.ingredient_unit_price * ingredient.ingredient_volume) }}원</div>
                             </v-card-text>
                         </v-card>
                     </a>
@@ -31,6 +32,16 @@ export default {
     props: {
         menu_name: String, // inputData props를 정의
         searchResult: Object // searchResult props를 정의
+    },
+    methods: {
+        // "youtube_uploaded_date"에서 날짜 부분만 추출하는 메서드
+        extractDate(fullDate) {
+        return fullDate.split(' ')[0]; // 문자열을 공백으로 분할하여 첫 번째 부분을 반환
+        },
+        // "total_price"를 반올림하여 반환하는 메서드
+        roundPrice(price) {
+        return Math.round(price); // 반올림된 가격 반환
+        }
     },
 }
 </script>
@@ -95,11 +106,14 @@ export default {
 }
 
 .coupang-img {
-    width: 80px;height: auto;
     transition: filter 0.3s ease;
     border-radius: 500px;
     background-color: #fff;
     margin-bottom: 5px;
+    min-width: 80px;
+    min-height: 80px;
+    max-height: 80px;
+    max-width: 80px;
 }
 
 .link-deco {

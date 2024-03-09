@@ -3,7 +3,7 @@
     <!--<div class="result-hero-bg align-center justify-center"></div>-->
     <div class="result-hero">
         <h1><span>{{ menu_name }}</span><br>최저가 레시피</h1>
-        <h2>₩ {{ searchResult.total_price }}</h2>
+        <h2 class="total-price">₩ {{ roundPrice(searchResult.total_price) }}</h2>
         <p class="lb">recipe</p>
         <p class="rb">price</p>
     </div>
@@ -17,11 +17,11 @@
             </a>
             <div class="youtube-info-additional">
                 <div class="youtube-channel">
-                    <img class="channel-logo" :src="searchResult.chaneel_img"/>
+                    <img class="channel-logo" :src="searchResult.channel_img"/>
                     <div class="channel-name">{{ searchResult.channel_name }}</div>
                     <!--<div class="channel-fan">구독자 수&nbsp;</div>-->
                 </div>
-                <div class="youtube-upload"><span>게시일</span>{{ searchResult.youtube_uploaded_date }}</div>
+                <div class="youtube-upload"><span>게시일</span><div class="uploaded-date">{{ extractDate(searchResult.youtube_uploaded_date) }}</div></div>
             </div>
         </div>
     </div>
@@ -32,6 +32,16 @@ export default {
     props: {
         menu_name: String, // menu_name props를 정의
         searchResult: Object // searchResult props를 정의
+    },
+    methods: {
+        // "youtube_uploaded_date"에서 날짜 부분만 추출하는 메서드
+        extractDate(fullDate) {
+        return fullDate.split(' ')[0]; // 문자열을 공백으로 분할하여 첫 번째 부분을 반환
+        },
+        // "total_price"를 반올림하여 반환하는 메서드
+        roundPrice(price) {
+        return Math.round(price); // 반올림된 가격 반환
+        }
     }
 };
 </script>
