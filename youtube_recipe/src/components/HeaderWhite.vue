@@ -9,7 +9,7 @@
       </div>
       <div class="menu">
         <router-link to="/about" class="router-link text-white-shadow">About</router-link>
-        <a href="https://github.com/orgs/The-Pirates-of-Jaryngobi/repositories" class="router-link">GitHub</a>
+        <a href="https://github.com/orgs/The-Pirates-of-Jaryngobi/repositories" target="blank" class="router-link">GitHub</a>
       </div>
     </div>
   </header>

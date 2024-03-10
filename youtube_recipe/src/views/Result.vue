@@ -15,51 +15,9 @@ export default {
             return this.$route.params.menu_name;
         },
         searchResult() {
-            // 검색어에 해당하는 내용을 가져오는 로직 구현
+            // 검색어에 해당하는 내용을 가져오는 로직
             // 예시로 정적인 데이터를 사용하고, 실제로는 API 요청 등을 통해 데이터를 가져와야 합니다.
             const searchData = {
-                '계란말이': {
-                    "youtube_url": "https://www.youtube.com/watch?v=oI9yhGS8IpA&pp=ygUM6rOE656A66eQ7J20", // 유튜브 영상 링크
-                    "youtube_thumbnail": "https://i.ytimg.com/vi/oI9yhGS8IpA/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDxqCrQ_ehWU9FbIyoYQtqUxn7FCQ", // 유튜브 썸네일
-                    "youtube_title": "미친 색감!! 예쁜 계란말이 만들기 | 계란만 있으면 됩니다(4K)", // 유튜브 제목
-                    "youtube_uploaded_date" : "2023.01.13",
-                    "channel_name": "B의 식탁 [B's table]", // 채널명
-                    "chaneel_img": "https://yt3.ggpht.com/d-TwBHsjfeApT3dKUBR2UUlILyXdwc8vCIX3NV8CHDMp29jg2MPYL4fMLQDqzFC2UE2hkjOi=s88-c-k-c0x00ffffff-no-rj", // 채널 이미지
-                    "total_price": 985.0, // 최종 가격
-                    "ingredient_list": [
-                        {
-                            "ingredient_name": "계란", // 재료명
-                            "ingredient_unit_price": "184", // 상품 1g 단위당 가격
-                            "ingredient_price": 500.0, // 상품 가격
-                            "ingredient_volume": 5.0, // 재료 용량
-                            "ingredient_unit": "개", // 재료 단위
-                            "ingredient_url": "https://www.coupang.com/vp/products/5971027117?itemId=10725672822&vendorItemId=78006304374&pickType=COU_PICK&q=%EA%B3%84%EB%9E%80&itemsCount=36&searchId=de9c24a2dbb14ecdafe3f2f55a3c3c9f&rank=0&isAddedCart=", // 상품 url
-                            "ingredient_img": "https://thumbnail9.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/87707671798877-fcaf7e3a-5aed-4bfc-8bac-b1a692abfa4e.jpg" // 상품 이미지
-                        },
-                        {
-                            "ingredient_name": "맛소금", // 재료명
-                            "ingredient_unit_price": "21.89", // 상품 1g 단위당 가격
-                            "ingredient_price": 2080.0, // 상품 가격
-                            "ingredient_volume": 3.0, // 재료 용량
-                            "ingredient_unit": "g", // 재료 단위
-                            "ingredient_url": "https://www.coupang.com/vp/products/1483853018?itemId=1044731006&vendorItemId=5506013843&pickType=COU_PICK&q=%EC%86%8C%EA%B8%88&itemsCount=36&searchId=9d20207defb44e6e94c70c6391ff873f&rank=2&isAddedCart=", // 상품 url
-                            "ingredient_img": "https://thumbnail8.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/2019/10/23/21/7/5a32065e-20c7-437e-87ba-ee827a601288.jpg" // 상품 이미지
-                        },
-                        {
-                            "ingredient_name": "설탕", // 재료명
-                            "ingredient_unit_price": "1.63", // 상품 1g 단위당 가격
-                            "ingredient_price": 24490.0, // 상품 가격
-                            "ingredient_volume": 3.0, // 재료 용량
-                            "ingredient_unit": "g", // 재료 단위
-                            "ingredient_url": "https://www.coupang.com/vp/products/7139315300?itemId=16584760&vendorItemId=3005825349&q=%EC%84%A4%ED%83%95&itemsCount=36&searchId=9d008b206e1b4877a028d58636c5835b&rank=6&isAddedCart=", // 상품 url
-                            "ingredient_img": "https://thumbnail7.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/1150455489522113-a56336d3-5f99-4469-8457-4aedb5e93eff.jpg" // 상품 이미지
-                        }
-                    ], // 레시피에 들어가는 재료 정보 리스트
-                    "ingredient_list_without_unit": [{ "ingredient_name": "물" }]
-                },
-                '닭갈비': {
-                    "youtube_url": "https://www.youtube.com/watch?v=Q7d8RLOhng0", "youtube_thumbnail": "https://i.ytimg.com/vi/Q7d8RLOhng0/maxresdefault.jpg", "youtube_title": "\ub2ed\uac08\ube44 \ub3c8\uc8fc\uace0 \uc0ac\uba39\uc9c0 \ub9d0\uace0 \ub9cc\ub4dc\uc138\uc694!!\ucd98\ucc9c\ub2ed\uac08\ube44 \ub9cc\ud07c \ub9db\uc788\ub294 \ub2ed\uac08\ube44 \ub808\uc2dc\ud53c", "youtube_uploaded_date": "2020-07-15", "channel_name": "\ubc25\uc0c1\ucc28\ub824\uc8fc\ub294\ub0a8\uc790", "channel_img": "https://yt3.ggpht.com/ytc/AIf8zZSMn3FSMz-JzjG7e1gvF6ij1yHAhZ7PomWt_QPk=s88-c-k-c0x00ffffff-no-rj", "total_price": 2592.0, "ingredient_list": [{"ingredient_name": "\ub2ed\ub2e4\ub9ac\uc0b4", "ingredient_unit_price": 3.81, "ingredient_price": 45700, "ingredient_volume": 400.0, "ingredient_unit": "g", "ingredient_url": "https://www.coupang.com/vp/products/7141699477?itemId=17931917695&vendorItemId=85093894059", "ingredient_img": "https://thumbnail6.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/2023/02/10/18/3/6bd4518c-5277-47eb-8f4f-d82190dc074e.jpg"}, {"ingredient_name": "\uc591\ud30c", "ingredient_unit_price": 1.65, "ingredient_price": 16540, "ingredient_volume": 180.0, "ingredient_unit": "g", "ingredient_url": "https://www.coupang.com/vp/products/6258806325?itemId=19223783161&vendorItemId=86340471165", "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif"}, {"ingredient_name": "\ub300\ud30c", "ingredient_unit_price": 2.39, "ingredient_price": 23900, "ingredient_volume": 0.0, "ingredient_unit": "g", "ingredient_url": "https://www.coupang.com/vp/products/7463554652?itemId=19459376019&vendorItemId=75939343495", "ingredient_img": "https://thumbnail9.coupangcdn.com/thumbnails/remote/230x230ex/image/vendor_inventory/af0b/5b5322a49d3ffc877a65e0324c0e9a39ccd0673059525678f3853dbf5690.jpg"}, {"ingredient_name": "\uc0ac\uacfc", "ingredient_unit_price": 5.53, "ingredient_price": 49800, "ingredient_volume": 100.0, "ingredient_unit": "g", "ingredient_url": "https://www.coupang.com/vp/products/7786388385?itemId=21055461157&vendorItemId=3077142648", "ingredient_img": "https://thumbnail9.coupangcdn.com/thumbnails/remote/230x230ex/image/vendor_inventory/4bec/8271603d126db8710e636579063a53e2e19693fa81d7afd7ee1139122963.JPG"}, {"ingredient_name": "\uae7b\uc78e", "ingredient_unit_price": 21.9, "ingredient_price": 21900, "ingredient_volume": 0.0, "ingredient_unit": "g", "ingredient_url": "https://www.coupang.com/vp/products/7420408904?itemId=19247471001&vendorItemId=86363313512", "ingredient_img": "https://thumbnail8.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/3391359859455750-b30483d9-de31-44c8-a9df-8c0577d0e9cc.jpg"}, {"ingredient_name": "\uace0\uad6c\ub9c8", "ingredient_unit_price": 2.18, "ingredient_price": 10900, "ingredient_volume": 100.0, "ingredient_unit": "g", "ingredient_url": "https://www.coupang.com/vp/products/7598703729?itemId=20095813478&vendorItemId=83643408403", "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif"}], "ingredient_list_without_unit": ["\ub300\ud30c", "\uae7b\uc78e"]
-                },
                 "홍합미역국": {
                     "youtube_url": "https://www.youtube.com/watch?v=OwhZKjBeqyQ",
                     "youtube_thumbnail": "https://i.ytimg.com/vi/OwhZKjBeqyQ/maxresdefault.jpg",
@@ -67,7 +25,7 @@ export default {
                     "youtube_uploaded_date": "2019-10-22 00:00:00",
                     "channel_name": "엄마의집밥 Mom's food",
                     "channel_img": "https://yt3.ggpht.com/uMA7_qEIa3Gg9vNGhiMZN8MPTFe9U3q9w28J5TBN5wnZPualDAwrB9lzjmX-0Tw0xhds7aoZjQ=s88-c-k-c0x00ffffff-no-rj",
-                    "total_price": 1822.0600000000002,
+                    "total_price": 1580.2400000000002,
                     "ingredient_list": [
                         {
                             "ingredient_name": "미역",
@@ -76,58 +34,58 @@ export default {
                             "ingredient_volume": 27.0,
                             "ingredient_unit": "g",
                             "ingredient_url": "https://www.coupang.com/vp/products/7449334644?itemId=19389782379&vendorItemId=70080553798",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
+                            "ingredient_img": "https://thumbnail8.coupangcdn.com/thumbnails/remote/230x230ex/image/vendor_inventory/ee4f/9e4387713e06ade97b495fcf621979d72dff3c3518fd9bda6c37ba6f7169.jpg",
                             "price": 469.53000000000003
                         },
                         {
                             "ingredient_name": "들기름",
-                            "ingredient_unit_price": 19.6,
-                            "ingredient_price": 35250,
+                            "ingredient_unit_price": 6.39,
+                            "ingredient_price": 11500,
                             "ingredient_volume": 19.0,
                             "ingredient_unit": "g",
-                            "ingredient_url": "https://www.coupang.com/vp/products/7248384207?itemId=18432606089&vendorItemId=85574074967",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
-                            "price": 372.40000000000003
+                            "ingredient_url": "https://www.coupang.com/vp/products/7558184610?itemId=19906589768&vendorItemId=86063361351",
+                            "ingredient_img": "https://thumbnail8.coupangcdn.com/thumbnails/remote/230x230ex/image/vendor_inventory/221a/ac0822697789f7b06e066a304e4e56f5315d91b4ac477b39736e696cba0a.jpg",
+                            "price": 121.41
                         },
                         {
                             "ingredient_name": "소금",
-                            "ingredient_unit_price": 0.75,
-                            "ingredient_price": 18840,
+                            "ingredient_unit_price": 1.52,
+                            "ingredient_price": 7580,
                             "ingredient_volume": 5.0,
                             "ingredient_unit": "g",
-                            "ingredient_url": "https://www.coupang.com/vp/products/6978355650?itemId=12717968475&vendorItemId=70610150039",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
-                            "price": 3.75
+                            "ingredient_url": "https://www.coupang.com/vp/products/7118404111?itemId=154184&vendorItemId=3000080355",
+                            "ingredient_img": "https://thumbnail10.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/77422699043342-2253a7aa-405d-4763-99c9-431b47b34762.jpg",
+                            "price": 7.6
                         },
                         {
                             "ingredient_name": "다진마늘",
-                            "ingredient_unit_price": 3.7,
-                            "ingredient_price": 18250,
+                            "ingredient_unit_price": 3.64,
+                            "ingredient_price": 18200,
                             "ingredient_volume": 5.0,
                             "ingredient_unit": "g",
-                            "ingredient_url": "https://www.coupang.com/vp/products/6012228407?itemId=10910051311&vendorItemId=78189867054",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
-                            "price": 18.5
+                            "ingredient_url": "https://www.coupang.com/vp/products/6890784639?itemId=19929771567&vendorItemId=87029336992",
+                            "ingredient_img": "https://thumbnail10.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/23c231f2-41be-4410-8873-5544a8f8fa272857012207940814782.png",
+                            "price": 18.2
                         },
                         {
                             "ingredient_name": "홍합",
-                            "ingredient_unit_price": 2.5,
-                            "ingredient_price": 12500,
+                            "ingredient_unit_price": 2.39,
+                            "ingredient_price": 23900,
                             "ingredient_volume": 370.0,
                             "ingredient_unit": "g",
-                            "ingredient_url": "https://www.coupang.com/vp/products/4322446192?itemId=5033154937&vendorItemId=72311683674",
-                            "ingredient_img": "https://thumbnail6.coupangcdn.com/thumbnails/remote/230x230ex/image/vendor_inventory/3147/5811f9e4c0a77bcad83cc2bc7c4434bf8230ebad3a8f0c023c4d45c1f3e6.JPG",
-                            "price": 925.0
+                            "ingredient_url": "https://www.coupang.com/vp/products/7231444491?itemId=18350096022&vendorItemId=73332567771",
+                            "ingredient_img": "https://thumbnail9.coupangcdn.com/thumbnails/remote/230x230ex/image/vendor_inventory/3286/c99fbec96fd7b96e4cb524226cc91be7cfbf2f091129440625f8e5d0c080.png",
+                            "price": 884.3000000000001
                         },
                         {
                             "ingredient_name": "국간장",
-                            "ingredient_unit_price": 1.37,
-                            "ingredient_price": 19190,
+                            "ingredient_unit_price": 3.3,
+                            "ingredient_price": 11210,
                             "ingredient_volume": 24.0,
                             "ingredient_unit": "g",
-                            "ingredient_url": "https://www.coupang.com/vp/products/5938053333?itemId=18204402896&vendorItemId=78415747472",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
-                            "price": 32.88
+                            "ingredient_url": "https://www.coupang.com/vp/products/239196850?itemId=18171493809&vendorItemId=85320843397",
+                            "ingredient_img": "https://thumbnail9.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/20c16af9-400e-47b9-8359-4b68cc4e41e99153747284672463110.png",
+                            "price": 79.19999999999999
                         }
                     ],
                     "ingredient_list_without_unit": []
@@ -139,57 +97,57 @@ export default {
                     "youtube_uploaded_date": "2020-03-07 00:00:00",
                     "channel_name": "SHF",
                     "channel_img": "https://yt3.ggpht.com/ytc/AIf8zZSfrlNbY7-Io75ZUpFBTKEDEPE77xHwpr8bkpAHBQ=s88-c-k-c0x00ffffff-no-rj",
-                    "total_price": 1907.325,
+                    "total_price": 6194.475,
                     "ingredient_list": [
                         {
                             "ingredient_name": "자숙피조개살",
-                            "ingredient_unit_price": 1.55,
-                            "ingredient_price": 99000,
+                            "ingredient_unit_price": 14.99,
+                            "ingredient_price": 14990,
                             "ingredient_volume": 300.0,
                             "ingredient_unit": "g",
-                            "ingredient_url": "https://www.coupang.com/vp/products/7657709569?itemId=20392679003&vendorItemId=87475390533",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
-                            "price": 465.0
+                            "ingredient_url": "https://www.coupang.com/vp/products/7657654961?itemId=20392399463&vendorItemId=85630732790",
+                            "ingredient_img": "https://thumbnail7.coupangcdn.com/thumbnails/remote/230x230ex/image/vendor_inventory/e05f/bb57d6c94afa2b2a1c0b38a33656861c10c11bba44983a9499947bce3960.jpg",
+                            "price": 4497.0
                         },
                         {
                             "ingredient_name": "고춧가루",
-                            "ingredient_unit_price": 8.7,
-                            "ingredient_price": 43500,
+                            "ingredient_unit_price": 10.9,
+                            "ingredient_price": 10900,
                             "ingredient_volume": 120.0,
                             "ingredient_unit": "g",
-                            "ingredient_url": "https://www.coupang.com/vp/products/1295382700?itemId=19133056738&vendorItemId=86252641685",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
-                            "price": 1044.0
+                            "ingredient_url": "https://www.coupang.com/vp/products/5608218091?itemId=9055310202&vendorItemId=76341650663",
+                            "ingredient_img": "https://thumbnail10.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/2021/06/01/17/1/d1341756-8a54-4fd4-acea-17b14c8129f8.jpg",
+                            "price": 1308.0
                         },
                         {
                             "ingredient_name": "올리고당",
-                            "ingredient_unit_price": 2.13,
-                            "ingredient_price": 42690,
+                            "ingredient_unit_price": 2.4,
+                            "ingredient_price": 36000,
                             "ingredient_volume": 22.5,
                             "ingredient_unit": "g",
-                            "ingredient_url": "https://www.coupang.com/vp/products/592825?itemId=7367555431&vendorItemId=74658955839",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
-                            "price": 47.925
+                            "ingredient_url": "https://www.coupang.com/vp/products/592825?itemId=12346402311&vendorItemId=84606305062",
+                            "ingredient_img": "https://thumbnail9.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/7396239517444869-f3787541-82b4-427d-a4e2-ef4495036f67.jpg",
+                            "price": 54.0
                         },
                         {
                             "ingredient_name": "매실액기스",
-                            "ingredient_unit_price": 3.52,
-                            "ingredient_price": 42220,
+                            "ingredient_unit_price": 2.91,
+                            "ingredient_price": 42760,
                             "ingredient_volume": 22.5,
                             "ingredient_unit": "g",
-                            "ingredient_url": "https://www.coupang.com/vp/products/2176203818?itemId=18741428378&vendorItemId=71688414360",
-                            "ingredient_img": "https://thumbnail7.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/2020/09/28/19/9/5fbf859e-38e1-426a-aab9-9eff4be1b459.jpg",
-                            "price": 79.2
+                            "ingredient_url": "https://www.coupang.com/vp/products/6594935237?itemId=14897081248&vendorItemId=81430704532",
+                            "ingredient_img": "https://thumbnail7.coupangcdn.com/thumbnails/remote/230x230ex/image/vendor_inventory/a150/942728f028eb03c1f576ede8835e4eaa73e313f9f9a4d10cf80bb16ccd68.png",
+                            "price": 65.47500000000001
                         },
                         {
                             "ingredient_name": "다진마늘",
-                            "ingredient_unit_price": 3.7,
-                            "ingredient_price": 18250,
+                            "ingredient_unit_price": 3.64,
+                            "ingredient_price": 18200,
                             "ingredient_volume": 22.5,
                             "ingredient_unit": "g",
-                            "ingredient_url": "https://www.coupang.com/vp/products/6012228407?itemId=10910051311&vendorItemId=78189867054",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
-                            "price": 83.25
+                            "ingredient_url": "https://www.coupang.com/vp/products/6890784639?itemId=19929771567&vendorItemId=87029336992",
+                            "ingredient_img": "https://thumbnail10.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/23c231f2-41be-4410-8873-5544a8f8fa272857012207940814782.png",
+                            "price": 81.9
                         },
                         {
                             "ingredient_name": "고추장",
@@ -198,18 +156,18 @@ export default {
                             "ingredient_volume": 90.0,
                             "ingredient_unit": "g",
                             "ingredient_url": "https://www.coupang.com/vp/products/6900313161?itemId=346924589&vendorItemId=85717010423",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
+                            "ingredient_img": "https://thumbnail10.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/26266206601838-abb50f02-5ef9-4fc5-b98f-0ba491f2fe1b.png",
                             "price": 175.5
                         },
                         {
                             "ingredient_name": "식초",
-                            "ingredient_unit_price": 0.83,
-                            "ingredient_price": 15020,
+                            "ingredient_unit_price": 0.84,
+                            "ingredient_price": 15180,
                             "ingredient_volume": 15.0,
                             "ingredient_unit": "g",
                             "ingredient_url": "https://www.coupang.com/vp/products/840193?itemId=3900978&vendorItemId=3004663263",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
-                            "price": 12.45
+                            "ingredient_img": "https://thumbnail6.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/4076040557935910-8d249e23-c0fa-4257-9ebe-9e0cf74388c0.jpg",
+                            "price": 12.6
                         }
                     ],
                     "ingredient_list_without_unit": []
@@ -220,18 +178,18 @@ export default {
                     "youtube_title": "Chewy Pizza Bread 쫄깃한 피자빵 만들기 | Kkuume",
                     "youtube_uploaded_date": "2022-09-01 00:00:00",
                     "channel_name": "꾸움 Kkuume",
-                    "channel_img": "",
-                    "total_price": 1078.1100000000001,
+                    "channel_img": "https://yt3.ggpht.com/JT9ut-deHCrte60mbXQmV7GUQ8MqLqd61a-NaGwdV2K5epg7NOMaWO_wU6yd-VfizWgOTT2-7Qk=s88-c-k-c0x00ffffff-no-rj",
+                    "total_price": 1098.13,
                     "ingredient_list": [
                         {
                             "ingredient_name": "우유",
-                            "ingredient_unit_price": 2.24,
-                            "ingredient_price": 24230,
+                            "ingredient_unit_price": 1.95,
+                            "ingredient_price": 19500,
                             "ingredient_volume": 50.0,
                             "ingredient_unit": "g",
-                            "ingredient_url": "https://www.coupang.com/vp/products/1232968322?itemId=19223670182&vendorItemId=86340356463",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
-                            "price": 112.00000000000001
+                            "ingredient_url": "https://www.coupang.com/vp/products/6659186192?itemId=2660581138&vendorItemId=70651228408",
+                            "ingredient_img": "https://thumbnail6.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/1177513559864216-9e77398c-b314-4b90-ab1b-d635100a960b.jpg",
+                            "price": 97.5
                         },
                         {
                             "ingredient_name": "물",
@@ -240,23 +198,23 @@ export default {
                             "ingredient_volume": 100.0,
                             "ingredient_unit": "g",
                             "ingredient_url": "https://www.coupang.com/vp/products/7689270513?itemId=20877904962&vendorItemId=87945141063",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
+                            "ingredient_img": "https://thumbnail8.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/1077787963868499-c1e46ca7-d157-4de0-ad8e-063b93ac490d.jpg",
                             "price": 21.0
                         },
                         {
                             "ingredient_name": "인스턴트드라이이스트",
-                            "ingredient_unit_price": 10.94,
-                            "ingredient_price": 109440,
+                            "ingredient_unit_price": 18.8,
+                            "ingredient_price": 11750,
                             "ingredient_volume": 4.0,
                             "ingredient_unit": "g",
-                            "ingredient_url": "https://www.coupang.com/vp/products/1310248746?itemId=20558829307&vendorItemId=85434486463",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
-                            "price": 43.76
+                            "ingredient_url": "https://www.coupang.com/vp/products/1310248746?itemId=14419335763&vendorItemId=88438600407",
+                            "ingredient_img": "https://thumbnail9.coupangcdn.com/thumbnails/remote/230x230ex/image/vendor_inventory/4337/f836d411aa1447218da683295ded6bff56dca252afe1c3bdebc00159ce5a.JPG",
+                            "price": 75.2
                         },
                         {
                             "ingredient_name": "설탕",
                             "ingredient_unit_price": 1.63,
-                            "ingredient_price": 24520,
+                            "ingredient_price": 24490,
                             "ingredient_volume": 10.0,
                             "ingredient_unit": "g",
                             "ingredient_url": "https://www.coupang.com/vp/products/7139315300?itemId=16584760&vendorItemId=3005825349",
@@ -265,13 +223,13 @@ export default {
                         },
                         {
                             "ingredient_name": "소금",
-                            "ingredient_unit_price": 0.75,
-                            "ingredient_price": 18840,
+                            "ingredient_unit_price": 1.52,
+                            "ingredient_price": 7580,
                             "ingredient_volume": 4.0,
                             "ingredient_unit": "g",
-                            "ingredient_url": "https://www.coupang.com/vp/products/6978355650?itemId=12717968475&vendorItemId=70610150039",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
-                            "price": 3.0
+                            "ingredient_url": "https://www.coupang.com/vp/products/7118404111?itemId=154184&vendorItemId=3000080355",
+                            "ingredient_img": "https://thumbnail10.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/77422699043342-2253a7aa-405d-4763-99c9-431b47b34762.jpg",
+                            "price": 6.08
                         },
                         {
                             "ingredient_name": "오일",
@@ -280,7 +238,7 @@ export default {
                             "ingredient_volume": 15.0,
                             "ingredient_unit": "g",
                             "ingredient_url": "https://www.coupang.com/vp/products/487322?itemId=17572599273&vendorItemId=84994378258",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
+                            "ingredient_img": "https://thumbnail8.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/1057991738033402-89640caa-db2e-4f81-9e20-8b073e7fa525.jpg",
                             "price": 46.65
                         },
                         {
@@ -290,7 +248,7 @@ export default {
                             "ingredient_volume": 170.0,
                             "ingredient_unit": "g",
                             "ingredient_url": "https://www.coupang.com/vp/products/1421510377?itemId=2460073624&vendorItemId=87933064191",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
+                            "ingredient_img": "https://thumbnail6.coupangcdn.com/thumbnails/remote/230x230ex/image/vendor_inventory/9499/c7817a9e663243c61e2070e4248f0ba37f9e68009e7d2b25762912cf4f87.png",
                             "price": 190.4
                         },
                         {
@@ -323,17 +281,17 @@ export default {
                     "youtube_uploaded_date": "2022-06-12 00:00:00",
                     "channel_name": "김대석 셰프TV",
                     "channel_img": "https://yt3.ggpht.com/aupNCO-3Qu8vAKwSMhLIlrhXi25j4cnqOE-00u6vODlFLDTAied56l_pTLCpYCknkGvRxhNg=s88-c-k-c0x00ffffff-no-rj",
-                    "total_price": 738.8249999999998,
+                    "total_price": 770.9999999999999,
                     "ingredient_list": [
                         {
                             "ingredient_name": "대파",
-                            "ingredient_unit_price": 2.39,
-                            "ingredient_price": 23900,
+                            "ingredient_unit_price": 2.45,
+                            "ingredient_price": 24500,
                             "ingredient_volume": 120.0,
                             "ingredient_unit": "g",
-                            "ingredient_url": "https://www.coupang.com/vp/products/7463554652?itemId=19459376019&vendorItemId=75939343495",
-                            "ingredient_img": "https://thumbnail9.coupangcdn.com/thumbnails/remote/230x230ex/image/vendor_inventory/af0b/5b5322a49d3ffc877a65e0324c0e9a39ccd0673059525678f3853dbf5690.jpg",
-                            "price": 286.8
+                            "ingredient_url": "https://www.coupang.com/vp/products/7777089811?itemId=21011062691&vendorItemId=88074628457",
+                            "ingredient_img": "https://thumbnail7.coupangcdn.com/thumbnails/remote/230x230ex/image/vendor_inventory/3479/e5ca22145ad0665ed3a47d075c23df0605aa6711482519f16b55b3a8628e.jpg",
+                            "price": 294.0
                         },
                         {
                             "ingredient_name": "무",
@@ -342,23 +300,23 @@ export default {
                             "ingredient_volume": 100.0,
                             "ingredient_unit": "g",
                             "ingredient_url": "https://www.coupang.com/vp/products/7403364293?itemId=19166701875&vendorItemId=82973629812",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
+                            "ingredient_img": "https://thumbnail9.coupangcdn.com/thumbnails/remote/230x230ex/image/vendor_inventory/89cd/22258b766852d6eb23c4df7bed982b034ce0c7c9e3a53f96f44906d80386.jpg",
                             "price": 158.0
                         },
                         {
                             "ingredient_name": "고춧가루",
-                            "ingredient_unit_price": 8.7,
-                            "ingredient_price": 43500,
+                            "ingredient_unit_price": 10.9,
+                            "ingredient_price": 10900,
                             "ingredient_volume": 10.0,
                             "ingredient_unit": "g",
-                            "ingredient_url": "https://www.coupang.com/vp/products/1295382700?itemId=19133056738&vendorItemId=86252641685",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
-                            "price": 87.0
+                            "ingredient_url": "https://www.coupang.com/vp/products/5608218091?itemId=9055310202&vendorItemId=76341650663",
+                            "ingredient_img": "https://thumbnail10.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/2021/06/01/17/1/d1341756-8a54-4fd4-acea-17b14c8129f8.jpg",
+                            "price": 109.0
                         },
                         {
                             "ingredient_name": "설탕",
                             "ingredient_unit_price": 1.63,
-                            "ingredient_price": 24520,
+                            "ingredient_price": 24490,
                             "ingredient_volume": 3.333333333333333,
                             "ingredient_unit": "g",
                             "ingredient_url": "https://www.coupang.com/vp/products/7139315300?itemId=16584760&vendorItemId=3005825349",
@@ -367,23 +325,23 @@ export default {
                         },
                         {
                             "ingredient_name": "소금",
-                            "ingredient_unit_price": 0.75,
-                            "ingredient_price": 18840,
+                            "ingredient_unit_price": 1.52,
+                            "ingredient_price": 7580,
                             "ingredient_volume": 2.5,
                             "ingredient_unit": "g",
-                            "ingredient_url": "https://www.coupang.com/vp/products/6978355650?itemId=12717968475&vendorItemId=70610150039",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
-                            "price": 1.875
+                            "ingredient_url": "https://www.coupang.com/vp/products/7118404111?itemId=154184&vendorItemId=3000080355",
+                            "ingredient_img": "https://thumbnail10.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/77422699043342-2253a7aa-405d-4763-99c9-431b47b34762.jpg",
+                            "price": 3.8
                         },
                         {
                             "ingredient_name": "식초",
-                            "ingredient_unit_price": 0.83,
-                            "ingredient_price": 15020,
+                            "ingredient_unit_price": 0.84,
+                            "ingredient_price": 15180,
                             "ingredient_volume": 5.0,
                             "ingredient_unit": "g",
                             "ingredient_url": "https://www.coupang.com/vp/products/840193?itemId=3900978&vendorItemId=3004663263",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
-                            "price": 4.1499999999999995
+                            "ingredient_img": "https://thumbnail6.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/4076040557935910-8d249e23-c0fa-4257-9ebe-9e0cf74388c0.jpg",
+                            "price": 4.2
                         },
                         {
                             "ingredient_name": "통깨",
@@ -407,13 +365,13 @@ export default {
                         },
                         {
                             "ingredient_name": "멸치액젓",
-                            "ingredient_unit_price": 2.0,
-                            "ingredient_price": 30610,
+                            "ingredient_unit_price": 2.3,
+                            "ingredient_price": 11260,
                             "ingredient_volume": 3.333333333333333,
                             "ingredient_unit": "g",
-                            "ingredient_url": "https://www.coupang.com/vp/products/7728625433?itemId=20761965459&vendorItemId=85192464163",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
-                            "price": 6.666666666666666
+                            "ingredient_url": "https://www.coupang.com/vp/products/7728625433?itemId=20761927235&vendorItemId=3037177082",
+                            "ingredient_img": "https://thumbnail6.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/879066650434839-962532b9-29ce-4e29-ad09-32cc2aaf34f8.jpg",
+                            "price": 7.666666666666665
                         }
                     ],
                     "ingredient_list_without_unit": []
@@ -425,57 +383,57 @@ export default {
                     "youtube_uploaded_date": "2021-02-25 00:00:00",
                     "channel_name": "Meal is love우리네 밥상",
                     "channel_img": "https://yt3.ggpht.com/ytc/AIf8zZSJTPmaHRdgATYaMGlFwMUL82YBkR28iWcAuJNdag=s88-c-k-c0x00ffffff-no-rj",
-                    "total_price": 1543.5500000000002,
+                    "total_price": 1424.9,
                     "ingredient_list": [
                         {
                             "ingredient_name": "다진마늘",
-                            "ingredient_unit_price": 3.7,
-                            "ingredient_price": 18250,
+                            "ingredient_unit_price": 3.64,
+                            "ingredient_price": 18200,
                             "ingredient_volume": 15.0,
                             "ingredient_unit": "g",
-                            "ingredient_url": "https://www.coupang.com/vp/products/6012228407?itemId=10910051311&vendorItemId=78189867054",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
-                            "price": 55.5
+                            "ingredient_url": "https://www.coupang.com/vp/products/6890784639?itemId=19929771567&vendorItemId=87029336992",
+                            "ingredient_img": "https://thumbnail10.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/23c231f2-41be-4410-8873-5544a8f8fa272857012207940814782.png",
+                            "price": 54.6
                         },
                         {
                             "ingredient_name": "들깨가루",
-                            "ingredient_unit_price": 7.2,
-                            "ingredient_price": 72100,
+                            "ingredient_unit_price": 8.31,
+                            "ingredient_price": 8310,
                             "ingredient_volume": 45.0,
                             "ingredient_unit": "g",
-                            "ingredient_url": "https://www.coupang.com/vp/products/6669341850?itemId=18333052229&vendorItemId=85477546173",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
-                            "price": 324.0
+                            "ingredient_url": "https://www.coupang.com/vp/products/1060458752?itemId=2004669584&vendorItemId=70004615073",
+                            "ingredient_img": "https://thumbnail10.coupangcdn.com/thumbnails/remote/230x230ex/image/vendor_inventory/061f/cb1b650bdb6ff0060e60e6834f842003ea528134becba3c7311f9e908bcb.jpg",
+                            "price": 373.95000000000005
                         },
                         {
                             "ingredient_name": "들기름",
-                            "ingredient_unit_price": 19.6,
-                            "ingredient_price": 35250,
+                            "ingredient_unit_price": 6.39,
+                            "ingredient_price": 11500,
                             "ingredient_volume": 15.0,
                             "ingredient_unit": "g",
-                            "ingredient_url": "https://www.coupang.com/vp/products/7248384207?itemId=18432606089&vendorItemId=85574074967",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
-                            "price": 294.0
+                            "ingredient_url": "https://www.coupang.com/vp/products/7558184610?itemId=19906589768&vendorItemId=86063361351",
+                            "ingredient_img": "https://thumbnail8.coupangcdn.com/thumbnails/remote/230x230ex/image/vendor_inventory/221a/ac0822697789f7b06e066a304e4e56f5315d91b4ac477b39736e696cba0a.jpg",
+                            "price": 95.85
                         },
                         {
                             "ingredient_name": "국간장",
-                            "ingredient_unit_price": 1.37,
-                            "ingredient_price": 19190,
+                            "ingredient_unit_price": 3.3,
+                            "ingredient_price": 11210,
                             "ingredient_volume": 15.0,
                             "ingredient_unit": "g",
-                            "ingredient_url": "https://www.coupang.com/vp/products/5938053333?itemId=18204402896&vendorItemId=78415747472",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
-                            "price": 20.55
+                            "ingredient_url": "https://www.coupang.com/vp/products/239196850?itemId=18171493809&vendorItemId=85320843397",
+                            "ingredient_img": "https://thumbnail9.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/20c16af9-400e-47b9-8359-4b68cc4e41e99153747284672463110.png",
+                            "price": 49.5
                         },
                         {
                             "ingredient_name": "멸치액젓",
-                            "ingredient_unit_price": 2.0,
-                            "ingredient_price": 30610,
+                            "ingredient_unit_price": 2.3,
+                            "ingredient_price": 11260,
                             "ingredient_volume": 5.0,
                             "ingredient_unit": "g",
-                            "ingredient_url": "https://www.coupang.com/vp/products/7728625433?itemId=20761965459&vendorItemId=85192464163",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
-                            "price": 10.0
+                            "ingredient_url": "https://www.coupang.com/vp/products/7728625433?itemId=20761927235&vendorItemId=3037177082",
+                            "ingredient_img": "https://thumbnail6.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/879066650434839-962532b9-29ce-4e29-ad09-32cc2aaf34f8.jpg",
+                            "price": 11.5
                         },
                         {
                             "ingredient_name": "물",
@@ -484,7 +442,7 @@ export default {
                             "ingredient_volume": 200.0,
                             "ingredient_unit": "g",
                             "ingredient_url": "https://www.coupang.com/vp/products/7689270513?itemId=20877904962&vendorItemId=87945141063",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
+                            "ingredient_img": "https://thumbnail8.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/1077787963868499-c1e46ca7-d157-4de0-ad8e-063b93ac490d.jpg",
                             "price": 42.0
                         },
                         {
@@ -494,7 +452,7 @@ export default {
                             "ingredient_volume": 340.0,
                             "ingredient_unit": "g",
                             "ingredient_url": "https://www.coupang.com/vp/products/7817092076?itemId=21219919815&vendorItemId=88280865399",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
+                            "ingredient_img": "https://thumbnail10.coupangcdn.com/thumbnails/remote/230x230ex/image/vendor_inventory/9f5c/50d64082475f937e53aaeaec3e7e1c313ceae615bc52e3b373b55175806d.jpg",
                             "price": 748.0000000000001
                         },
                         {
@@ -517,7 +475,7 @@ export default {
                     "youtube_uploaded_date": "2022-05-26 00:00:00",
                     "channel_name": "호주가이버hojugyver",
                     "channel_img": "https://yt3.ggpht.com/ytc/AIf8zZS6BwR367IxBxWpbfBlUAClPkU3ADcJb8nqQ75g6j8=s88-c-k-c0x00ffffff-no-rj",
-                    "total_price": 484.25,
+                    "total_price": 506.64000000000004,
                     "ingredient_list": [
                         {
                             "ingredient_name": "다크초콜렛블럭",
@@ -525,39 +483,39 @@ export default {
                             "ingredient_price": 6700,
                             "ingredient_volume": 40.0,
                             "ingredient_unit": "g",
-                            "ingredient_url": "https://www.coupang.com/vp/products/6138530431?itemId=19344756351&vendorItemId=71583285146&pickType=COU_PICK",
+                            "ingredient_url": "https://www.coupang.com/vp/products/6138530431?itemId=19344756351&vendorItemId=71583285146",
                             "ingredient_img": "https://thumbnail9.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/3225711041318621-4d9acd60-0cf9-4793-ac07-55d60ebdc179.jpg",
                             "price": 268.0
                         },
                         {
                             "ingredient_name": "버터",
-                            "ingredient_unit_price": 10.67,
-                            "ingredient_price": 53360,
+                            "ingredient_unit_price": 9.44,
+                            "ingredient_price": 25710,
                             "ingredient_volume": 15.0,
                             "ingredient_unit": "g",
-                            "ingredient_url": "https://www.coupang.com/vp/products/206818868?itemId=18578646483&vendorItemId=85715378404",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
-                            "price": 160.05
+                            "ingredient_url": "https://www.coupang.com/vp/products/7560464841?itemId=19977726848&vendorItemId=87076074963",
+                            "ingredient_img": "https://thumbnail9.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/50d94581-a5cb-4248-ba1e-671f09fc6ba61848645928949945057.png",
+                            "price": 141.6
                         },
                         {
                             "ingredient_name": "인스턴트드라이이스트",
-                            "ingredient_unit_price": 10.94,
-                            "ingredient_price": 109440,
+                            "ingredient_unit_price": 18.8,
+                            "ingredient_price": 11750,
                             "ingredient_volume": 5.0,
                             "ingredient_unit": "g",
-                            "ingredient_url": "https://www.coupang.com/vp/products/1310248746?itemId=20558829307&vendorItemId=85434486463",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
-                            "price": 54.699999999999996
+                            "ingredient_url": "https://www.coupang.com/vp/products/1310248746?itemId=14419335763&vendorItemId=88438600407",
+                            "ingredient_img": "https://thumbnail9.coupangcdn.com/thumbnails/remote/230x230ex/image/vendor_inventory/4337/f836d411aa1447218da683295ded6bff56dca252afe1c3bdebc00159ce5a.JPG",
+                            "price": 94.0
                         },
                         {
                             "ingredient_name": "소금",
-                            "ingredient_unit_price": 0.75,
-                            "ingredient_price": 18840,
+                            "ingredient_unit_price": 1.52,
+                            "ingredient_price": 7580,
                             "ingredient_volume": 2.0,
                             "ingredient_unit": "g",
-                            "ingredient_url": "https://www.coupang.com/vp/products/6978355650?itemId=12717968475&vendorItemId=70610150039",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
-                            "price": 1.5
+                            "ingredient_url": "https://www.coupang.com/vp/products/7118404111?itemId=154184&vendorItemId=3000080355",
+                            "ingredient_img": "https://thumbnail10.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/77422699043342-2253a7aa-405d-4763-99c9-431b47b34762.jpg",
+                            "price": 3.04
                         }
                     ],
                     "ingredient_list_without_unit": []
@@ -569,17 +527,17 @@ export default {
                     "youtube_uploaded_date": "2021-09-01 00:00:00",
                     "channel_name": "쿡잇파파 C.E.P.P",
                     "channel_img": "https://yt3.ggpht.com/lP5MSH0ECoAx4eL1BiV68ElBRWE8qVkCnVdaFB4xQPHl1Hq3x8Ynux7qi30cuuyrfnSczoH38UI=s88-c-k-c0x00ffffff-no-rj",
-                    "total_price": 3285.73,
+                    "total_price": 3445.17,
                     "ingredient_list": [
                         {
                             "ingredient_name": "파",
-                            "ingredient_unit_price": 4.25,
-                            "ingredient_price": 4250,
+                            "ingredient_unit_price": 2.59,
+                            "ingredient_price": 25900,
                             "ingredient_volume": 20.0,
                             "ingredient_unit": "g",
-                            "ingredient_url": "https://www.coupang.com/vp/products/6528172171?itemId=5911958170&vendorItemId=73210037048&pickType=COU_PICK",
-                            "ingredient_img": "https://thumbnail6.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/4063320789843989-2f070b18-3886-4b8c-871b-2403227cfec9.jpg",
-                            "price": 85.0
+                            "ingredient_url": "https://www.coupang.com/vp/products/7463554652?itemId=19459376019&vendorItemId=75939343495",
+                            "ingredient_img": "https://thumbnail9.coupangcdn.com/thumbnails/remote/230x230ex/image/vendor_inventory/af0b/5b5322a49d3ffc877a65e0324c0e9a39ccd0673059525678f3853dbf5690.jpg",
+                            "price": 51.8
                         },
                         {
                             "ingredient_name": "마늘",
@@ -588,7 +546,7 @@ export default {
                             "ingredient_volume": 10.0,
                             "ingredient_unit": "g",
                             "ingredient_url": "https://www.coupang.com/vp/products/7522579565?itemId=19733204766&vendorItemId=74155694139",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
+                            "ingredient_img": "https://thumbnail7.coupangcdn.com/thumbnails/remote/230x230ex/image/vendor_inventory/a85a/1a71ab05c1bcf4e6af88cd0c366597f27b7b0e86f63ba836a8a99b4f4691.png",
                             "price": 71.2
                         },
                         {
@@ -598,7 +556,7 @@ export default {
                             "ingredient_volume": 300.0,
                             "ingredient_unit": "g",
                             "ingredient_url": "https://www.coupang.com/vp/products/7689270513?itemId=20877904962&vendorItemId=87945141063",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
+                            "ingredient_img": "https://thumbnail8.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/1077787963868499-c1e46ca7-d157-4de0-ad8e-063b93ac490d.jpg",
                             "price": 63.0
                         },
                         {
@@ -608,7 +566,7 @@ export default {
                             "ingredient_volume": 60.0,
                             "ingredient_unit": "g",
                             "ingredient_url": "https://www.coupang.com/vp/products/6900313161?itemId=346924589&vendorItemId=85717010423",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
+                            "ingredient_img": "https://thumbnail10.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/26266206601838-abb50f02-5ef9-4fc5-b98f-0ba491f2fe1b.png",
                             "price": 117.0
                         },
                         {
@@ -624,7 +582,7 @@ export default {
                         {
                             "ingredient_name": "설탕",
                             "ingredient_unit_price": 1.63,
-                            "ingredient_price": 24520,
+                            "ingredient_price": 24490,
                             "ingredient_volume": 15.0,
                             "ingredient_unit": "g",
                             "ingredient_url": "https://www.coupang.com/vp/products/7139315300?itemId=16584760&vendorItemId=3005825349",
@@ -633,23 +591,23 @@ export default {
                         },
                         {
                             "ingredient_name": "케찹",
-                            "ingredient_unit_price": 1.97,
-                            "ingredient_price": 6500,
+                            "ingredient_unit_price": 1.86,
+                            "ingredient_price": 24500,
                             "ingredient_volume": 20.0,
                             "ingredient_unit": "g",
-                            "ingredient_url": "https://www.coupang.com/vp/products/6572877795?itemId=20279414658&vendorItemId=3000044037",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
-                            "price": 39.4
+                            "ingredient_url": "https://www.coupang.com/vp/products/6572877795?itemId=317168944&vendorItemId=70754922523",
+                            "ingredient_img": "https://thumbnail9.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/2020/05/25/14/8/979826c6-9cba-447b-bd8b-a03100b48c66.jpg",
+                            "price": 37.2
                         },
                         {
                             "ingredient_name": "카레가루",
-                            "ingredient_unit_price": 5.55,
-                            "ingredient_price": 55490,
+                            "ingredient_unit_price": 5.54,
+                            "ingredient_price": 55440,
                             "ingredient_volume": 16.0,
                             "ingredient_unit": "g",
                             "ingredient_url": "https://www.coupang.com/vp/products/4005453?itemId=556122587&vendorItemId=70909973964",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
-                            "price": 88.8
+                            "ingredient_img": "https://thumbnail8.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/4877396567387320-ee054021-f5cb-40c9-96bd-ef1efb7a8ad3.png",
+                            "price": 88.64
                         },
                         {
                             "ingredient_name": "물엿",
@@ -663,13 +621,13 @@ export default {
                         },
                         {
                             "ingredient_name": "떡",
-                            "ingredient_unit_price": 8.5,
-                            "ingredient_price": 11880,
+                            "ingredient_unit_price": 9.4,
+                            "ingredient_price": 13200,
                             "ingredient_volume": 250.0,
                             "ingredient_unit": "g",
-                            "ingredient_url": "https://www.coupang.com/vp/products/6511333006?itemId=14383382934&vendorItemId=77604375339",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
-                            "price": 2125.0
+                            "ingredient_url": "https://www.coupang.com/vp/products/5930058127?itemId=10534803498&vendorItemId=77816348238",
+                            "ingredient_img": "https://thumbnail6.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/6520778785531071-f8fc9737-f8d6-4eef-8080-6747b99438cb.jpg",
+                            "price": 2350.0
                         },
                         {
                             "ingredient_name": "식용유",
@@ -678,7 +636,7 @@ export default {
                             "ingredient_volume": 24.0,
                             "ingredient_unit": "g",
                             "ingredient_url": "https://www.coupang.com/vp/products/6680558424?itemId=15403790368&vendorItemId=87576247097",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
+                            "ingredient_img": "https://thumbnail10.coupangcdn.com/thumbnails/remote/230x230ex/image/vendor_inventory/7e03/a05e9badf865e55c296900732aee957db58acdc952c4a8f7d3f510e13df9.jpg",
                             "price": 62.88
                         },
                         {
@@ -688,18 +646,18 @@ export default {
                             "ingredient_volume": 5.0,
                             "ingredient_unit": "g",
                             "ingredient_url": "https://www.coupang.com/vp/products/45708?itemId=18036780282&vendorItemId=85191203553",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
+                            "ingredient_img": "https://thumbnail6.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/462394f7-364a-43bb-be99-7cd1e99f01e89194122958364267151.png",
                             "price": 18.0
                         },
                         {
                             "ingredient_name": "어묵",
-                            "ingredient_unit_price": 4.4,
-                            "ingredient_price": 13090,
+                            "ingredient_unit_price": 4.1,
+                            "ingredient_price": 24430,
                             "ingredient_volume": 100.0,
                             "ingredient_unit": "g",
-                            "ingredient_url": "https://www.coupang.com/vp/products/305534577?itemId=19224737751&vendorItemId=86341408669",
-                            "ingredient_img": "https://thumbnail9.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/ef244fb8-1ae2-4f9f-814d-7d415663d55c8032382146989868077.png",
-                            "price": 440.00000000000006
+                            "ingredient_url": "https://www.coupang.com/vp/products/305534577?itemId=19224742703&vendorItemId=86341414063",
+                            "ingredient_img": "https://thumbnail10.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/399a7f01-e137-49a4-b643-7c997bf735325468668615047965851.png",
+                            "price": 409.99999999999994
                         }
                     ],
                     "ingredient_list_without_unit": []
@@ -711,7 +669,7 @@ export default {
                     "youtube_uploaded_date": "2020-01-07 00:00:00",
                     "channel_name": "백종원 PAIK JONG WON",
                     "channel_img": "https://yt3.ggpht.com/J3OI66Bc7T3nheyKJKAkXR6tb-_bpCsoRMTFoslOBCXI3DpVY8eFY4LZWzww3BEgkRjMOEoI=s88-c-k-c0x00ffffff-no-rj",
-                    "total_price": 4505.6,
+                    "total_price": 4500.099999999999,
                     "ingredient_list": [
                         {
                             "ingredient_name": "신김치",
@@ -720,38 +678,38 @@ export default {
                             "ingredient_volume": 400.0,
                             "ingredient_unit": "g",
                             "ingredient_url": "https://www.coupang.com/vp/products/7122229650?itemId=17835916638&vendorItemId=84999602570",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
+                            "ingredient_img": "https://thumbnail9.coupangcdn.com/thumbnails/remote/230x230ex/image/vendor_inventory/d5ae/d2c7c2f20e98343338c13baf5d878e3506fe0a2f50380b76a03a6fd189db.jpg",
                             "price": 1000.0
                         },
                         {
                             "ingredient_name": "양파",
-                            "ingredient_unit_price": 1.65,
-                            "ingredient_price": 16540,
+                            "ingredient_unit_price": 1.69,
+                            "ingredient_price": 16900,
                             "ingredient_volume": 180.0,
                             "ingredient_unit": "g",
-                            "ingredient_url": "https://www.coupang.com/vp/products/6258806325?itemId=19223783161&vendorItemId=86340471165",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
-                            "price": 297.0
+                            "ingredient_url": "https://www.coupang.com/vp/products/7472965964?itemId=19503240121&vendorItemId=86018545921",
+                            "ingredient_img": "https://thumbnail9.coupangcdn.com/thumbnails/remote/230x230ex/image/vendor_inventory/1582/b4a5a3a502648f442cd515bddc80425374ad537b055415e517a20fe75812.jpg",
+                            "price": 304.2
                         },
                         {
                             "ingredient_name": "청양고추",
-                            "ingredient_unit_price": 16.21,
-                            "ingredient_price": 29170,
+                            "ingredient_unit_price": 14.7,
+                            "ingredient_price": 7350,
                             "ingredient_volume": 20.0,
                             "ingredient_unit": "g",
-                            "ingredient_url": "https://www.coupang.com/vp/products/6639183562?itemId=19223914026&vendorItemId=86340596423",
-                            "ingredient_img": "https://thumbnail7.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/3960703655094524-f015193d-605b-4763-a119-4181683915d7.jpg",
-                            "price": 324.20000000000005
+                            "ingredient_url": "https://www.coupang.com/vp/products/6097731697?itemId=11406371607&vendorItemId=78682324950",
+                            "ingredient_img": "https://thumbnail8.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/7030340116853210-5cce2da8-d902-453c-9cac-eef7401d1fb0.jpg",
+                            "price": 294.0
                         },
                         {
                             "ingredient_name": "대파",
-                            "ingredient_unit_price": 2.39,
-                            "ingredient_price": 23900,
+                            "ingredient_unit_price": 2.45,
+                            "ingredient_price": 24500,
                             "ingredient_volume": 50.0,
                             "ingredient_unit": "g",
-                            "ingredient_url": "https://www.coupang.com/vp/products/7463554652?itemId=19459376019&vendorItemId=75939343495",
-                            "ingredient_img": "https://thumbnail9.coupangcdn.com/thumbnails/remote/230x230ex/image/vendor_inventory/af0b/5b5322a49d3ffc877a65e0324c0e9a39ccd0673059525678f3853dbf5690.jpg",
-                            "price": 119.5
+                            "ingredient_url": "https://www.coupang.com/vp/products/7777089811?itemId=21011062691&vendorItemId=88074628457",
+                            "ingredient_img": "https://thumbnail7.coupangcdn.com/thumbnails/remote/230x230ex/image/vendor_inventory/3479/e5ca22145ad0665ed3a47d075c23df0605aa6711482519f16b55b3a8628e.jpg",
+                            "price": 122.50000000000001
                         },
                         {
                             "ingredient_name": "굵은고춧가루",
@@ -770,48 +728,48 @@ export default {
                             "ingredient_volume": 400.0,
                             "ingredient_unit": "g",
                             "ingredient_url": "https://www.coupang.com/vp/products/7689270513?itemId=20877904962&vendorItemId=87945141063",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
+                            "ingredient_img": "https://thumbnail8.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/1077787963868499-c1e46ca7-d157-4de0-ad8e-063b93ac490d.jpg",
                             "price": 84.0
                         },
                         {
                             "ingredient_name": "간마늘",
-                            "ingredient_unit_price": 3.64,
-                            "ingredient_price": 18200,
+                            "ingredient_unit_price": 3.7,
+                            "ingredient_price": 18250,
                             "ingredient_volume": 30.0,
                             "ingredient_unit": "g",
-                            "ingredient_url": "https://www.coupang.com/vp/products/6890784639?itemId=19929771567&vendorItemId=87029336992",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
-                            "price": 109.2
+                            "ingredient_url": "https://www.coupang.com/vp/products/6012228407?itemId=10910051311&vendorItemId=78189867054",
+                            "ingredient_img": "https://thumbnail6.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/546432680819306-54f32764-2a7d-4253-92dc-9571d6a902a5.jpg",
+                            "price": 111.0
                         },
                         {
                             "ingredient_name": "된장",
-                            "ingredient_unit_price": 3.02,
-                            "ingredient_price": 9070,
+                            "ingredient_unit_price": 1.7,
+                            "ingredient_price": 23780,
                             "ingredient_volume": 30.0,
                             "ingredient_unit": "g",
-                            "ingredient_url": "https://www.coupang.com/vp/products/1320940305?itemId=154135&vendorItemId=3000080349",
-                            "ingredient_img": "https://thumbnail9.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/193968610145347-df4fd946-d496-44df-b0a5-8ef49270fc45.jpg",
-                            "price": 90.6
+                            "ingredient_url": "https://www.coupang.com/vp/products/7735374057?itemId=20797053013&vendorItemId=3000201322",
+                            "ingredient_img": "https://thumbnail10.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/8353012220753453-4f34688f-5f16-4df2-a13c-2a157e1c1fa1.jpg",
+                            "price": 51.0
                         },
                         {
                             "ingredient_name": "황설탕",
-                            "ingredient_unit_price": 2.04,
-                            "ingredient_price": 30670,
+                            "ingredient_unit_price": 1.83,
+                            "ingredient_price": 27460,
                             "ingredient_volume": 10.0,
                             "ingredient_unit": "g",
-                            "ingredient_url": "https://www.coupang.com/vp/products/2146550469?itemId=20142506636&vendorItemId=88803700015",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
-                            "price": 20.4
+                            "ingredient_url": "https://www.coupang.com/vp/products/2146550469?itemId=20142506636&vendorItemId=74038381322",
+                            "ingredient_img": "https://thumbnail6.coupangcdn.com/thumbnails/remote/230x230ex/image/vendor_inventory/1517/17b12bd00fc94a4a95a70e655826ca9b259adce79b80a402098c8181ce72.jpg",
+                            "price": 18.3
                         },
                         {
                             "ingredient_name": "진간장",
-                            "ingredient_unit_price": 1.16,
-                            "ingredient_price": 15050,
+                            "ingredient_unit_price": 1.83,
+                            "ingredient_price": 27390,
                             "ingredient_volume": 20.0,
                             "ingredient_unit": "g",
-                            "ingredient_url": "https://www.coupang.com/vp/products/7196421572?itemId=18180298196&vendorItemId=85329334567",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
-                            "price": 23.2
+                            "ingredient_url": "https://www.coupang.com/vp/products/5897832438?itemId=18204720267&vendorItemId=3008200213",
+                            "ingredient_img": "https://thumbnail10.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/3578077938599046-faf01df5-9ab8-4312-8694-3933c3153852.png",
+                            "price": 36.6
                         },
                         {
                             "ingredient_name": "참기름",
@@ -825,13 +783,13 @@ export default {
                         },
                         {
                             "ingredient_name": "고등어통조림",
-                            "ingredient_unit_price": 5.0,
-                            "ingredient_price": 13900,
+                            "ingredient_unit_price": 5.1,
+                            "ingredient_price": 14200,
                             "ingredient_volume": 400.0,
                             "ingredient_unit": "g",
                             "ingredient_url": "https://www.coupang.com/vp/products/6504316111?itemId=12081336697&vendorItemId=86683721665",
                             "ingredient_img": "https://thumbnail8.coupangcdn.com/thumbnails/remote/230x230ex/image/vendor_inventory/628b/db65bce23cc9e99aaa7ef32b7ab503950605b6015a5be169df4167e3eaba.jpg",
-                            "price": 2000.0
+                            "price": 2039.9999999999998
                         },
                         {
                             "ingredient_name": "고운고춧가루",
@@ -845,13 +803,13 @@ export default {
                         },
                         {
                             "ingredient_name": "간생강",
-                            "ingredient_unit_price": 5.0,
-                            "ingredient_price": 50240,
+                            "ingredient_unit_price": 5.2,
+                            "ingredient_price": 25900,
                             "ingredient_volume": 5.0,
                             "ingredient_unit": "g",
-                            "ingredient_url": "https://www.coupang.com/vp/products/6012228412?itemId=19282714821&vendorItemId=86397666119",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
-                            "price": 25.0
+                            "ingredient_url": "https://www.coupang.com/vp/products/6012228412?itemId=10910051324&vendorItemId=78189867044",
+                            "ingredient_img": "https://thumbnail10.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/714727371294559-1b182bcc-2ba3-455b-b7b3-b9f5c600ff59.jpg",
+                            "price": 26.0
                         }
                     ],
                     "ingredient_list_without_unit": []
@@ -863,57 +821,57 @@ export default {
                     "youtube_uploaded_date": "2020-02-01 00:00:00",
                     "channel_name": "뚝딱Tooktak",
                     "channel_img": "https://yt3.ggpht.com/ytc/AIf8zZQnMzW6bGQxUdeTKTvuLsD66xoIrxqHaeYlDoqriA=s88-c-k-c0x00ffffff-no-rj",
-                    "total_price": 2241.7000000000003,
+                    "total_price": 2107.0,
                     "ingredient_list": [
                         {
                             "ingredient_name": "유채나물",
-                            "ingredient_unit_price": 5.88,
-                            "ingredient_price": 23500,
+                            "ingredient_unit_price": 5.95,
+                            "ingredient_price": 23800,
                             "ingredient_volume": 300.0,
                             "ingredient_unit": "g",
-                            "ingredient_url": "https://www.coupang.com/vp/products/2304699009?itemId=3972352221&vendorItemId=4384678259",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
-                            "price": 1764.0
+                            "ingredient_url": "https://www.coupang.com/vp/products/5126024110?itemId=7011107053&vendorItemId=74303338872",
+                            "ingredient_img": "https://thumbnail9.coupangcdn.com/thumbnails/remote/230x230ex/image/vendor_inventory/9e22/d9fd3a1ed4c86742663a1b7a4b14929ba628927fd3f39b40d857ebbf75d2.jpg",
+                            "price": 1785.0
                         },
                         {
                             "ingredient_name": "당근",
-                            "ingredient_unit_price": 2.78,
-                            "ingredient_price": 13900,
+                            "ingredient_unit_price": 2.42,
+                            "ingredient_price": 12100,
                             "ingredient_volume": 60.0,
                             "ingredient_unit": "g",
-                            "ingredient_url": "https://www.coupang.com/vp/products/7728601536?itemId=21021502361&vendorItemId=86893492119",
+                            "ingredient_url": "https://www.coupang.com/vp/products/7534360517?itemId=19790890806&vendorItemId=86893492181",
                             "ingredient_img": "https://thumbnail7.coupangcdn.com/thumbnails/remote/230x230ex/image/vendor_inventory/c0c8/f5ce9d7cfb931230ea71e70ea36d42f85abb7e7210ba49d87f5b67cc02ff.jpg",
-                            "price": 166.79999999999998
+                            "price": 145.2
                         },
                         {
                             "ingredient_name": "들기름",
-                            "ingredient_unit_price": 19.6,
-                            "ingredient_price": 35250,
+                            "ingredient_unit_price": 6.39,
+                            "ingredient_price": 11500,
                             "ingredient_volume": 10.0,
                             "ingredient_unit": "g",
-                            "ingredient_url": "https://www.coupang.com/vp/products/7248384207?itemId=18432606089&vendorItemId=85574074967",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
-                            "price": 196.0
+                            "ingredient_url": "https://www.coupang.com/vp/products/7558184610?itemId=19906589768&vendorItemId=86063361351",
+                            "ingredient_img": "https://thumbnail8.coupangcdn.com/thumbnails/remote/230x230ex/image/vendor_inventory/221a/ac0822697789f7b06e066a304e4e56f5315d91b4ac477b39736e696cba0a.jpg",
+                            "price": 63.9
                         },
                         {
                             "ingredient_name": "깨소금",
-                            "ingredient_unit_price": 9.49,
-                            "ingredient_price": 18980,
+                            "ingredient_unit_price": 8.99,
+                            "ingredient_price": 17980,
                             "ingredient_volume": 10.0,
                             "ingredient_unit": "g",
-                            "ingredient_url": "https://www.coupang.com/vp/products/1667161685?itemId=2840569126&vendorItemId=70829944677",
-                            "ingredient_img": "https://thumbnail6.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/316782230414351-876ced41-ce45-4dbe-8c7c-94e22c1b506d.jpg",
-                            "price": 94.9
+                            "ingredient_url": "https://www.coupang.com/vp/products/7574514650?itemId=17716327048&vendorItemId=84881175299",
+                            "ingredient_img": "https://thumbnail10.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/766316930514427-fac38c83-125d-4d65-b995-c48d45e9ee71.jpg",
+                            "price": 89.9
                         },
                         {
                             "ingredient_name": "멸치액젓",
-                            "ingredient_unit_price": 2.0,
-                            "ingredient_price": 30610,
+                            "ingredient_unit_price": 2.3,
+                            "ingredient_price": 11260,
                             "ingredient_volume": 10.0,
                             "ingredient_unit": "g",
-                            "ingredient_url": "https://www.coupang.com/vp/products/7728625433?itemId=20761965459&vendorItemId=85192464163",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
-                            "price": 20.0
+                            "ingredient_url": "https://www.coupang.com/vp/products/7728625433?itemId=20761927235&vendorItemId=3037177082",
+                            "ingredient_img": "https://thumbnail6.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/879066650434839-962532b9-29ce-4e29-ad09-32cc2aaf34f8.jpg",
+                            "price": 23.0
                         }
                     ],
                     "ingredient_list_without_unit": []
@@ -925,7 +883,7 @@ export default {
                     "youtube_uploaded_date": "2022-11-22 00:00:00",
                     "channel_name": "엄마의요리랜드",
                     "channel_img": "https://yt3.ggpht.com/ytc/AIf8zZSzmkCZkwKcgQ_Ro-8oeTrlhgKCjcO_oVZgO38TFw=s88-c-k-c0x00ffffff-no-rj",
-                    "total_price": 848.6,
+                    "total_price": 875.6,
                     "ingredient_list": [
                         {
                             "ingredient_name": "배추우거지",
@@ -939,13 +897,13 @@ export default {
                         },
                         {
                             "ingredient_name": "된장",
-                            "ingredient_unit_price": 3.02,
-                            "ingredient_price": 9070,
+                            "ingredient_unit_price": 1.7,
+                            "ingredient_price": 23780,
                             "ingredient_volume": 5.0,
                             "ingredient_unit": "g",
-                            "ingredient_url": "https://www.coupang.com/vp/products/1320940305?itemId=154135&vendorItemId=3000080349",
-                            "ingredient_img": "https://thumbnail9.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/193968610145347-df4fd946-d496-44df-b0a5-8ef49270fc45.jpg",
-                            "price": 15.1
+                            "ingredient_url": "https://www.coupang.com/vp/products/7735374057?itemId=20797053013&vendorItemId=3000201322",
+                            "ingredient_img": "https://thumbnail10.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/8353012220753453-4f34688f-5f16-4df2-a13c-2a157e1c1fa1.jpg",
+                            "price": 8.5
                         },
                         {
                             "ingredient_name": "간장",
@@ -954,28 +912,28 @@ export default {
                             "ingredient_volume": 10.0,
                             "ingredient_unit": "g",
                             "ingredient_url": "https://www.coupang.com/vp/products/5897832438?itemId=18171819377&vendorItemId=85321160831",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
+                            "ingredient_img": "https://thumbnail8.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/77c4fb51-65b7-43ee-955d-7deec1714bc55045824864441731918.png",
                             "price": 23.5
                         },
                         {
                             "ingredient_name": "고춧가루",
-                            "ingredient_unit_price": 8.7,
-                            "ingredient_price": 43500,
+                            "ingredient_unit_price": 10.9,
+                            "ingredient_price": 10900,
                             "ingredient_volume": 15.0,
                             "ingredient_unit": "g",
-                            "ingredient_url": "https://www.coupang.com/vp/products/1295382700?itemId=19133056738&vendorItemId=86252641685",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
-                            "price": 130.5
+                            "ingredient_url": "https://www.coupang.com/vp/products/5608218091?itemId=9055310202&vendorItemId=76341650663",
+                            "ingredient_img": "https://thumbnail10.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/2021/06/01/17/1/d1341756-8a54-4fd4-acea-17b14c8129f8.jpg",
+                            "price": 163.5
                         },
                         {
                             "ingredient_name": "대파",
-                            "ingredient_unit_price": 2.39,
-                            "ingredient_price": 23900,
+                            "ingredient_unit_price": 2.45,
+                            "ingredient_price": 24500,
                             "ingredient_volume": 10.0,
                             "ingredient_unit": "g",
-                            "ingredient_url": "https://www.coupang.com/vp/products/7463554652?itemId=19459376019&vendorItemId=75939343495",
-                            "ingredient_img": "https://thumbnail9.coupangcdn.com/thumbnails/remote/230x230ex/image/vendor_inventory/af0b/5b5322a49d3ffc877a65e0324c0e9a39ccd0673059525678f3853dbf5690.jpg",
-                            "price": 23.900000000000002
+                            "ingredient_url": "https://www.coupang.com/vp/products/7777089811?itemId=21011062691&vendorItemId=88074628457",
+                            "ingredient_img": "https://thumbnail7.coupangcdn.com/thumbnails/remote/230x230ex/image/vendor_inventory/3479/e5ca22145ad0665ed3a47d075c23df0605aa6711482519f16b55b3a8628e.jpg",
+                            "price": 24.5
                         },
                         {
                             "ingredient_name": "마늘",
@@ -984,7 +942,7 @@ export default {
                             "ingredient_volume": 5.0,
                             "ingredient_unit": "g",
                             "ingredient_url": "https://www.coupang.com/vp/products/7522579565?itemId=19733204766&vendorItemId=74155694139",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
+                            "ingredient_img": "https://thumbnail7.coupangcdn.com/thumbnails/remote/230x230ex/image/vendor_inventory/a85a/1a71ab05c1bcf4e6af88cd0c366597f27b7b0e86f63ba836a8a99b4f4691.png",
                             "price": 35.6
                         }
                     ],
@@ -997,42 +955,42 @@ export default {
                     "youtube_uploaded_date": "2020-08-10 00:00:00",
                     "channel_name": "초이초이",
                     "channel_img": "https://yt3.ggpht.com/oBob-Z7uJ395tKq2IPSZtoFjLaC3vDdR0ya1WmoN-YJBIEnS_Knuz52bVxM5WQHQ-ZTvh0aP4w=s88-c-k-c0x00ffffff-no-rj",
-                    "total_price": 13256.800000000001,
+                    "total_price": 11947.266666666668,
                     "ingredient_list": [
                         {
                             "ingredient_name": "밥",
-                            "ingredient_unit_price": 3.61,
-                            "ingredient_price": 36380,
+                            "ingredient_unit_price": 3.81,
+                            "ingredient_price": 30500,
                             "ingredient_volume": 420.0,
                             "ingredient_unit": "g",
-                            "ingredient_url": "https://www.coupang.com/vp/products/7038410650?itemId=19565597272&vendorItemId=86673474312",
-                            "ingredient_img": "https://thumbnail6.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/2d4f86a3-11bb-482a-8537-8c1e7b59bce11135118731124213168.png",
-                            "price": 1516.2
+                            "ingredient_url": "https://www.coupang.com/vp/products/1258945808?itemId=19013178382&vendorItemId=86137798562",
+                            "ingredient_img": "https://thumbnail7.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/3321529521019768-9a86b90f-84ae-4e07-9e60-38864be73bee.jpg",
+                            "price": 1600.2
                         },
                         {
                             "ingredient_name": "양파",
-                            "ingredient_unit_price": 1.65,
-                            "ingredient_price": 16540,
+                            "ingredient_unit_price": 1.69,
+                            "ingredient_price": 16900,
                             "ingredient_volume": 90.0,
                             "ingredient_unit": "g",
-                            "ingredient_url": "https://www.coupang.com/vp/products/6258806325?itemId=19223783161&vendorItemId=86340471165",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
-                            "price": 148.5
+                            "ingredient_url": "https://www.coupang.com/vp/products/7472965964?itemId=19503240121&vendorItemId=86018545921",
+                            "ingredient_img": "https://thumbnail9.coupangcdn.com/thumbnails/remote/230x230ex/image/vendor_inventory/1582/b4a5a3a502648f442cd515bddc80425374ad537b055415e517a20fe75812.jpg",
+                            "price": 152.1
                         },
                         {
                             "ingredient_name": "식초",
-                            "ingredient_unit_price": 0.83,
-                            "ingredient_price": 15020,
+                            "ingredient_unit_price": 0.84,
+                            "ingredient_price": 15180,
                             "ingredient_volume": 30.0,
                             "ingredient_unit": "g",
                             "ingredient_url": "https://www.coupang.com/vp/products/840193?itemId=3900978&vendorItemId=3004663263",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
-                            "price": 24.9
+                            "ingredient_img": "https://thumbnail6.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/4076040557935910-8d249e23-c0fa-4257-9ebe-9e0cf74388c0.jpg",
+                            "price": 25.2
                         },
                         {
                             "ingredient_name": "설탕",
                             "ingredient_unit_price": 1.63,
-                            "ingredient_price": 24520,
+                            "ingredient_price": 24490,
                             "ingredient_volume": 10.0,
                             "ingredient_unit": "g",
                             "ingredient_url": "https://www.coupang.com/vp/products/7139315300?itemId=16584760&vendorItemId=3005825349",
@@ -1046,7 +1004,7 @@ export default {
                             "ingredient_volume": 20.0,
                             "ingredient_unit": "g",
                             "ingredient_url": "https://www.coupang.com/vp/products/7127363444?itemId=17860149902&vendorItemId=83040764260",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
+                            "ingredient_img": "https://thumbnail10.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/2022/09/05/17/0/72607960-2d0a-446b-946c-64559be71024.jpg",
                             "price": 74.80000000000001
                         },
                         {
@@ -1061,23 +1019,23 @@ export default {
                         },
                         {
                             "ingredient_name": "생연어",
-                            "ingredient_unit_price": 45.5,
-                            "ingredient_price": 45500,
+                            "ingredient_unit_price": 39.9,
+                            "ingredient_price": 39900,
                             "ingredient_volume": 250.0,
                             "ingredient_unit": "g",
-                            "ingredient_url": "https://www.coupang.com/vp/products/6594974253?itemId=14897326709&vendorItemId=85339341026",
-                            "ingredient_img": "https://thumbnail8.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/2023/03/14/17/0/85d654d4-42cf-4ad5-9fa5-36a9c4cef206.jpg",
-                            "price": 11375.0
+                            "ingredient_url": "https://www.coupang.com/vp/products/5694247522?itemId=18737849489&vendorItemId=85870199357",
+                            "ingredient_img": "https://thumbnail6.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/2023/05/03/14/5/a2632555-ceb7-449d-be5d-b6e33f94b19a.jpg",
+                            "price": 9975.0
                         },
                         {
                             "ingredient_name": "소금",
-                            "ingredient_unit_price": 0.75,
-                            "ingredient_price": 18840,
+                            "ingredient_unit_price": 1.52,
+                            "ingredient_price": 7580,
                             "ingredient_volume": 3.333333333333333,
                             "ingredient_unit": "g",
-                            "ingredient_url": "https://www.coupang.com/vp/products/6978355650?itemId=12717968475&vendorItemId=70610150039",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
-                            "price": 2.5
+                            "ingredient_url": "https://www.coupang.com/vp/products/7118404111?itemId=154184&vendorItemId=3000080355",
+                            "ingredient_img": "https://thumbnail10.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/77422699043342-2253a7aa-405d-4763-99c9-431b47b34762.jpg",
+                            "price": 5.066666666666666
                         },
                         {
                             "ingredient_name": "다진양파",
@@ -1099,17 +1057,17 @@ export default {
                     "youtube_uploaded_date": "2023-04-30 00:00:00",
                     "channel_name": "EBSCulture (EBS 교양)",
                     "channel_img": "https://yt3.ggpht.com/ytc/AIf8zZRk8O4slYECdXddc8tE05mh8IkazJ9Xi0zXxBmtaw=s88-c-k-c0x00ffffff-no-rj",
-                    "total_price": 5420.5,
+                    "total_price": 5963.699999999999,
                     "ingredient_list": [
                         {
                             "ingredient_name": "불린미역",
-                            "ingredient_unit_price": 20.0,
-                            "ingredient_price": 10000,
+                            "ingredient_unit_price": 26.8,
+                            "ingredient_price": 13400,
                             "ingredient_volume": 100.0,
                             "ingredient_unit": "g",
-                            "ingredient_url": "https://www.coupang.com/vp/products/5710286741?itemId=9518763272&vendorItemId=76803521987",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
-                            "price": 2000.0
+                            "ingredient_url": "https://www.coupang.com/vp/products/5896631287?itemId=10384536777&vendorItemId=77666604015",
+                            "ingredient_img": "https://thumbnail10.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/8913910505254357-8c24c812-feaf-4d8d-9817-566f843e8cf9.jpg",
+                            "price": 2680.0
                         },
                         {
                             "ingredient_name": "참기름",
@@ -1123,13 +1081,13 @@ export default {
                         },
                         {
                             "ingredient_name": "다진마늘",
-                            "ingredient_unit_price": 3.7,
-                            "ingredient_price": 18250,
+                            "ingredient_unit_price": 3.64,
+                            "ingredient_price": 18200,
                             "ingredient_volume": 5.0,
                             "ingredient_unit": "g",
-                            "ingredient_url": "https://www.coupang.com/vp/products/6012228407?itemId=10910051311&vendorItemId=78189867054",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
-                            "price": 18.5
+                            "ingredient_url": "https://www.coupang.com/vp/products/6890784639?itemId=19929771567&vendorItemId=87029336992",
+                            "ingredient_img": "https://thumbnail10.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/23c231f2-41be-4410-8873-5544a8f8fa272857012207940814782.png",
+                            "price": 18.2
                         },
                         {
                             "ingredient_name": "물",
@@ -1138,80 +1096,120 @@ export default {
                             "ingredient_volume": 800.0,
                             "ingredient_unit": "g",
                             "ingredient_url": "https://www.coupang.com/vp/products/7689270513?itemId=20877904962&vendorItemId=87945141063",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
+                            "ingredient_img": "https://thumbnail8.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/1077787963868499-c1e46ca7-d157-4de0-ad8e-063b93ac490d.jpg",
                             "price": 168.0
                         },
                         {
                             "ingredient_name": "소고기",
-                            "ingredient_unit_price": 20.9,
-                            "ingredient_price": 20900,
+                            "ingredient_unit_price": 19.99,
+                            "ingredient_price": 19990,
                             "ingredient_volume": 150.0,
                             "ingredient_unit": "g",
-                            "ingredient_url": "https://www.coupang.com/vp/products/7538803732?itemId=19812721275&vendorItemId=86914831967",
-                            "ingredient_img": "https://thumbnail8.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/4793573765786466-ff8878ec-3c16-4527-a456-f08a0e0b1bca.jpg",
-                            "price": 3135.0
+                            "ingredient_url": "https://www.coupang.com/vp/products/7485959624?itemId=19565425440&vendorItemId=86673308004",
+                            "ingredient_img": "https://thumbnail8.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/1225692299273221-a9b59cca-3cfa-47ba-8ec8-653798e55ab1.jpg",
+                            "price": 2998.4999999999995
                         }
                     ],
                     "ingredient_list_without_unit": []
                 },
                 "비름나물무침": {
-                    "youtube_url": "https://www.youtube.com/watch?v=9bbtzAgyfVQ",
-                    "youtube_thumbnail": "https://i.ytimg.com/vi/9bbtzAgyfVQ/maxresdefault.jpg",
-                    "youtube_title": "들기름에 무치지마세요. 대박집 비름나물무침 '이것'을 넣고 무쳐야 정말 맛있어요",
-                    "youtube_uploaded_date": "2023-04-05 00:00:00",
-                    "channel_name": "요리왕비룡 Korean Food Cooking",
-                    "channel_img": "https://yt3.ggpht.com/ytc/AIf8zZTct-uy-QGq5D06gqsk2k1ka0ztG8xOQii4Y8Hecg=s88-c-k-c0x00ffffff-no-rj",
-                    "total_price": 4789.925,
+                    "youtube_url": "https://www.youtube.com/watch?v=HpKfBaw_RA0",
+                    "youtube_thumbnail": "https://i.ytimg.com/vi/HpKfBaw_RA0/maxresdefault.jpg",
+                    "youtube_title": "비름나물무침 만드는법, 이건 무조건 드세요! 오메가3 골다공증에 좋은 비름나물/참비름",
+                    "youtube_uploaded_date": "2022-05-16 00:00:00",
+                    "channel_name": "엄마의집밥 Mom's food",
+                    "channel_img": "https://yt3.ggpht.com/uMA7_qEIa3Gg9vNGhiMZN8MPTFe9U3q9w28J5TBN5wnZPualDAwrB9lzjmX-0Tw0xhds7aoZjQ=s88-c-k-c0x00ffffff-no-rj",
+                    "total_price": 2128.7099999999996,
                     "ingredient_list": [
                         {
-                            "ingredient_name": "비름",
-                            "ingredient_unit_price": 23.46,
-                            "ingredient_price": 11730,
-                            "ingredient_volume": 200.0,
+                            "ingredient_name": "비름나물",
+                            "ingredient_unit_price": 6.95,
+                            "ingredient_price": 13900,
+                            "ingredient_volume": 250.0,
                             "ingredient_unit": "g",
-                            "ingredient_url": "https://www.coupang.com/vp/products/6408062814?itemId=19224390152&vendorItemId=86341061582&pickType=COU_PICK",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
-                            "price": 4692.0
+                            "ingredient_url": "https://www.coupang.com/vp/products/4337295562?itemId=5072641122&vendorItemId=72382330324",
+                            "ingredient_img": "https://thumbnail8.coupangcdn.com/thumbnails/remote/230x230ex/image/vendor_inventory/bce8/02c1f9bdad6a31f0d2fe38af12241a53aec9b5e5111569314350f7e83b8e.jpeg",
+                            "price": 1737.5
                         },
                         {
-                            "ingredient_name": "된장",
-                            "ingredient_unit_price": 3.02,
-                            "ingredient_price": 9070,
-                            "ingredient_volume": 2.5,
-                            "ingredient_unit": "g",
-                            "ingredient_url": "https://www.coupang.com/vp/products/1320940305?itemId=154135&vendorItemId=3000080349",
-                            "ingredient_img": "https://thumbnail9.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/193968610145347-df4fd946-d496-44df-b0a5-8ef49270fc45.jpg",
-                            "price": 7.55
-                        },
-                        {
-                            "ingredient_name": "참기름",
+                            "ingredient_name": "실파",
                             "ingredient_unit_price": 9.9,
-                            "ingredient_price": 35680,
-                            "ingredient_volume": 5.0,
+                            "ingredient_price": 9900,
+                            "ingredient_volume": 11.0,
                             "ingredient_unit": "g",
-                            "ingredient_url": "https://www.coupang.com/vp/products/72465?itemId=11201096244&vendorItemId=85193104418",
-                            "ingredient_img": "https://thumbnail8.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/5f6d21d5-289c-4b5f-9912-55f2b2ab43417869728638207554014.png",
-                            "price": 49.5
+                            "ingredient_url": "https://www.coupang.com/vp/products/6692229991?itemId=15469035166&vendorItemId=82688524276",
+                            "ingredient_img": "https://thumbnail7.coupangcdn.com/thumbnails/remote/230x230ex/image/vendor_inventory/5d84/d979f9f5bdb87c22912a3cfdec511f21c6474e00647b61df1fc355e0f70f.jpg",
+                            "price": 108.9
                         },
                         {
                             "ingredient_name": "고추장",
                             "ingredient_unit_price": 1.95,
                             "ingredient_price": 27300,
-                            "ingredient_volume": 2.5,
+                            "ingredient_volume": 13.0,
                             "ingredient_unit": "g",
                             "ingredient_url": "https://www.coupang.com/vp/products/6900313161?itemId=346924589&vendorItemId=85717010423",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
-                            "price": 4.875
+                            "ingredient_img": "https://thumbnail10.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/26266206601838-abb50f02-5ef9-4fc5-b98f-0ba491f2fe1b.png",
+                            "price": 25.349999999999998
                         },
                         {
-                            "ingredient_name": "들깨가루",
-                            "ingredient_unit_price": 7.2,
-                            "ingredient_price": 72100,
-                            "ingredient_volume": 5.0,
+                            "ingredient_name": "된장",
+                            "ingredient_unit_price": 1.7,
+                            "ingredient_price": 23780,
+                            "ingredient_volume": 18.0,
                             "ingredient_unit": "g",
-                            "ingredient_url": "https://www.coupang.com/vp/products/6669341850?itemId=18333052229&vendorItemId=85477546173",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
-                            "price": 36.0
+                            "ingredient_url": "https://www.coupang.com/vp/products/7735374057?itemId=20797053013&vendorItemId=3000201322",
+                            "ingredient_img": "https://thumbnail10.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/8353012220753453-4f34688f-5f16-4df2-a13c-2a157e1c1fa1.jpg",
+                            "price": 30.599999999999998
+                        },
+                        {
+                            "ingredient_name": "다진마늘",
+                            "ingredient_unit_price": 3.64,
+                            "ingredient_price": 18200,
+                            "ingredient_volume": 8.0,
+                            "ingredient_unit": "g",
+                            "ingredient_url": "https://www.coupang.com/vp/products/6890784639?itemId=19929771567&vendorItemId=87029336992",
+                            "ingredient_img": "https://thumbnail10.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/23c231f2-41be-4410-8873-5544a8f8fa272857012207940814782.png",
+                            "price": 29.12
+                        },
+                        {
+                            "ingredient_name": "갈은깨",
+                            "ingredient_unit_price": 11.5,
+                            "ingredient_price": 11500,
+                            "ingredient_volume": 7.0,
+                            "ingredient_unit": "g",
+                            "ingredient_url": "https://www.coupang.com/vp/products/1911738124?itemId=3245728805&vendorItemId=71232822026",
+                            "ingredient_img": "https://thumbnail9.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/7169474778291558-f70b8111-3305-46b3-a2f3-41a0254d1a33.jpg",
+                            "price": 80.5
+                        },
+                        {
+                            "ingredient_name": "들기름",
+                            "ingredient_unit_price": 6.39,
+                            "ingredient_price": 11500,
+                            "ingredient_volume": 12.0,
+                            "ingredient_unit": "g",
+                            "ingredient_url": "https://www.coupang.com/vp/products/7558184610?itemId=19906589768&vendorItemId=86063361351",
+                            "ingredient_img": "https://thumbnail8.coupangcdn.com/thumbnails/remote/230x230ex/image/vendor_inventory/221a/ac0822697789f7b06e066a304e4e56f5315d91b4ac477b39736e696cba0a.jpg",
+                            "price": 76.67999999999999
+                        },
+                        {
+                            "ingredient_name": "고춧가루",
+                            "ingredient_unit_price": 10.9,
+                            "ingredient_price": 10900,
+                            "ingredient_volume": 3.0,
+                            "ingredient_unit": "g",
+                            "ingredient_url": "https://www.coupang.com/vp/products/5608218091?itemId=9055310202&vendorItemId=76341650663",
+                            "ingredient_img": "https://thumbnail10.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/2021/06/01/17/1/d1341756-8a54-4fd4-acea-17b14c8129f8.jpg",
+                            "price": 32.7
+                        },
+                        {
+                            "ingredient_name": "굵은소금",
+                            "ingredient_unit_price": 0.92,
+                            "ingredient_price": 18360,
+                            "ingredient_volume": 8.0,
+                            "ingredient_unit": "g",
+                            "ingredient_url": "https://www.coupang.com/vp/products/7598091427?itemId=20092631837&vendorItemId=87875020025",
+                            "ingredient_img": "https://thumbnail7.coupangcdn.com/thumbnails/remote/230x230ex/image/vendor_inventory/32fe/800d5f0d40a1104c3754215f75d62be476b631ce33b7f80c12391baa5f8e.png",
+                            "price": 7.36
                         }
                     ],
                     "ingredient_list_without_unit": []
@@ -1223,7 +1221,7 @@ export default {
                     "youtube_uploaded_date": "2022-03-18 00:00:00",
                     "channel_name": "딸을 위한 레시피 Recipes for daughters",
                     "channel_img": "https://yt3.ggpht.com/cX0xLVL_WbQF66EiRmtYhU5I1If0scnNuswcMdalq88OCLQ6drE2H6qB_jEynsTN9b1EtaDatw=s88-c-k-c0x00ffffff-no-rj",
-                    "total_price": 3746.35,
+                    "total_price": 3746.95,
                     "ingredient_list": [
                         {
                             "ingredient_name": "황태채",
@@ -1242,7 +1240,7 @@ export default {
                             "ingredient_volume": 60.0,
                             "ingredient_unit": "g",
                             "ingredient_url": "https://www.coupang.com/vp/products/7689270513?itemId=20877904962&vendorItemId=87945141063",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
+                            "ingredient_img": "https://thumbnail8.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/1077787963868499-c1e46ca7-d157-4de0-ad8e-063b93ac490d.jpg",
                             "price": 12.6
                         },
                         {
@@ -1258,7 +1256,7 @@ export default {
                         {
                             "ingredient_name": "백설탕",
                             "ingredient_unit_price": 1.63,
-                            "ingredient_price": 24520,
+                            "ingredient_price": 24490,
                             "ingredient_volume": 30.0,
                             "ingredient_unit": "g",
                             "ingredient_url": "https://www.coupang.com/vp/products/7139315300?itemId=16584760&vendorItemId=3005825349",
@@ -1267,13 +1265,13 @@ export default {
                         },
                         {
                             "ingredient_name": "물엿올리고당",
-                            "ingredient_unit_price": 2.46,
-                            "ingredient_price": 12320,
+                            "ingredient_unit_price": 2.47,
+                            "ingredient_price": 12360,
                             "ingredient_volume": 60.0,
                             "ingredient_unit": "g",
                             "ingredient_url": "https://www.coupang.com/vp/products/35151?itemId=17969220731&vendorItemId=3000043756",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
-                            "price": 147.6
+                            "ingredient_img": "https://thumbnail8.coupangcdn.com/thumbnails/remote/230x230ex/image/product/image/vendoritem/2018/03/06/3000043756/3b712f84-b9ce-4c85-9c19-4ff10834402a.jpg",
+                            "price": 148.20000000000002
                         },
                         {
                             "ingredient_name": "맛술",
@@ -1302,17 +1300,17 @@ export default {
                             "ingredient_volume": 90.0,
                             "ingredient_unit": "g",
                             "ingredient_url": "https://www.coupang.com/vp/products/6900313161?itemId=346924589&vendorItemId=85717010423",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
+                            "ingredient_img": "https://thumbnail10.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/26266206601838-abb50f02-5ef9-4fc5-b98f-0ba491f2fe1b.png",
                             "price": 175.5
                         },
                         {
                             "ingredient_name": "고추기름",
                             "ingredient_unit_price": 4.28,
-                            "ingredient_price": 61680,
+                            "ingredient_price": 61610,
                             "ingredient_volume": 30.0,
                             "ingredient_unit": "g",
-                            "ingredient_url": "https://www.coupang.com/vp/products/72470?itemId=2877871685&vendorItemId=86016490820",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
+                            "ingredient_url": "https://www.coupang.com/vp/products/72470?itemId=2877871685&vendorItemId=81354691042",
+                            "ingredient_img": "https://thumbnail7.coupangcdn.com/thumbnails/remote/230x230ex/image/vendor_inventory/ca19/5fd5685b9b2352402868561e569a175407976fb1ef990419a4caf267d16e.png",
                             "price": 128.4
                         }
                     ],
@@ -1325,17 +1323,17 @@ export default {
                     "youtube_uploaded_date": "2023-04-27 00:00:00",
                     "channel_name": "진영 Jinyeong",
                     "channel_img": "https://yt3.ggpht.com/ytc/AIf8zZSOriiHA5-9LFB0XNTubl4WqnPDKv-OOFMwUstmgw=s88-c-k-c0x00ffffff-no-rj",
-                    "total_price": 616.1800000000001,
+                    "total_price": 793.9000000000001,
                     "ingredient_list": [
                         {
                             "ingredient_name": "인스턴트드라이이스트",
-                            "ingredient_unit_price": 10.94,
-                            "ingredient_price": 109440,
+                            "ingredient_unit_price": 18.8,
+                            "ingredient_price": 11750,
                             "ingredient_volume": 4.0,
                             "ingredient_unit": "g",
-                            "ingredient_url": "https://www.coupang.com/vp/products/1310248746?itemId=20558829307&vendorItemId=85434486463",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
-                            "price": 43.76
+                            "ingredient_url": "https://www.coupang.com/vp/products/1310248746?itemId=14419335763&vendorItemId=88438600407",
+                            "ingredient_img": "https://thumbnail9.coupangcdn.com/thumbnails/remote/230x230ex/image/vendor_inventory/4337/f836d411aa1447218da683295ded6bff56dca252afe1c3bdebc00159ce5a.JPG",
+                            "price": 75.2
                         },
                         {
                             "ingredient_name": "강력분",
@@ -1344,28 +1342,28 @@ export default {
                             "ingredient_volume": 360.0,
                             "ingredient_unit": "g",
                             "ingredient_url": "https://www.coupang.com/vp/products/1421510377?itemId=2460073624&vendorItemId=87933064191",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
+                            "ingredient_img": "https://thumbnail6.coupangcdn.com/thumbnails/remote/230x230ex/image/vendor_inventory/9499/c7817a9e663243c61e2070e4248f0ba37f9e68009e7d2b25762912cf4f87.png",
                             "price": 403.20000000000005
                         },
                         {
                             "ingredient_name": "소금",
-                            "ingredient_unit_price": 0.75,
-                            "ingredient_price": 18840,
+                            "ingredient_unit_price": 1.52,
+                            "ingredient_price": 7580,
                             "ingredient_volume": 6.0,
                             "ingredient_unit": "g",
-                            "ingredient_url": "https://www.coupang.com/vp/products/6978355650?itemId=12717968475&vendorItemId=70610150039",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
-                            "price": 4.5
+                            "ingredient_url": "https://www.coupang.com/vp/products/7118404111?itemId=154184&vendorItemId=3000080355",
+                            "ingredient_img": "https://thumbnail10.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/77422699043342-2253a7aa-405d-4763-99c9-431b47b34762.jpg",
+                            "price": 9.120000000000001
                         },
                         {
                             "ingredient_name": "식물성오일",
-                            "ingredient_unit_price": 5.03,
-                            "ingredient_price": 4530,
+                            "ingredient_unit_price": 12.9,
+                            "ingredient_price": 12900,
                             "ingredient_volume": 18.0,
                             "ingredient_unit": "g",
-                            "ingredient_url": "https://www.coupang.com/vp/products/988704?itemId=14282667975&vendorItemId=3000080376",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
-                            "price": 90.54
+                            "ingredient_url": "https://www.coupang.com/vp/products/33222751?itemId=124801757&vendorItemId=3254410022&pickType=COU_PICK",
+                            "ingredient_img": "https://thumbnail8.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/1861310314724957-ce1a718a-c904-45f6-9d72-75a453e14983.jpg",
+                            "price": 232.20000000000002
                         },
                         {
                             "ingredient_name": "물",
@@ -1374,13 +1372,13 @@ export default {
                             "ingredient_volume": 198.0,
                             "ingredient_unit": "g",
                             "ingredient_url": "https://www.coupang.com/vp/products/7689270513?itemId=20877904962&vendorItemId=87945141063",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
+                            "ingredient_img": "https://thumbnail8.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/1077787963868499-c1e46ca7-d157-4de0-ad8e-063b93ac490d.jpg",
                             "price": 41.58
                         },
                         {
                             "ingredient_name": "설탕",
                             "ingredient_unit_price": 1.63,
-                            "ingredient_price": 24520,
+                            "ingredient_price": 24490,
                             "ingredient_volume": 20.0,
                             "ingredient_unit": "g",
                             "ingredient_url": "https://www.coupang.com/vp/products/7139315300?itemId=16584760&vendorItemId=3005825349",
@@ -1397,7 +1395,7 @@ export default {
                     "youtube_uploaded_date": "2021-08-12 00:00:00",
                     "channel_name": "함께해요 맛나요리",
                     "channel_img": "https://yt3.ggpht.com/ytc/AIf8zZRsGQa2oOsyfjCqhSEatFDlODUFopJOluSVXOQ=s88-c-k-c0x00ffffff-no-rj",
-                    "total_price": 1271.15,
+                    "total_price": 1263.65,
                     "ingredient_list": [
                         {
                             "ingredient_name": "마른미역",
@@ -1416,7 +1414,7 @@ export default {
                             "ingredient_volume": 90.0,
                             "ingredient_unit": "g",
                             "ingredient_url": "https://www.coupang.com/vp/products/6680558424?itemId=15403790368&vendorItemId=87576247097",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
+                            "ingredient_img": "https://thumbnail10.coupangcdn.com/thumbnails/remote/230x230ex/image/vendor_inventory/7e03/a05e9badf865e55c296900732aee957db58acdc952c4a8f7d3f510e13df9.jpg",
                             "price": 235.8
                         },
                         {
@@ -1432,7 +1430,7 @@ export default {
                         {
                             "ingredient_name": "설탕",
                             "ingredient_unit_price": 1.63,
-                            "ingredient_price": 24520,
+                            "ingredient_price": 24490,
                             "ingredient_volume": 30.0,
                             "ingredient_unit": "g",
                             "ingredient_url": "https://www.coupang.com/vp/products/7139315300?itemId=16584760&vendorItemId=3005825349",
@@ -1441,13 +1439,13 @@ export default {
                         },
                         {
                             "ingredient_name": "깨소금",
-                            "ingredient_unit_price": 9.49,
-                            "ingredient_price": 18980,
+                            "ingredient_unit_price": 8.99,
+                            "ingredient_price": 17980,
                             "ingredient_volume": 15.0,
                             "ingredient_unit": "g",
-                            "ingredient_url": "https://www.coupang.com/vp/products/1667161685?itemId=2840569126&vendorItemId=70829944677",
-                            "ingredient_img": "https://thumbnail6.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/316782230414351-876ced41-ce45-4dbe-8c7c-94e22c1b506d.jpg",
-                            "price": 142.35
+                            "ingredient_url": "https://www.coupang.com/vp/products/7574514650?itemId=17716327048&vendorItemId=84881175299",
+                            "ingredient_img": "https://thumbnail10.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/766316930514427-fac38c83-125d-4d65-b995-c48d45e9ee71.jpg",
+                            "price": 134.85
                         }
                     ],
                     "ingredient_list_without_unit": []
@@ -1459,17 +1457,17 @@ export default {
                     "youtube_uploaded_date": "2020-03-20 00:00:00",
                     "channel_name": "백종원 PAIK JONG WON",
                     "channel_img": "https://yt3.ggpht.com/J3OI66Bc7T3nheyKJKAkXR6tb-_bpCsoRMTFoslOBCXI3DpVY8eFY4LZWzww3BEgkRjMOEoI=s88-c-k-c0x00ffffff-no-rj",
-                    "total_price": 3092.7,
+                    "total_price": 2425.5000000000005,
                     "ingredient_list": [
                         {
                             "ingredient_name": "소고기양지",
-                            "ingredient_unit_price": 23.73,
-                            "ingredient_price": 7120,
+                            "ingredient_unit_price": 16.44,
+                            "ingredient_price": 49310,
                             "ingredient_volume": 100.0,
                             "ingredient_unit": "g",
-                            "ingredient_url": "https://www.coupang.com/vp/products/1473796614?itemId=2532934918&vendorItemId=70525675924",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
-                            "price": 2373.0
+                            "ingredient_url": "https://www.coupang.com/vp/products/6304494253?itemId=13053991445&vendorItemId=80316709070",
+                            "ingredient_img": "https://thumbnail10.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/2022/01/20/11/9/dca795db-9fce-41ea-9a29-b800b897db00.jpg",
+                            "price": 1644.0000000000002
                         },
                         {
                             "ingredient_name": "참기름",
@@ -1483,13 +1481,13 @@ export default {
                         },
                         {
                             "ingredient_name": "국간장",
-                            "ingredient_unit_price": 1.37,
-                            "ingredient_price": 19190,
+                            "ingredient_unit_price": 3.3,
+                            "ingredient_price": 11210,
                             "ingredient_volume": 30.0,
                             "ingredient_unit": "g",
-                            "ingredient_url": "https://www.coupang.com/vp/products/5938053333?itemId=18204402896&vendorItemId=78415747472",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
-                            "price": 41.1
+                            "ingredient_url": "https://www.coupang.com/vp/products/239196850?itemId=18171493809&vendorItemId=85320843397",
+                            "ingredient_img": "https://thumbnail9.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/20c16af9-400e-47b9-8359-4b68cc4e41e99153747284672463110.png",
+                            "price": 99.0
                         },
                         {
                             "ingredient_name": "물",
@@ -1498,18 +1496,18 @@ export default {
                             "ingredient_volume": 1300.0,
                             "ingredient_unit": "g",
                             "ingredient_url": "https://www.coupang.com/vp/products/7689270513?itemId=20877904962&vendorItemId=87945141063",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
+                            "ingredient_img": "https://thumbnail8.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/1077787963868499-c1e46ca7-d157-4de0-ad8e-063b93ac490d.jpg",
                             "price": 273.0
                         },
                         {
                             "ingredient_name": "다진마늘",
-                            "ingredient_unit_price": 3.7,
-                            "ingredient_price": 18250,
+                            "ingredient_unit_price": 3.64,
+                            "ingredient_price": 18200,
                             "ingredient_volume": 10.0,
                             "ingredient_unit": "g",
-                            "ingredient_url": "https://www.coupang.com/vp/products/6012228407?itemId=10910051311&vendorItemId=78189867054",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
-                            "price": 37.0
+                            "ingredient_url": "https://www.coupang.com/vp/products/6890784639?itemId=19929771567&vendorItemId=87029336992",
+                            "ingredient_img": "https://thumbnail10.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/23c231f2-41be-4410-8873-5544a8f8fa272857012207940814782.png",
+                            "price": 36.4
                         },
                         {
                             "ingredient_name": "자른미역",
@@ -1518,18 +1516,18 @@ export default {
                             "ingredient_volume": 10.0,
                             "ingredient_unit": "g",
                             "ingredient_url": "https://www.coupang.com/vp/products/5710286741?itemId=9518763272&vendorItemId=76803521987",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
+                            "ingredient_img": "https://thumbnail9.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/7995909724220-3a4c6068-eec4-4716-b3da-746e8d31593e.jpg",
                             "price": 200.0
                         },
                         {
                             "ingredient_name": "멸치액젓",
-                            "ingredient_unit_price": 2.0,
-                            "ingredient_price": 30610,
+                            "ingredient_unit_price": 2.3,
+                            "ingredient_price": 11260,
                             "ingredient_volume": 15.0,
                             "ingredient_unit": "g",
-                            "ingredient_url": "https://www.coupang.com/vp/products/7728625433?itemId=20761965459&vendorItemId=85192464163",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
-                            "price": 30.0
+                            "ingredient_url": "https://www.coupang.com/vp/products/7728625433?itemId=20761927235&vendorItemId=3037177082",
+                            "ingredient_img": "https://thumbnail6.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/879066650434839-962532b9-29ce-4e29-ad09-32cc2aaf34f8.jpg",
+                            "price": 34.5
                         }
                     ],
                     "ingredient_list_without_unit": []
@@ -1541,32 +1539,32 @@ export default {
                     "youtube_uploaded_date": "2022-02-27 00:00:00",
                     "channel_name": "뚝딱Tooktak",
                     "channel_img": "https://yt3.ggpht.com/ytc/AIf8zZQnMzW6bGQxUdeTKTvuLsD66xoIrxqHaeYlDoqriA=s88-c-k-c0x00ffffff-no-rj",
-                    "total_price": 2491.0,
+                    "total_price": 2379.3399999999997,
                     "ingredient_list": [
                         {
                             "ingredient_name": "습식맵쌀가루",
-                            "ingredient_unit_price": 4.94,
-                            "ingredient_price": 9880,
+                            "ingredient_unit_price": 4.6,
+                            "ingredient_price": 9200,
                             "ingredient_volume": 450.0,
                             "ingredient_unit": "g",
-                            "ingredient_url": "https://www.coupang.com/vp/products/191956?itemId=19444197938&vendorItemId=86555147043",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
-                            "price": 2223.0
+                            "ingredient_url": "https://www.coupang.com/vp/products/48617425?itemId=171859159&vendorItemId=3411946086",
+                            "ingredient_img": "https://thumbnail8.coupangcdn.com/thumbnails/remote/230x230ex/image/product/image/vendoritem/2018/12/03/3411946086/e12e4d95-2f28-4809-a7fa-2be72823a9c4.jpg",
+                            "price": 2070.0
                         },
                         {
                             "ingredient_name": "소금",
-                            "ingredient_unit_price": 0.75,
-                            "ingredient_price": 18840,
+                            "ingredient_unit_price": 1.52,
+                            "ingredient_price": 7580,
                             "ingredient_volume": 2.0,
                             "ingredient_unit": "g",
-                            "ingredient_url": "https://www.coupang.com/vp/products/6978355650?itemId=12717968475&vendorItemId=70610150039",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
-                            "price": 1.5
+                            "ingredient_url": "https://www.coupang.com/vp/products/7118404111?itemId=154184&vendorItemId=3000080355",
+                            "ingredient_img": "https://thumbnail10.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/77422699043342-2253a7aa-405d-4763-99c9-431b47b34762.jpg",
+                            "price": 3.04
                         },
                         {
                             "ingredient_name": "백설탕",
                             "ingredient_unit_price": 1.63,
-                            "ingredient_price": 24520,
+                            "ingredient_price": 24490,
                             "ingredient_volume": 40.0,
                             "ingredient_unit": "g",
                             "ingredient_url": "https://www.coupang.com/vp/products/7139315300?itemId=16584760&vendorItemId=3005825349",
@@ -1575,13 +1573,13 @@ export default {
                         },
                         {
                             "ingredient_name": "건포도",
-                            "ingredient_unit_price": 4.65,
-                            "ingredient_price": 46500,
+                            "ingredient_unit_price": 6.7,
+                            "ingredient_price": 26800,
                             "ingredient_volume": 20.0,
                             "ingredient_unit": "g",
-                            "ingredient_url": "https://www.coupang.com/vp/products/106484974?itemId=321926599&vendorItemId=3788359713",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
-                            "price": 93.0
+                            "ingredient_url": "https://www.coupang.com/vp/products/154401001?itemId=19224750523&vendorItemId=86341421769",
+                            "ingredient_img": "https://thumbnail6.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/d6d4a0c8-532d-45d4-8c1b-f3c434c9ccd8374498979979065653.png",
+                            "price": 134.0
                         },
                         {
                             "ingredient_name": "물",
@@ -1590,18 +1588,18 @@ export default {
                             "ingredient_volume": 450.0,
                             "ingredient_unit": "g",
                             "ingredient_url": "https://www.coupang.com/vp/products/7689270513?itemId=20877904962&vendorItemId=87945141063",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
+                            "ingredient_img": "https://thumbnail8.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/1077787963868499-c1e46ca7-d157-4de0-ad8e-063b93ac490d.jpg",
                             "price": 94.5
                         },
                         {
                             "ingredient_name": "미지근한물",
-                            "ingredient_unit_price": 0.23,
-                            "ingredient_price": 16800,
+                            "ingredient_unit_price": 0.21,
+                            "ingredient_price": 15390,
                             "ingredient_volume": 60.0,
                             "ingredient_unit": "g",
-                            "ingredient_url": "https://www.coupang.com/vp/products/5625704601?itemId=19013169354&vendorItemId=86137789886",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
-                            "price": 13.8
+                            "ingredient_url": "https://www.coupang.com/vp/products/7689270513?itemId=20877904962&vendorItemId=87945141063&pickType=COU_PICK",
+                            "ingredient_img": "https://thumbnail8.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/1077787963868499-c1e46ca7-d157-4de0-ad8e-063b93ac490d.jpg",
+                            "price": 12.6
                         }
                     ],
                     "ingredient_list_without_unit": []
@@ -1613,7 +1611,7 @@ export default {
                     "youtube_uploaded_date": "2021-06-03 00:00:00",
                     "channel_name": "백종원 PAIK JONG WON",
                     "channel_img": "https://yt3.ggpht.com/J3OI66Bc7T3nheyKJKAkXR6tb-_bpCsoRMTFoslOBCXI3DpVY8eFY4LZWzww3BEgkRjMOEoI=s88-c-k-c0x00ffffff-no-rj",
-                    "total_price": 999.24,
+                    "total_price": 989.5799999999999,
                     "ingredient_list": [
                         {
                             "ingredient_name": "중멸치",
@@ -1622,18 +1620,18 @@ export default {
                             "ingredient_volume": 50.0,
                             "ingredient_unit": "g",
                             "ingredient_url": "https://www.coupang.com/vp/products/5729226493?itemId=9607824729&vendorItemId=88663879076",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
+                            "ingredient_img": "https://thumbnail6.coupangcdn.com/thumbnails/remote/230x230ex/image/vendor_inventory/9747/3278b7bf4f092b86ddee0cabe23f4e209634f39ed47858fd2a57ecaa9e8b.jpg",
                             "price": 565.0
                         },
                         {
                             "ingredient_name": "청양고추",
-                            "ingredient_unit_price": 16.21,
-                            "ingredient_price": 29170,
+                            "ingredient_unit_price": 14.7,
+                            "ingredient_price": 7350,
                             "ingredient_volume": 10.0,
                             "ingredient_unit": "g",
-                            "ingredient_url": "https://www.coupang.com/vp/products/6639183562?itemId=19223914026&vendorItemId=86340596423",
-                            "ingredient_img": "https://thumbnail7.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/3960703655094524-f015193d-605b-4763-a119-4181683915d7.jpg",
-                            "price": 162.10000000000002
+                            "ingredient_url": "https://www.coupang.com/vp/products/6097731697?itemId=11406371607&vendorItemId=78682324950",
+                            "ingredient_img": "https://thumbnail8.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/7030340116853210-5cce2da8-d902-453c-9cac-eef7401d1fb0.jpg",
+                            "price": 147.0
                         },
                         {
                             "ingredient_name": "식용유",
@@ -1642,28 +1640,28 @@ export default {
                             "ingredient_volume": 21.0,
                             "ingredient_unit": "g",
                             "ingredient_url": "https://www.coupang.com/vp/products/6680558424?itemId=15403790368&vendorItemId=87576247097",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
+                            "ingredient_img": "https://thumbnail10.coupangcdn.com/thumbnails/remote/230x230ex/image/vendor_inventory/7e03/a05e9badf865e55c296900732aee957db58acdc952c4a8f7d3f510e13df9.jpg",
                             "price": 55.02
                         },
                         {
                             "ingredient_name": "진간장",
-                            "ingredient_unit_price": 1.16,
-                            "ingredient_price": 15050,
+                            "ingredient_unit_price": 1.83,
+                            "ingredient_price": 27390,
                             "ingredient_volume": 10.0,
                             "ingredient_unit": "g",
-                            "ingredient_url": "https://www.coupang.com/vp/products/7196421572?itemId=18180298196&vendorItemId=85329334567",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
-                            "price": 11.6
+                            "ingredient_url": "https://www.coupang.com/vp/products/5897832438?itemId=18204720267&vendorItemId=3008200213",
+                            "ingredient_img": "https://thumbnail10.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/3578077938599046-faf01df5-9ab8-4312-8694-3933c3153852.png",
+                            "price": 18.3
                         },
                         {
                             "ingredient_name": "황설탕",
-                            "ingredient_unit_price": 2.04,
-                            "ingredient_price": 30670,
+                            "ingredient_unit_price": 1.83,
+                            "ingredient_price": 27460,
                             "ingredient_volume": 6.0,
                             "ingredient_unit": "g",
-                            "ingredient_url": "https://www.coupang.com/vp/products/2146550469?itemId=20142506636&vendorItemId=88803700015",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
-                            "price": 12.24
+                            "ingredient_url": "https://www.coupang.com/vp/products/2146550469?itemId=20142506636&vendorItemId=74038381322",
+                            "ingredient_img": "https://thumbnail6.coupangcdn.com/thumbnails/remote/230x230ex/image/vendor_inventory/1517/17b12bd00fc94a4a95a70e655826ca9b259adce79b80a402098c8181ce72.jpg",
+                            "price": 10.98
                         },
                         {
                             "ingredient_name": "통깨",
@@ -1682,7 +1680,7 @@ export default {
                             "ingredient_volume": 20.0,
                             "ingredient_unit": "g",
                             "ingredient_url": "https://www.coupang.com/vp/products/6900313161?itemId=346924589&vendorItemId=85717010423",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
+                            "ingredient_img": "https://thumbnail10.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/26266206601838-abb50f02-5ef9-4fc5-b98f-0ba491f2fe1b.png",
                             "price": 39.0
                         },
                         {
@@ -1725,7 +1723,7 @@ export default {
                     "youtube_uploaded_date": "2019-10-15 00:00:00",
                     "channel_name": "엄마의집밥 Mom's food",
                     "channel_img": "https://yt3.ggpht.com/uMA7_qEIa3Gg9vNGhiMZN8MPTFe9U3q9w28J5TBN5wnZPualDAwrB9lzjmX-0Tw0xhds7aoZjQ=s88-c-k-c0x00ffffff-no-rj",
-                    "total_price": 2541.233333333333,
+                    "total_price": 2115.983333333333,
                     "ingredient_list": [
                         {
                             "ingredient_name": "무",
@@ -1734,48 +1732,48 @@ export default {
                             "ingredient_volume": 480.0,
                             "ingredient_unit": "g",
                             "ingredient_url": "https://www.coupang.com/vp/products/7403364293?itemId=19166701875&vendorItemId=82973629812",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
+                            "ingredient_img": "https://thumbnail9.coupangcdn.com/thumbnails/remote/230x230ex/image/vendor_inventory/89cd/22258b766852d6eb23c4df7bed982b034ce0c7c9e3a53f96f44906d80386.jpg",
                             "price": 758.4000000000001
                         },
                         {
                             "ingredient_name": "부추",
-                            "ingredient_unit_price": 12.54,
-                            "ingredient_price": 31360,
+                            "ingredient_unit_price": 6.93,
+                            "ingredient_price": 27700,
                             "ingredient_volume": 50.0,
                             "ingredient_unit": "g",
-                            "ingredient_url": "https://www.coupang.com/vp/products/4760601434?itemId=19223909723&vendorItemId=86340592139",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
-                            "price": 627.0
+                            "ingredient_url": "https://www.coupang.com/vp/products/7153505103?itemId=17989410984&vendorItemId=73453966419",
+                            "ingredient_img": "https://thumbnail7.coupangcdn.com/thumbnails/remote/230x230ex/image/vendor_inventory/c10b/2747a242ba86ca2a92e6da786b35d84b37feaf48bf4ffca8981f22b00745.jpg",
+                            "price": 346.5
                         },
                         {
                             "ingredient_name": "다진마늘",
-                            "ingredient_unit_price": 3.7,
-                            "ingredient_price": 18250,
+                            "ingredient_unit_price": 3.64,
+                            "ingredient_price": 18200,
                             "ingredient_volume": 3.333333333333333,
                             "ingredient_unit": "g",
-                            "ingredient_url": "https://www.coupang.com/vp/products/6012228407?itemId=10910051311&vendorItemId=78189867054",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
-                            "price": 12.333333333333332
+                            "ingredient_url": "https://www.coupang.com/vp/products/6890784639?itemId=19929771567&vendorItemId=87029336992",
+                            "ingredient_img": "https://thumbnail10.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/23c231f2-41be-4410-8873-5544a8f8fa272857012207940814782.png",
+                            "price": 12.133333333333333
                         },
                         {
                             "ingredient_name": "깨소금",
-                            "ingredient_unit_price": 9.49,
-                            "ingredient_price": 18980,
+                            "ingredient_unit_price": 8.99,
+                            "ingredient_price": 17980,
                             "ingredient_volume": 15.0,
                             "ingredient_unit": "g",
-                            "ingredient_url": "https://www.coupang.com/vp/products/1667161685?itemId=2840569126&vendorItemId=70829944677",
-                            "ingredient_img": "https://thumbnail6.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/316782230414351-876ced41-ce45-4dbe-8c7c-94e22c1b506d.jpg",
-                            "price": 142.35
+                            "ingredient_url": "https://www.coupang.com/vp/products/7574514650?itemId=17716327048&vendorItemId=84881175299",
+                            "ingredient_img": "https://thumbnail10.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/766316930514427-fac38c83-125d-4d65-b995-c48d45e9ee71.jpg",
+                            "price": 134.85
                         },
                         {
                             "ingredient_name": "들기름",
-                            "ingredient_unit_price": 19.6,
-                            "ingredient_price": 35250,
+                            "ingredient_unit_price": 6.39,
+                            "ingredient_price": 11500,
                             "ingredient_volume": 15.0,
                             "ingredient_unit": "g",
-                            "ingredient_url": "https://www.coupang.com/vp/products/7248384207?itemId=18432606089&vendorItemId=85574074967",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
-                            "price": 294.0
+                            "ingredient_url": "https://www.coupang.com/vp/products/7558184610?itemId=19906589768&vendorItemId=86063361351",
+                            "ingredient_img": "https://thumbnail8.coupangcdn.com/thumbnails/remote/230x230ex/image/vendor_inventory/221a/ac0822697789f7b06e066a304e4e56f5315d91b4ac477b39736e696cba0a.jpg",
+                            "price": 95.85
                         },
                         {
                             "ingredient_name": "메밀가루",
@@ -1794,7 +1792,7 @@ export default {
                             "ingredient_volume": 375.0,
                             "ingredient_unit": "g",
                             "ingredient_url": "https://www.coupang.com/vp/products/7689270513?itemId=20877904962&vendorItemId=87945141063",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
+                            "ingredient_img": "https://thumbnail8.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/1077787963868499-c1e46ca7-d157-4de0-ad8e-063b93ac490d.jpg",
                             "price": 78.75
                         },
                         {
@@ -1809,23 +1807,23 @@ export default {
                         },
                         {
                             "ingredient_name": "고춧가루",
-                            "ingredient_unit_price": 8.7,
-                            "ingredient_price": 43500,
+                            "ingredient_unit_price": 10.9,
+                            "ingredient_price": 10900,
                             "ingredient_volume": 20.0,
                             "ingredient_unit": "g",
-                            "ingredient_url": "https://www.coupang.com/vp/products/1295382700?itemId=19133056738&vendorItemId=86252641685",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
-                            "price": 174.0
+                            "ingredient_url": "https://www.coupang.com/vp/products/5608218091?itemId=9055310202&vendorItemId=76341650663",
+                            "ingredient_img": "https://thumbnail10.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/2021/06/01/17/1/d1341756-8a54-4fd4-acea-17b14c8129f8.jpg",
+                            "price": 218.0
                         },
                         {
                             "ingredient_name": "밀가루",
-                            "ingredient_unit_price": 1.14,
-                            "ingredient_price": 17160,
+                            "ingredient_unit_price": 1.33,
+                            "ingredient_price": 3990,
                             "ingredient_volume": 90.0,
                             "ingredient_unit": "g",
-                            "ingredient_url": "https://www.coupang.com/vp/products/13432703?itemId=19610911320&vendorItemId=86717879346",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
-                            "price": 102.6
+                            "ingredient_url": "https://www.coupang.com/vp/products/7257694107?itemId=18477853883&vendorItemId=85617748048",
+                            "ingredient_img": "https://thumbnail10.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/3419146629828407-257238be-cfdc-41cd-881a-b535b88c3b95.jpg",
+                            "price": 119.7
                         }
                     ],
                     "ingredient_list_without_unit": []
@@ -1837,17 +1835,17 @@ export default {
                     "youtube_uploaded_date": "2020-05-11 00:00:00",
                     "channel_name": "오늘 뭐 먹지?",
                     "channel_img": "https://yt3.ggpht.com/ytc/AIf8zZSdaxGDuQXbW6w3kXpzFcRlGRWXJiTuKpi-2S1rBw=s88-c-k-c0x00ffffff-no-rj",
-                    "total_price": 250.2,
+                    "total_price": 280.7,
                     "ingredient_list": [
                         {
                             "ingredient_name": "떡",
-                            "ingredient_unit_price": 8.5,
-                            "ingredient_price": 11880,
+                            "ingredient_unit_price": 9.4,
+                            "ingredient_price": 13200,
                             "ingredient_volume": 5.0,
                             "ingredient_unit": "g",
-                            "ingredient_url": "https://www.coupang.com/vp/products/6511333006?itemId=14383382934&vendorItemId=77604375339",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
-                            "price": 42.5
+                            "ingredient_url": "https://www.coupang.com/vp/products/5930058127?itemId=10534803498&vendorItemId=77816348238",
+                            "ingredient_img": "https://thumbnail6.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/6520778785531071-f8fc9737-f8d6-4eef-8080-6747b99438cb.jpg",
+                            "price": 47.0
                         },
                         {
                             "ingredient_name": "간장",
@@ -1856,18 +1854,18 @@ export default {
                             "ingredient_volume": 5.0,
                             "ingredient_unit": "g",
                             "ingredient_url": "https://www.coupang.com/vp/products/5897832438?itemId=18171819377&vendorItemId=85321160831",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
+                            "ingredient_img": "https://thumbnail8.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/77c4fb51-65b7-43ee-955d-7deec1714bc55045824864441731918.png",
                             "price": 11.75
                         },
                         {
                             "ingredient_name": "고춧가루",
-                            "ingredient_unit_price": 8.7,
-                            "ingredient_price": 43500,
+                            "ingredient_unit_price": 10.9,
+                            "ingredient_price": 10900,
                             "ingredient_volume": 10.0,
                             "ingredient_unit": "g",
-                            "ingredient_url": "https://www.coupang.com/vp/products/1295382700?itemId=19133056738&vendorItemId=86252641685",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
-                            "price": 87.0
+                            "ingredient_url": "https://www.coupang.com/vp/products/5608218091?itemId=9055310202&vendorItemId=76341650663",
+                            "ingredient_img": "https://thumbnail10.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/2021/06/01/17/1/d1341756-8a54-4fd4-acea-17b14c8129f8.jpg",
+                            "price": 109.0
                         },
                         {
                             "ingredient_name": "고추장",
@@ -1876,28 +1874,28 @@ export default {
                             "ingredient_volume": 5.0,
                             "ingredient_unit": "g",
                             "ingredient_url": "https://www.coupang.com/vp/products/6900313161?itemId=346924589&vendorItemId=85717010423",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
+                            "ingredient_img": "https://thumbnail10.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/26266206601838-abb50f02-5ef9-4fc5-b98f-0ba491f2fe1b.png",
                             "price": 9.75
                         },
                         {
                             "ingredient_name": "케찹",
-                            "ingredient_unit_price": 1.97,
-                            "ingredient_price": 6500,
+                            "ingredient_unit_price": 1.86,
+                            "ingredient_price": 24500,
                             "ingredient_volume": 10.0,
                             "ingredient_unit": "g",
-                            "ingredient_url": "https://www.coupang.com/vp/products/6572877795?itemId=20279414658&vendorItemId=3000044037",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
-                            "price": 19.7
+                            "ingredient_url": "https://www.coupang.com/vp/products/6572877795?itemId=317168944&vendorItemId=70754922523",
+                            "ingredient_img": "https://thumbnail9.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/2020/05/25/14/8/979826c6-9cba-447b-bd8b-a03100b48c66.jpg",
+                            "price": 18.6
                         },
                         {
                             "ingredient_name": "올리고당",
-                            "ingredient_unit_price": 2.13,
-                            "ingredient_price": 42690,
+                            "ingredient_unit_price": 2.4,
+                            "ingredient_price": 36000,
                             "ingredient_volume": 20.0,
                             "ingredient_unit": "g",
-                            "ingredient_url": "https://www.coupang.com/vp/products/592825?itemId=7367555431&vendorItemId=74658955839",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
-                            "price": 42.599999999999994
+                            "ingredient_url": "https://www.coupang.com/vp/products/592825?itemId=12346402311&vendorItemId=84606305062",
+                            "ingredient_img": "https://thumbnail9.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/7396239517444869-f3787541-82b4-427d-a4e2-ef4495036f67.jpg",
+                            "price": 48.0
                         },
                         {
                             "ingredient_name": "물",
@@ -1906,23 +1904,23 @@ export default {
                             "ingredient_volume": 10.0,
                             "ingredient_unit": "g",
                             "ingredient_url": "https://www.coupang.com/vp/products/7689270513?itemId=20877904962&vendorItemId=87945141063",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
+                            "ingredient_img": "https://thumbnail8.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/1077787963868499-c1e46ca7-d157-4de0-ad8e-063b93ac490d.jpg",
                             "price": 2.1
                         },
                         {
                             "ingredient_name": "다진마늘",
-                            "ingredient_unit_price": 3.7,
-                            "ingredient_price": 18250,
+                            "ingredient_unit_price": 3.64,
+                            "ingredient_price": 18200,
                             "ingredient_volume": 5.0,
                             "ingredient_unit": "g",
-                            "ingredient_url": "https://www.coupang.com/vp/products/6012228407?itemId=10910051311&vendorItemId=78189867054",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
-                            "price": 18.5
+                            "ingredient_url": "https://www.coupang.com/vp/products/6890784639?itemId=19929771567&vendorItemId=87029336992",
+                            "ingredient_img": "https://thumbnail10.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/23c231f2-41be-4410-8873-5544a8f8fa272857012207940814782.png",
+                            "price": 18.2
                         },
                         {
                             "ingredient_name": "설탕",
                             "ingredient_unit_price": 1.63,
-                            "ingredient_price": 24520,
+                            "ingredient_price": 24490,
                             "ingredient_volume": 10.0,
                             "ingredient_unit": "g",
                             "ingredient_url": "https://www.coupang.com/vp/products/7139315300?itemId=16584760&vendorItemId=3005825349",
@@ -1939,7 +1937,7 @@ export default {
                     "youtube_uploaded_date": "2023-08-17 00:00:00",
                     "channel_name": "아따아줌마TV_전라도할매 전통요리",
                     "channel_img": "https://yt3.ggpht.com/ytc/AIf8zZQlKNEgmU4Pa4KnW6I26CK_Bez3O6FXFhr7zop4mg=s88-c-k-c0x00ffffff-no-rj",
-                    "total_price": 2800.425,
+                    "total_price": 2409.9,
                     "ingredient_list": [
                         {
                             "ingredient_name": "도토리가루",
@@ -1948,7 +1946,7 @@ export default {
                             "ingredient_volume": 180.0,
                             "ingredient_unit": "g",
                             "ingredient_url": "https://www.coupang.com/vp/products/7281850949?itemId=18593192180&vendorItemId=82732389918",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
+                            "ingredient_img": "https://thumbnail8.coupangcdn.com/thumbnails/remote/230x230ex/image/vendor_inventory/4a0f/acd5098e292d02b239be5a19c843fe4185017530c79fcb3215c0910e8566.jpg",
                             "price": 1980.0
                         },
                         {
@@ -1958,28 +1956,28 @@ export default {
                             "ingredient_volume": 1080.0,
                             "ingredient_unit": "g",
                             "ingredient_url": "https://www.coupang.com/vp/products/7689270513?itemId=20877904962&vendorItemId=87945141063",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
+                            "ingredient_img": "https://thumbnail8.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/1077787963868499-c1e46ca7-d157-4de0-ad8e-063b93ac490d.jpg",
                             "price": 226.79999999999998
                         },
                         {
                             "ingredient_name": "들기름",
-                            "ingredient_unit_price": 19.6,
-                            "ingredient_price": 35250,
+                            "ingredient_unit_price": 6.39,
+                            "ingredient_price": 11500,
                             "ingredient_volume": 30.0,
                             "ingredient_unit": "g",
-                            "ingredient_url": "https://www.coupang.com/vp/products/7248384207?itemId=18432606089&vendorItemId=85574074967",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
-                            "price": 588.0
+                            "ingredient_url": "https://www.coupang.com/vp/products/7558184610?itemId=19906589768&vendorItemId=86063361351",
+                            "ingredient_img": "https://thumbnail8.coupangcdn.com/thumbnails/remote/230x230ex/image/vendor_inventory/221a/ac0822697789f7b06e066a304e4e56f5315d91b4ac477b39736e696cba0a.jpg",
+                            "price": 191.7
                         },
                         {
                             "ingredient_name": "소금",
-                            "ingredient_unit_price": 0.75,
-                            "ingredient_price": 18840,
+                            "ingredient_unit_price": 1.52,
+                            "ingredient_price": 7580,
                             "ingredient_volume": 7.5,
                             "ingredient_unit": "g",
-                            "ingredient_url": "https://www.coupang.com/vp/products/6978355650?itemId=12717968475&vendorItemId=70610150039",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
-                            "price": 5.625
+                            "ingredient_url": "https://www.coupang.com/vp/products/7118404111?itemId=154184&vendorItemId=3000080355",
+                            "ingredient_img": "https://thumbnail10.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/77422699043342-2253a7aa-405d-4763-99c9-431b47b34762.jpg",
+                            "price": 11.4
                         }
                     ],
                     "ingredient_list_without_unit": []
@@ -1991,7 +1989,7 @@ export default {
                     "youtube_uploaded_date": "2019-09-05 00:00:00",
                     "channel_name": "딸을 위한 레시피 Recipes for daughters",
                     "channel_img": "https://yt3.ggpht.com/cX0xLVL_WbQF66EiRmtYhU5I1If0scnNuswcMdalq88OCLQ6drE2H6qB_jEynsTN9b1EtaDatw=s88-c-k-c0x00ffffff-no-rj",
-                    "total_price": 2385.35,
+                    "total_price": 2387.2999999999997,
                     "ingredient_list": [
                         {
                             "ingredient_name": "도라지",
@@ -2010,7 +2008,7 @@ export default {
                             "ingredient_volume": 5.0,
                             "ingredient_unit": "g",
                             "ingredient_url": "https://www.coupang.com/vp/products/7195988134?itemId=18626117227&vendorItemId=85761496343",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
+                            "ingredient_img": "https://thumbnail10.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/7d46e3dc-159f-4a68-98eb-7d81e84673b01825372048899440918.png",
                             "price": 6.0
                         },
                         {
@@ -2025,13 +2023,13 @@ export default {
                         },
                         {
                             "ingredient_name": "대파",
-                            "ingredient_unit_price": 2.39,
-                            "ingredient_price": 23900,
+                            "ingredient_unit_price": 2.45,
+                            "ingredient_price": 24500,
                             "ingredient_volume": 10.0,
                             "ingredient_unit": "g",
-                            "ingredient_url": "https://www.coupang.com/vp/products/7463554652?itemId=19459376019&vendorItemId=75939343495",
-                            "ingredient_img": "https://thumbnail9.coupangcdn.com/thumbnails/remote/230x230ex/image/vendor_inventory/af0b/5b5322a49d3ffc877a65e0324c0e9a39ccd0673059525678f3853dbf5690.jpg",
-                            "price": 23.900000000000002
+                            "ingredient_url": "https://www.coupang.com/vp/products/7777089811?itemId=21011062691&vendorItemId=88074628457",
+                            "ingredient_img": "https://thumbnail7.coupangcdn.com/thumbnails/remote/230x230ex/image/vendor_inventory/3479/e5ca22145ad0665ed3a47d075c23df0605aa6711482519f16b55b3a8628e.jpg",
+                            "price": 24.5
                         },
                         {
                             "ingredient_name": "참기름",
@@ -2045,23 +2043,23 @@ export default {
                         },
                         {
                             "ingredient_name": "깨소금",
-                            "ingredient_unit_price": 9.49,
-                            "ingredient_price": 18980,
+                            "ingredient_unit_price": 8.99,
+                            "ingredient_price": 17980,
                             "ingredient_volume": 5.0,
                             "ingredient_unit": "g",
-                            "ingredient_url": "https://www.coupang.com/vp/products/1667161685?itemId=2840569126&vendorItemId=70829944677",
-                            "ingredient_img": "https://thumbnail6.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/316782230414351-876ced41-ce45-4dbe-8c7c-94e22c1b506d.jpg",
-                            "price": 47.45
+                            "ingredient_url": "https://www.coupang.com/vp/products/7574514650?itemId=17716327048&vendorItemId=84881175299",
+                            "ingredient_img": "https://thumbnail10.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/766316930514427-fac38c83-125d-4d65-b995-c48d45e9ee71.jpg",
+                            "price": 44.95
                         },
                         {
                             "ingredient_name": "소금",
-                            "ingredient_unit_price": 0.75,
-                            "ingredient_price": 18840,
+                            "ingredient_unit_price": 1.52,
+                            "ingredient_price": 7580,
                             "ingredient_volume": 5.0,
                             "ingredient_unit": "g",
-                            "ingredient_url": "https://www.coupang.com/vp/products/6978355650?itemId=12717968475&vendorItemId=70610150039",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
-                            "price": 3.75
+                            "ingredient_url": "https://www.coupang.com/vp/products/7118404111?itemId=154184&vendorItemId=3000080355",
+                            "ingredient_img": "https://thumbnail10.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/77422699043342-2253a7aa-405d-4763-99c9-431b47b34762.jpg",
+                            "price": 7.6
                         },
                         {
                             "ingredient_name": "식용유",
@@ -2070,7 +2068,7 @@ export default {
                             "ingredient_volume": 5.0,
                             "ingredient_unit": "g",
                             "ingredient_url": "https://www.coupang.com/vp/products/6680558424?itemId=15403790368&vendorItemId=87576247097",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
+                            "ingredient_img": "https://thumbnail10.coupangcdn.com/thumbnails/remote/230x230ex/image/vendor_inventory/7e03/a05e9badf865e55c296900732aee957db58acdc952c4a8f7d3f510e13df9.jpg",
                             "price": 13.100000000000001
                         }
                     ],
@@ -2083,7 +2081,7 @@ export default {
                     "youtube_uploaded_date": "2023-02-27 00:00:00",
                     "channel_name": "Mrs macarons마카롱여사",
                     "channel_img": "https://yt3.ggpht.com/ytc/AIf8zZRbcOOdbkV90cjmvJHfQ_rITPW2u1yWIBHMmeX_LMA=s88-c-k-c0x00ffffff-no-rj",
-                    "total_price": 6313.95,
+                    "total_price": 6313.65,
                     "ingredient_list": [
                         {
                             "ingredient_name": "닭날개",
@@ -2117,13 +2115,13 @@ export default {
                         },
                         {
                             "ingredient_name": "다진마늘",
-                            "ingredient_unit_price": 3.7,
-                            "ingredient_price": 18250,
+                            "ingredient_unit_price": 3.64,
+                            "ingredient_price": 18200,
                             "ingredient_volume": 5.0,
                             "ingredient_unit": "g",
-                            "ingredient_url": "https://www.coupang.com/vp/products/6012228407?itemId=10910051311&vendorItemId=78189867054",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
-                            "price": 18.5
+                            "ingredient_url": "https://www.coupang.com/vp/products/6890784639?itemId=19929771567&vendorItemId=87029336992",
+                            "ingredient_img": "https://thumbnail10.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/23c231f2-41be-4410-8873-5544a8f8fa272857012207940814782.png",
+                            "price": 18.2
                         },
                         {
                             "ingredient_name": "라임즙",
@@ -2138,7 +2136,7 @@ export default {
                         {
                             "ingredient_name": "설탕",
                             "ingredient_unit_price": 1.63,
-                            "ingredient_price": 24520,
+                            "ingredient_price": 24490,
                             "ingredient_volume": 15.0,
                             "ingredient_unit": "g",
                             "ingredient_url": "https://www.coupang.com/vp/products/7139315300?itemId=16584760&vendorItemId=3005825349",
@@ -2152,7 +2150,7 @@ export default {
                             "ingredient_volume": 5.0,
                             "ingredient_unit": "g",
                             "ingredient_url": "https://www.coupang.com/vp/products/5760586837?itemId=18877403308&vendorItemId=3037177116",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
+                            "ingredient_img": "https://thumbnail10.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/356109451292814-5c1804b1-593f-4bfe-8c93-5d6ca7b86f0e.jpg",
                             "price": 21.5
                         }
                     ],
@@ -2165,17 +2163,17 @@ export default {
                     "youtube_uploaded_date": "2020-05-28 00:00:00",
                     "channel_name": "소소황 Cook & Eat",
                     "channel_img": "https://yt3.ggpht.com/O5duj-utaWLVDGXNomi-1OyyZp3q0JK5Wva3UJ3tW8wHuNe9aGtX7R2TRQrSooljWJ09wb81=s88-c-k-c0x00ffffff-no-rj",
-                    "total_price": 3736.350000000001,
+                    "total_price": 5035.55,
                     "ingredient_list": [
                         {
                             "ingredient_name": "닭다리",
-                            "ingredient_unit_price": 4.23,
-                            "ingredient_price": 50700,
+                            "ingredient_unit_price": 5.83,
+                            "ingredient_price": 6990,
                             "ingredient_volume": 800.0,
                             "ingredient_unit": "g",
-                            "ingredient_url": "https://www.coupang.com/vp/products/5140323612?itemId=7045112872&vendorItemId=74337215286",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
-                            "price": 3384.0000000000005
+                            "ingredient_url": "https://www.coupang.com/vp/products/5077126547?itemId=6882155226&vendorItemId=74174758824",
+                            "ingredient_img": "https://thumbnail8.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/2410034443733245-c96a1077-f5ab-4df4-bb35-0cd0eaf8bc2e.jpg",
+                            "price": 4664.0
                         },
                         {
                             "ingredient_name": "고추장",
@@ -2184,7 +2182,7 @@ export default {
                             "ingredient_volume": 30.0,
                             "ingredient_unit": "g",
                             "ingredient_url": "https://www.coupang.com/vp/products/6900313161?itemId=346924589&vendorItemId=85717010423",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
+                            "ingredient_img": "https://thumbnail10.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/26266206601838-abb50f02-5ef9-4fc5-b98f-0ba491f2fe1b.png",
                             "price": 58.5
                         },
                         {
@@ -2219,28 +2217,28 @@ export default {
                         },
                         {
                             "ingredient_name": "다진마늘",
-                            "ingredient_unit_price": 3.7,
-                            "ingredient_price": 18250,
+                            "ingredient_unit_price": 3.64,
+                            "ingredient_price": 18200,
                             "ingredient_volume": 15.0,
                             "ingredient_unit": "g",
-                            "ingredient_url": "https://www.coupang.com/vp/products/6012228407?itemId=10910051311&vendorItemId=78189867054",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
-                            "price": 55.5
+                            "ingredient_url": "https://www.coupang.com/vp/products/6890784639?itemId=19929771567&vendorItemId=87029336992",
+                            "ingredient_img": "https://thumbnail10.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/23c231f2-41be-4410-8873-5544a8f8fa272857012207940814782.png",
+                            "price": 54.6
                         },
                         {
                             "ingredient_name": "진간장",
-                            "ingredient_unit_price": 1.16,
-                            "ingredient_price": 15050,
+                            "ingredient_unit_price": 1.83,
+                            "ingredient_price": 27390,
                             "ingredient_volume": 30.0,
                             "ingredient_unit": "g",
-                            "ingredient_url": "https://www.coupang.com/vp/products/7196421572?itemId=18180298196&vendorItemId=85329334567",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
-                            "price": 34.8
+                            "ingredient_url": "https://www.coupang.com/vp/products/5897832438?itemId=18204720267&vendorItemId=3008200213",
+                            "ingredient_img": "https://thumbnail10.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/3578077938599046-faf01df5-9ab8-4312-8694-3933c3153852.png",
+                            "price": 54.900000000000006
                         },
                         {
                             "ingredient_name": "설탕",
                             "ingredient_unit_price": 1.63,
-                            "ingredient_price": 24520,
+                            "ingredient_price": 24490,
                             "ingredient_volume": 30.0,
                             "ingredient_unit": "g",
                             "ingredient_url": "https://www.coupang.com/vp/products/7139315300?itemId=16584760&vendorItemId=3005825349",
@@ -2254,7 +2252,7 @@ export default {
                             "ingredient_volume": 60.0,
                             "ingredient_unit": "g",
                             "ingredient_url": "https://www.coupang.com/vp/products/7689270513?itemId=20877904962&vendorItemId=87945141063",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
+                            "ingredient_img": "https://thumbnail8.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/1077787963868499-c1e46ca7-d157-4de0-ad8e-063b93ac490d.jpg",
                             "price": 12.6
                         }
                     ],
@@ -2267,17 +2265,17 @@ export default {
                     "youtube_uploaded_date": "2020-06-23 00:00:00",
                     "channel_name": "정호영의 오늘도 요리 Kitchen Caden",
                     "channel_img": "https://yt3.ggpht.com/ytc/AIf8zZTDNPcWD7UH_jED20D-SlhpEHw0gbiETRfxqjXQ=s88-c-k-c0x00ffffff-no-rj",
-                    "total_price": 1609.1,
+                    "total_price": 1591.3999999999999,
                     "ingredient_list": [
                         {
                             "ingredient_name": "닭",
-                            "ingredient_unit_price": 4.23,
-                            "ingredient_price": 50700,
+                            "ingredient_unit_price": 4.14,
+                            "ingredient_price": 49620,
                             "ingredient_volume": 240.0,
                             "ingredient_unit": "g",
                             "ingredient_url": "https://www.coupang.com/vp/products/5140323612?itemId=7045112872&vendorItemId=74337215286",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
-                            "price": 1015.2
+                            "ingredient_img": "https://thumbnail9.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/2021/03/05/16/7/b1c68b27-466e-4026-8323-3994beb9bbe0.jpg",
+                            "price": 993.5999999999999
                         },
                         {
                             "ingredient_name": "고추장",
@@ -2286,17 +2284,17 @@ export default {
                             "ingredient_volume": 30.0,
                             "ingredient_unit": "g",
                             "ingredient_url": "https://www.coupang.com/vp/products/6900313161?itemId=346924589&vendorItemId=85717010423",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
+                            "ingredient_img": "https://thumbnail10.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/26266206601838-abb50f02-5ef9-4fc5-b98f-0ba491f2fe1b.png",
                             "price": 58.5
                         },
                         {
                             "ingredient_name": "고추기름",
                             "ingredient_unit_price": 4.28,
-                            "ingredient_price": 61680,
+                            "ingredient_price": 61610,
                             "ingredient_volume": 20.0,
                             "ingredient_unit": "g",
-                            "ingredient_url": "https://www.coupang.com/vp/products/72470?itemId=2877871685&vendorItemId=86016490820",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
+                            "ingredient_url": "https://www.coupang.com/vp/products/72470?itemId=2877871685&vendorItemId=81354691042",
+                            "ingredient_img": "https://thumbnail7.coupangcdn.com/thumbnails/remote/230x230ex/image/vendor_inventory/ca19/5fd5685b9b2352402868561e569a175407976fb1ef990419a4caf267d16e.png",
                             "price": 85.60000000000001
                         },
                         {
@@ -2316,18 +2314,18 @@ export default {
                             "ingredient_volume": 20.0,
                             "ingredient_unit": "g",
                             "ingredient_url": "https://www.coupang.com/vp/products/5897832438?itemId=18171819377&vendorItemId=85321160831",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
+                            "ingredient_img": "https://thumbnail8.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/77c4fb51-65b7-43ee-955d-7deec1714bc55045824864441731918.png",
                             "price": 47.0
                         },
                         {
                             "ingredient_name": "다진마늘",
-                            "ingredient_unit_price": 3.7,
-                            "ingredient_price": 18250,
+                            "ingredient_unit_price": 3.64,
+                            "ingredient_price": 18200,
                             "ingredient_volume": 10.0,
                             "ingredient_unit": "g",
-                            "ingredient_url": "https://www.coupang.com/vp/products/6012228407?itemId=10910051311&vendorItemId=78189867054",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
-                            "price": 37.0
+                            "ingredient_url": "https://www.coupang.com/vp/products/6890784639?itemId=19929771567&vendorItemId=87029336992",
+                            "ingredient_img": "https://thumbnail10.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/23c231f2-41be-4410-8873-5544a8f8fa272857012207940814782.png",
+                            "price": 36.4
                         },
                         {
                             "ingredient_name": "케첩",
@@ -2346,23 +2344,23 @@ export default {
                             "ingredient_volume": 30.0,
                             "ingredient_unit": "g",
                             "ingredient_url": "https://www.coupang.com/vp/products/7689270513?itemId=20877904962&vendorItemId=87945141063",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
+                            "ingredient_img": "https://thumbnail8.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/1077787963868499-c1e46ca7-d157-4de0-ad8e-063b93ac490d.jpg",
                             "price": 6.3
                         },
                         {
                             "ingredient_name": "튀김가루",
-                            "ingredient_unit_price": 1.76,
-                            "ingredient_price": 17640,
+                            "ingredient_unit_price": 1.91,
+                            "ingredient_price": 19080,
                             "ingredient_volume": 30.0,
                             "ingredient_unit": "g",
-                            "ingredient_url": "https://www.coupang.com/vp/products/7448501892?itemId=19385271920&vendorItemId=86503009666",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
-                            "price": 52.8
+                            "ingredient_url": "https://www.coupang.com/vp/products/6640593253?itemId=17956561520&vendorItemId=85970521228",
+                            "ingredient_img": "https://thumbnail9.coupangcdn.com/thumbnails/remote/230x230ex/image/vendor_inventory/17a0/04a06ebf80b589c5b71513fe4b8f1cc102b522ceebf38a200309397110c0.png",
+                            "price": 57.3
                         },
                         {
                             "ingredient_name": "설탕",
                             "ingredient_unit_price": 1.63,
-                            "ingredient_price": 24520,
+                            "ingredient_price": 24490,
                             "ingredient_volume": 20.0,
                             "ingredient_unit": "g",
                             "ingredient_url": "https://www.coupang.com/vp/products/7139315300?itemId=16584760&vendorItemId=3005825349",
@@ -2389,7 +2387,7 @@ export default {
                     "youtube_uploaded_date": "2019-04-06 00:00:00",
                     "channel_name": "딸을 위한 레시피 Recipes for daughters",
                     "channel_img": "https://yt3.ggpht.com/cX0xLVL_WbQF66EiRmtYhU5I1If0scnNuswcMdalq88OCLQ6drE2H6qB_jEynsTN9b1EtaDatw=s88-c-k-c0x00ffffff-no-rj",
-                    "total_price": 3276.35,
+                    "total_price": 3270.5499999999997,
                     "ingredient_list": [
                         {
                             "ingredient_name": "멸치",
@@ -2403,13 +2401,13 @@ export default {
                         },
                         {
                             "ingredient_name": "꽈리고추",
-                            "ingredient_unit_price": 12.35,
-                            "ingredient_price": 49400,
+                            "ingredient_unit_price": 12.13,
+                            "ingredient_price": 48500,
                             "ingredient_volume": 100.0,
                             "ingredient_unit": "g",
                             "ingredient_url": "https://www.coupang.com/vp/products/6340332659?itemId=13298346783&vendorItemId=80555653454",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
-                            "price": 1235.0
+                            "ingredient_img": "https://thumbnail10.coupangcdn.com/thumbnails/remote/230x230ex/image/vendor_inventory/32d5/0463a1a9cbeaed1d6785b04f6391a8b1f0f75bbe9aa2f9261a7ea327bca9.jpg",
+                            "price": 1213.0
                         },
                         {
                             "ingredient_name": "편마늘",
@@ -2418,7 +2416,7 @@ export default {
                             "ingredient_volume": 15.0,
                             "ingredient_unit": "g",
                             "ingredient_url": "https://www.coupang.com/vp/products/6890446561?itemId=19272806059&vendorItemId=86387962600",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
+                            "ingredient_img": "https://thumbnail9.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/dbc8aa41-b1dc-447d-8a57-14f0c18a614624297691915085764.png",
                             "price": 73.2
                         },
                         {
@@ -2428,7 +2426,7 @@ export default {
                             "ingredient_volume": 15.0,
                             "ingredient_unit": "g",
                             "ingredient_url": "https://www.coupang.com/vp/products/6091708833?itemId=18204495963&vendorItemId=88375813525",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
+                            "ingredient_img": "https://thumbnail10.coupangcdn.com/thumbnails/remote/230x230ex/image/vendor_inventory/cb69/d614e4711b236d216a9030c8b1b11bd535423a0883b5364e5976884d18dc.png",
                             "price": 46.65
                         },
                         {
@@ -2443,18 +2441,18 @@ export default {
                         },
                         {
                             "ingredient_name": "올리고당",
-                            "ingredient_unit_price": 2.13,
-                            "ingredient_price": 42690,
+                            "ingredient_unit_price": 2.4,
+                            "ingredient_price": 36000,
                             "ingredient_volume": 60.0,
                             "ingredient_unit": "g",
-                            "ingredient_url": "https://www.coupang.com/vp/products/592825?itemId=7367555431&vendorItemId=74658955839",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
-                            "price": 127.8
+                            "ingredient_url": "https://www.coupang.com/vp/products/592825?itemId=12346402311&vendorItemId=84606305062",
+                            "ingredient_img": "https://thumbnail9.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/7396239517444869-f3787541-82b4-427d-a4e2-ef4495036f67.jpg",
+                            "price": 144.0
                         },
                         {
                             "ingredient_name": "설탕",
                             "ingredient_unit_price": 1.63,
-                            "ingredient_price": 24520,
+                            "ingredient_price": 24490,
                             "ingredient_volume": 15.0,
                             "ingredient_unit": "g",
                             "ingredient_url": "https://www.coupang.com/vp/products/7139315300?itemId=16584760&vendorItemId=3005825349",
@@ -2468,7 +2466,7 @@ export default {
                             "ingredient_volume": 45.0,
                             "ingredient_unit": "g",
                             "ingredient_url": "https://www.coupang.com/vp/products/6680558424?itemId=15403790368&vendorItemId=87576247097",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
+                            "ingredient_img": "https://thumbnail10.coupangcdn.com/thumbnails/remote/230x230ex/image/vendor_inventory/7e03/a05e9badf865e55c296900732aee957db58acdc952c4a8f7d3f510e13df9.jpg",
                             "price": 117.9
                         },
                         {
@@ -2491,27 +2489,27 @@ export default {
                     "youtube_uploaded_date": "2023-06-22 00:00:00",
                     "channel_name": "요리왕비룡 Korean Food Cooking",
                     "channel_img": "https://yt3.ggpht.com/ytc/AIf8zZTct-uy-QGq5D06gqsk2k1ka0ztG8xOQii4Y8Hecg=s88-c-k-c0x00ffffff-no-rj",
-                    "total_price": 1581.3,
+                    "total_price": 1529.0,
                     "ingredient_list": [
                         {
                             "ingredient_name": "국간장",
-                            "ingredient_unit_price": 1.37,
-                            "ingredient_price": 19190,
+                            "ingredient_unit_price": 3.3,
+                            "ingredient_price": 11210,
                             "ingredient_volume": 5.0,
                             "ingredient_unit": "g",
-                            "ingredient_url": "https://www.coupang.com/vp/products/5938053333?itemId=18204402896&vendorItemId=78415747472",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
-                            "price": 6.8500000000000005
+                            "ingredient_url": "https://www.coupang.com/vp/products/239196850?itemId=18171493809&vendorItemId=85320843397",
+                            "ingredient_img": "https://thumbnail9.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/20c16af9-400e-47b9-8359-4b68cc4e41e99153747284672463110.png",
+                            "price": 16.5
                         },
                         {
                             "ingredient_name": "참치액",
-                            "ingredient_unit_price": 6.3,
-                            "ingredient_price": 13200,
+                            "ingredient_unit_price": 4.7,
+                            "ingredient_price": 19930,
                             "ingredient_volume": 2.5,
                             "ingredient_unit": "g",
-                            "ingredient_url": "https://www.coupang.com/vp/products/1463018080?itemId=2516565144&vendorItemId=85382914150",
-                            "ingredient_img": "https://thumbnail6.coupangcdn.com/thumbnails/remote/230x230ex/image/vendor_inventory/79ad/e11ba73f15420ece01c2edd513fd32736825c78c611de53fc18cd319764e.PNG",
-                            "price": 15.75
+                            "ingredient_url": "https://www.coupang.com/vp/products/1463018080?itemId=18623602264&vendorItemId=85760514037",
+                            "ingredient_img": "https://thumbnail9.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/1a0edbe1-73fa-44b3-b561-3f6a867703a95018413528174038520.png",
+                            "price": 11.75
                         },
                         {
                             "ingredient_name": "물엿",
@@ -2525,33 +2523,33 @@ export default {
                         },
                         {
                             "ingredient_name": "들기름",
-                            "ingredient_unit_price": 19.6,
-                            "ingredient_price": 35250,
+                            "ingredient_unit_price": 6.39,
+                            "ingredient_price": 11500,
                             "ingredient_volume": 5.0,
                             "ingredient_unit": "g",
-                            "ingredient_url": "https://www.coupang.com/vp/products/7248384207?itemId=18432606089&vendorItemId=85574074967",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
-                            "price": 98.0
+                            "ingredient_url": "https://www.coupang.com/vp/products/7558184610?itemId=19906589768&vendorItemId=86063361351",
+                            "ingredient_img": "https://thumbnail8.coupangcdn.com/thumbnails/remote/230x230ex/image/vendor_inventory/221a/ac0822697789f7b06e066a304e4e56f5315d91b4ac477b39736e696cba0a.jpg",
+                            "price": 31.95
                         },
                         {
                             "ingredient_name": "들깨가루",
-                            "ingredient_unit_price": 7.2,
-                            "ingredient_price": 72100,
+                            "ingredient_unit_price": 8.31,
+                            "ingredient_price": 8310,
                             "ingredient_volume": 5.0,
                             "ingredient_unit": "g",
-                            "ingredient_url": "https://www.coupang.com/vp/products/6669341850?itemId=18333052229&vendorItemId=85477546173",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
-                            "price": 36.0
+                            "ingredient_url": "https://www.coupang.com/vp/products/1060458752?itemId=2004669584&vendorItemId=70004615073",
+                            "ingredient_img": "https://thumbnail10.coupangcdn.com/thumbnails/remote/230x230ex/image/vendor_inventory/061f/cb1b650bdb6ff0060e60e6834f842003ea528134becba3c7311f9e908bcb.jpg",
+                            "price": 41.550000000000004
                         },
                         {
                             "ingredient_name": "밀가루",
-                            "ingredient_unit_price": 1.14,
-                            "ingredient_price": 17160,
+                            "ingredient_unit_price": 1.33,
+                            "ingredient_price": 3990,
                             "ingredient_volume": 15.0,
                             "ingredient_unit": "g",
-                            "ingredient_url": "https://www.coupang.com/vp/products/13432703?itemId=19610911320&vendorItemId=86717879346",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
-                            "price": 17.099999999999998
+                            "ingredient_url": "https://www.coupang.com/vp/products/7257694107?itemId=18477853883&vendorItemId=85617748048",
+                            "ingredient_img": "https://thumbnail10.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/3419146629828407-257238be-cfdc-41cd-881a-b535b88c3b95.jpg",
+                            "price": 19.950000000000003
                         },
                         {
                             "ingredient_name": "물",
@@ -2560,7 +2558,7 @@ export default {
                             "ingredient_volume": 100.0,
                             "ingredient_unit": "g",
                             "ingredient_url": "https://www.coupang.com/vp/products/7689270513?itemId=20877904962&vendorItemId=87945141063",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
+                            "ingredient_img": "https://thumbnail8.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/1077787963868499-c1e46ca7-d157-4de0-ad8e-063b93ac490d.jpg",
                             "price": 21.0
                         },
                         {
@@ -2575,13 +2573,13 @@ export default {
                         },
                         {
                             "ingredient_name": "다진마늘",
-                            "ingredient_unit_price": 3.7,
-                            "ingredient_price": 18250,
+                            "ingredient_unit_price": 3.64,
+                            "ingredient_price": 18200,
                             "ingredient_volume": 5.0,
                             "ingredient_unit": "g",
-                            "ingredient_url": "https://www.coupang.com/vp/products/6012228407?itemId=10910051311&vendorItemId=78189867054",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
-                            "price": 18.5
+                            "ingredient_url": "https://www.coupang.com/vp/products/6890784639?itemId=19929771567&vendorItemId=87029336992",
+                            "ingredient_img": "https://thumbnail10.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/23c231f2-41be-4410-8873-5544a8f8fa272857012207940814782.png",
+                            "price": 18.2
                         },
                         {
                             "ingredient_name": "식용유",
@@ -2590,7 +2588,7 @@ export default {
                             "ingredient_volume": 5.0,
                             "ingredient_unit": "g",
                             "ingredient_url": "https://www.coupang.com/vp/products/6680558424?itemId=15403790368&vendorItemId=87576247097",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
+                            "ingredient_img": "https://thumbnail10.coupangcdn.com/thumbnails/remote/230x230ex/image/vendor_inventory/7e03/a05e9badf865e55c296900732aee957db58acdc952c4a8f7d3f510e13df9.jpg",
                             "price": 13.100000000000001
                         }
                     ],
@@ -2603,7 +2601,7 @@ export default {
                     "youtube_uploaded_date": "2020-08-12 00:00:00",
                     "channel_name": "백종원 PAIK JONG WON",
                     "channel_img": "https://yt3.ggpht.com/J3OI66Bc7T3nheyKJKAkXR6tb-_bpCsoRMTFoslOBCXI3DpVY8eFY4LZWzww3BEgkRjMOEoI=s88-c-k-c0x00ffffff-no-rj",
-                    "total_price": 3099.1000000000004,
+                    "total_price": 3093.6000000000004,
                     "ingredient_list": [
                         {
                             "ingredient_name": "돼지고기목살",
@@ -2612,7 +2610,7 @@ export default {
                             "ingredient_volume": 130.0,
                             "ingredient_unit": "g",
                             "ingredient_url": "https://www.coupang.com/vp/products/5169947632?itemId=7131594758&vendorItemId=74423389195",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
+                            "ingredient_img": "https://thumbnail10.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/6598779476294580-230e90d6-b1d5-40fa-aa2e-0fef0e42ece5.jpg",
                             "price": 1296.1000000000001
                         },
                         {
@@ -2622,38 +2620,38 @@ export default {
                             "ingredient_volume": 390.0,
                             "ingredient_unit": "g",
                             "ingredient_url": "https://www.coupang.com/vp/products/7122229650?itemId=17835916638&vendorItemId=84999602570",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
+                            "ingredient_img": "https://thumbnail9.coupangcdn.com/thumbnails/remote/230x230ex/image/vendor_inventory/d5ae/d2c7c2f20e98343338c13baf5d878e3506fe0a2f50380b76a03a6fd189db.jpg",
                             "price": 975.0
                         },
                         {
                             "ingredient_name": "청양고추",
-                            "ingredient_unit_price": 16.21,
-                            "ingredient_price": 29170,
+                            "ingredient_unit_price": 14.7,
+                            "ingredient_price": 7350,
                             "ingredient_volume": 20.0,
                             "ingredient_unit": "g",
-                            "ingredient_url": "https://www.coupang.com/vp/products/6639183562?itemId=19223914026&vendorItemId=86340596423",
-                            "ingredient_img": "https://thumbnail7.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/3960703655094524-f015193d-605b-4763-a119-4181683915d7.jpg",
-                            "price": 324.20000000000005
+                            "ingredient_url": "https://www.coupang.com/vp/products/6097731697?itemId=11406371607&vendorItemId=78682324950",
+                            "ingredient_img": "https://thumbnail8.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/7030340116853210-5cce2da8-d902-453c-9cac-eef7401d1fb0.jpg",
+                            "price": 294.0
                         },
                         {
                             "ingredient_name": "대파",
-                            "ingredient_unit_price": 2.39,
-                            "ingredient_price": 23900,
+                            "ingredient_unit_price": 2.45,
+                            "ingredient_price": 24500,
                             "ingredient_volume": 70.0,
                             "ingredient_unit": "g",
-                            "ingredient_url": "https://www.coupang.com/vp/products/7463554652?itemId=19459376019&vendorItemId=75939343495",
-                            "ingredient_img": "https://thumbnail9.coupangcdn.com/thumbnails/remote/230x230ex/image/vendor_inventory/af0b/5b5322a49d3ffc877a65e0324c0e9a39ccd0673059525678f3853dbf5690.jpg",
-                            "price": 167.3
+                            "ingredient_url": "https://www.coupang.com/vp/products/7777089811?itemId=21011062691&vendorItemId=88074628457",
+                            "ingredient_img": "https://thumbnail7.coupangcdn.com/thumbnails/remote/230x230ex/image/vendor_inventory/3479/e5ca22145ad0665ed3a47d075c23df0605aa6711482519f16b55b3a8628e.jpg",
+                            "price": 171.5
                         },
                         {
                             "ingredient_name": "간마늘",
-                            "ingredient_unit_price": 3.64,
-                            "ingredient_price": 18200,
+                            "ingredient_unit_price": 3.7,
+                            "ingredient_price": 18250,
                             "ingredient_volume": 20.0,
                             "ingredient_unit": "g",
-                            "ingredient_url": "https://www.coupang.com/vp/products/6890784639?itemId=19929771567&vendorItemId=87029336992",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
-                            "price": 72.8
+                            "ingredient_url": "https://www.coupang.com/vp/products/6012228407?itemId=10910051311&vendorItemId=78189867054",
+                            "ingredient_img": "https://thumbnail6.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/546432680819306-54f32764-2a7d-4253-92dc-9571d6a902a5.jpg",
+                            "price": 74.0
                         },
                         {
                             "ingredient_name": "고운고춧가루",
@@ -2667,13 +2665,13 @@ export default {
                         },
                         {
                             "ingredient_name": "국간장",
-                            "ingredient_unit_price": 1.37,
-                            "ingredient_price": 19190,
+                            "ingredient_unit_price": 3.3,
+                            "ingredient_price": 11210,
                             "ingredient_volume": 10.0,
                             "ingredient_unit": "g",
-                            "ingredient_url": "https://www.coupang.com/vp/products/5938053333?itemId=18204402896&vendorItemId=78415747472",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
-                            "price": 13.700000000000001
+                            "ingredient_url": "https://www.coupang.com/vp/products/239196850?itemId=18171493809&vendorItemId=85320843397",
+                            "ingredient_img": "https://thumbnail9.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/20c16af9-400e-47b9-8359-4b68cc4e41e99153747284672463110.png",
+                            "price": 33.0
                         },
                         {
                             "ingredient_name": "새우젓",
@@ -2692,7 +2690,7 @@ export default {
                             "ingredient_volume": 540.0,
                             "ingredient_unit": "g",
                             "ingredient_url": "https://www.coupang.com/vp/products/7689270513?itemId=20877904962&vendorItemId=87945141063",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
+                            "ingredient_img": "https://thumbnail8.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/1077787963868499-c1e46ca7-d157-4de0-ad8e-063b93ac490d.jpg",
                             "price": 113.39999999999999
                         },
                         {
@@ -2715,17 +2713,17 @@ export default {
                     "youtube_uploaded_date": "2021-03-03 00:00:00",
                     "channel_name": "양장금주부",
                     "channel_img": "https://yt3.ggpht.com/ytc/AIf8zZTUXzGXmbCeLw7N2q2_YiICTdp-NKyj0yKavZ4oOg=s88-c-k-c0x00ffffff-no-rj",
-                    "total_price": 3281.125,
+                    "total_price": 3398.125,
                     "ingredient_list": [
                         {
                             "ingredient_name": "대파",
-                            "ingredient_unit_price": 2.39,
-                            "ingredient_price": 23900,
+                            "ingredient_unit_price": 2.45,
+                            "ingredient_price": 24500,
                             "ingredient_volume": 150.0,
                             "ingredient_unit": "g",
-                            "ingredient_url": "https://www.coupang.com/vp/products/7463554652?itemId=19459376019&vendorItemId=75939343495",
-                            "ingredient_img": "https://thumbnail9.coupangcdn.com/thumbnails/remote/230x230ex/image/vendor_inventory/af0b/5b5322a49d3ffc877a65e0324c0e9a39ccd0673059525678f3853dbf5690.jpg",
-                            "price": 358.5
+                            "ingredient_url": "https://www.coupang.com/vp/products/7777089811?itemId=21011062691&vendorItemId=88074628457",
+                            "ingredient_img": "https://thumbnail7.coupangcdn.com/thumbnails/remote/230x230ex/image/vendor_inventory/3479/e5ca22145ad0665ed3a47d075c23df0605aa6711482519f16b55b3a8628e.jpg",
+                            "price": 367.5
                         },
                         {
                             "ingredient_name": "오이",
@@ -2739,33 +2737,33 @@ export default {
                         },
                         {
                             "ingredient_name": "골뱅이",
-                            "ingredient_unit_price": 13.8,
-                            "ingredient_price": 33180,
+                            "ingredient_unit_price": 14.6,
+                            "ingredient_price": 21870,
                             "ingredient_volume": 150.0,
                             "ingredient_unit": "g",
-                            "ingredient_url": "https://www.coupang.com/vp/products/18406051?itemId=17910009410&vendorItemId=85068501377",
-                            "ingredient_img": "https://thumbnail7.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/2269893661020724-900b0aff-a593-42b0-a462-e8dca13c1c52.jpg",
-                            "price": 2070.0
+                            "ingredient_url": "https://www.coupang.com/vp/products/18406051?itemId=15491403141&vendorItemId=85296814379",
+                            "ingredient_img": "https://thumbnail7.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/6f68a808-994c-4e3a-8198-a19e1d96e43c4285942145224219448.png",
+                            "price": 2190.0
                         },
                         {
                             "ingredient_name": "소면",
-                            "ingredient_unit_price": 1.92,
-                            "ingredient_price": 11500,
+                            "ingredient_unit_price": 1.78,
+                            "ingredient_price": 32100,
                             "ingredient_volume": 100.0,
                             "ingredient_unit": "g",
-                            "ingredient_url": "https://www.coupang.com/vp/products/2070876420?itemId=18818675113&vendorItemId=85949056939",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
-                            "price": 192.0
+                            "ingredient_url": "https://www.coupang.com/vp/products/5189171848?itemId=19421827113&vendorItemId=86533289145",
+                            "ingredient_img": "https://thumbnail6.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/fbfc71dc-cdab-4945-9b09-05eb1646bb125630445462236113439.png",
+                            "price": 178.0
                         },
                         {
                             "ingredient_name": "양파",
-                            "ingredient_unit_price": 1.65,
-                            "ingredient_price": 16540,
+                            "ingredient_unit_price": 1.69,
+                            "ingredient_price": 16900,
                             "ingredient_volume": 50.0,
                             "ingredient_unit": "g",
-                            "ingredient_url": "https://www.coupang.com/vp/products/6258806325?itemId=19223783161&vendorItemId=86340471165",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
-                            "price": 82.5
+                            "ingredient_url": "https://www.coupang.com/vp/products/7472965964?itemId=19503240121&vendorItemId=86018545921",
+                            "ingredient_img": "https://thumbnail9.coupangcdn.com/thumbnails/remote/230x230ex/image/vendor_inventory/1582/b4a5a3a502648f442cd515bddc80425374ad537b055415e517a20fe75812.jpg",
+                            "price": 84.5
                         }
                     ],
                     "ingredient_list_without_unit": []
@@ -2777,37 +2775,37 @@ export default {
                     "youtube_uploaded_date": "2023-10-11 00:00:00",
                     "channel_name": "엄마의집밥 Mom's food",
                     "channel_img": "https://yt3.ggpht.com/uMA7_qEIa3Gg9vNGhiMZN8MPTFe9U3q9w28J5TBN5wnZPualDAwrB9lzjmX-0Tw0xhds7aoZjQ=s88-c-k-c0x00ffffff-no-rj",
-                    "total_price": 9190.0,
+                    "total_price": 15477.95,
                     "ingredient_list": [
                         {
                             "ingredient_name": "대파",
-                            "ingredient_unit_price": 2.39,
-                            "ingredient_price": 23900,
+                            "ingredient_unit_price": 2.45,
+                            "ingredient_price": 24500,
                             "ingredient_volume": 120.0,
                             "ingredient_unit": "g",
-                            "ingredient_url": "https://www.coupang.com/vp/products/7463554652?itemId=19459376019&vendorItemId=75939343495",
-                            "ingredient_img": "https://thumbnail9.coupangcdn.com/thumbnails/remote/230x230ex/image/vendor_inventory/af0b/5b5322a49d3ffc877a65e0324c0e9a39ccd0673059525678f3853dbf5690.jpg",
-                            "price": 286.8
+                            "ingredient_url": "https://www.coupang.com/vp/products/7777089811?itemId=21011062691&vendorItemId=88074628457",
+                            "ingredient_img": "https://thumbnail7.coupangcdn.com/thumbnails/remote/230x230ex/image/vendor_inventory/3479/e5ca22145ad0665ed3a47d075c23df0605aa6711482519f16b55b3a8628e.jpg",
+                            "price": 294.0
                         },
                         {
                             "ingredient_name": "굵은소금",
-                            "ingredient_unit_price": 1.0,
-                            "ingredient_price": 20000,
+                            "ingredient_unit_price": 0.92,
+                            "ingredient_price": 18360,
                             "ingredient_volume": 100.0,
                             "ingredient_unit": "g",
-                            "ingredient_url": "https://www.coupang.com/vp/products/7639921549?itemId=20296510348&vendorItemId=85916280487",
-                            "ingredient_img": "https://thumbnail10.coupangcdn.com/thumbnails/remote/230x230ex/image/vendor_inventory/7b2f/bd1b494236dd2e2df7e1845856401ef1dd06509ea6e5bc918aefe9a9b04b.jpg",
-                            "price": 100.0
+                            "ingredient_url": "https://www.coupang.com/vp/products/7598091427?itemId=20092631837&vendorItemId=87875020025",
+                            "ingredient_img": "https://thumbnail7.coupangcdn.com/thumbnails/remote/230x230ex/image/vendor_inventory/32fe/800d5f0d40a1104c3754215f75d62be476b631ce33b7f80c12391baa5f8e.png",
+                            "price": 92.0
                         },
                         {
                             "ingredient_name": "밀가루",
-                            "ingredient_unit_price": 1.14,
-                            "ingredient_price": 17160,
+                            "ingredient_unit_price": 1.33,
+                            "ingredient_price": 3990,
                             "ingredient_volume": 25.0,
                             "ingredient_unit": "g",
-                            "ingredient_url": "https://www.coupang.com/vp/products/13432703?itemId=19610911320&vendorItemId=86717879346",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
-                            "price": 28.499999999999996
+                            "ingredient_url": "https://www.coupang.com/vp/products/7257694107?itemId=18477853883&vendorItemId=85617748048",
+                            "ingredient_img": "https://thumbnail10.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/3419146629828407-257238be-cfdc-41cd-881a-b535b88c3b95.jpg",
+                            "price": 33.25
                         },
                         {
                             "ingredient_name": "물",
@@ -2816,68 +2814,68 @@ export default {
                             "ingredient_volume": 500.0,
                             "ingredient_unit": "g",
                             "ingredient_url": "https://www.coupang.com/vp/products/7689270513?itemId=20877904962&vendorItemId=87945141063",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
+                            "ingredient_img": "https://thumbnail8.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/1077787963868499-c1e46ca7-d157-4de0-ad8e-063b93ac490d.jpg",
                             "price": 105.0
                         },
                         {
                             "ingredient_name": "멸치액젓",
-                            "ingredient_unit_price": 2.0,
-                            "ingredient_price": 30610,
+                            "ingredient_unit_price": 2.3,
+                            "ingredient_price": 11260,
                             "ingredient_volume": 120.0,
                             "ingredient_unit": "g",
-                            "ingredient_url": "https://www.coupang.com/vp/products/7728625433?itemId=20761965459&vendorItemId=85192464163",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
-                            "price": 240.0
+                            "ingredient_url": "https://www.coupang.com/vp/products/7728625433?itemId=20761927235&vendorItemId=3037177082",
+                            "ingredient_img": "https://thumbnail6.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/879066650434839-962532b9-29ce-4e29-ad09-32cc2aaf34f8.jpg",
+                            "price": 276.0
                         },
                         {
                             "ingredient_name": "조청",
-                            "ingredient_unit_price": 3.08,
-                            "ingredient_price": 46270,
+                            "ingredient_unit_price": 3.02,
+                            "ingredient_price": 45280,
                             "ingredient_volume": 190.0,
                             "ingredient_unit": "g",
                             "ingredient_url": "https://www.coupang.com/vp/products/6209315616?itemId=10104584660&vendorItemId=85929841698",
                             "ingredient_img": "https://thumbnail7.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/b4eb36be-7b49-4532-856a-b88615e3631a1848092172661924616.png",
-                            "price": 585.2
+                            "price": 573.8
                         },
                         {
                             "ingredient_name": "다진마늘",
-                            "ingredient_unit_price": 3.7,
-                            "ingredient_price": 18250,
+                            "ingredient_unit_price": 3.64,
+                            "ingredient_price": 18200,
                             "ingredient_volume": 80.0,
                             "ingredient_unit": "g",
-                            "ingredient_url": "https://www.coupang.com/vp/products/6012228407?itemId=10910051311&vendorItemId=78189867054",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
-                            "price": 296.0
+                            "ingredient_url": "https://www.coupang.com/vp/products/6890784639?itemId=19929771567&vendorItemId=87029336992",
+                            "ingredient_img": "https://thumbnail10.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/23c231f2-41be-4410-8873-5544a8f8fa272857012207940814782.png",
+                            "price": 291.2
                         },
                         {
                             "ingredient_name": "다진생강",
-                            "ingredient_unit_price": 5.0,
-                            "ingredient_price": 50240,
+                            "ingredient_unit_price": 5.2,
+                            "ingredient_price": 25900,
                             "ingredient_volume": 16.0,
                             "ingredient_unit": "g",
-                            "ingredient_url": "https://www.coupang.com/vp/products/6012228412?itemId=19282714821&vendorItemId=86397666119",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
-                            "price": 80.0
+                            "ingredient_url": "https://www.coupang.com/vp/products/6012228412?itemId=10910051324&vendorItemId=78189867044",
+                            "ingredient_img": "https://thumbnail10.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/714727371294559-1b182bcc-2ba3-455b-b7b3-b9f5c600ff59.jpg",
+                            "price": 83.2
                         },
                         {
                             "ingredient_name": "고들빼기",
-                            "ingredient_unit_price": 3.5,
-                            "ingredient_price": 35000,
+                            "ingredient_unit_price": 7.3,
+                            "ingredient_price": 7250,
                             "ingredient_volume": 1500.0,
                             "ingredient_unit": "g",
-                            "ingredient_url": "https://www.coupang.com/vp/products/184963779?itemId=529242082&vendorItemId=4377641087",
-                            "ingredient_img": "https://thumbnail10.coupangcdn.com/thumbnails/remote/230x230ex/image/vendor_inventory/images/2019/02/12/16/7/3d5d690b-43ae-49f7-80b1-dc3eae68deca.jpg",
-                            "price": 5250.0
+                            "ingredient_url": "https://www.coupang.com/vp/products/176981231?itemId=506031394&vendorItemId=4296041167&pickType=COU_PICK",
+                            "ingredient_img": "https://thumbnail8.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/6751249728934350-2b4c66d3-18a0-4e6f-9ec9-d3adca529c84.jpg",
+                            "price": 10950.0
                         },
                         {
                             "ingredient_name": "고춧가루",
-                            "ingredient_unit_price": 8.7,
-                            "ingredient_price": 43500,
+                            "ingredient_unit_price": 10.9,
+                            "ingredient_price": 10900,
                             "ingredient_volume": 255.0,
                             "ingredient_unit": "g",
-                            "ingredient_url": "https://www.coupang.com/vp/products/1295382700?itemId=19133056738&vendorItemId=86252641685",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
-                            "price": 2218.5
+                            "ingredient_url": "https://www.coupang.com/vp/products/5608218091?itemId=9055310202&vendorItemId=76341650663",
+                            "ingredient_img": "https://thumbnail10.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/2021/06/01/17/1/d1341756-8a54-4fd4-acea-17b14c8129f8.jpg",
+                            "price": 2779.5
                         }
                     ],
                     "ingredient_list_without_unit": []
@@ -2889,27 +2887,27 @@ export default {
                     "youtube_uploaded_date": "2022-01-04 00:00:00",
                     "channel_name": "1분엄마 1 minute mom",
                     "channel_img": "https://yt3.ggpht.com/ytc/AIf8zZT4eLRTxn5Ef3Y6Swp_YWycBk4zruXsbwUMSToG=s88-c-k-c0x00ffffff-no-rj",
-                    "total_price": 3135.5,
+                    "total_price": 3231.5,
                     "ingredient_list": [
                         {
                             "ingredient_name": "검은콩",
-                            "ingredient_unit_price": 9.25,
-                            "ingredient_price": 37000,
+                            "ingredient_unit_price": 9.7,
+                            "ingredient_price": 58210,
                             "ingredient_volume": 150.0,
                             "ingredient_unit": "g",
-                            "ingredient_url": "https://www.coupang.com/vp/products/6758262561?itemId=19225634887&vendorItemId=86342276559",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
-                            "price": 1387.5
+                            "ingredient_url": "https://www.coupang.com/vp/products/7268065376?itemId=18529408922&vendorItemId=81754640877",
+                            "ingredient_img": "https://thumbnail6.coupangcdn.com/thumbnails/remote/230x230ex/image/vendor_inventory/7717/5be279882771a790a1a2eb63b29453d68b044555ed157aa8e2b0c39296c3.jpg",
+                            "price": 1455.0
                         },
                         {
                             "ingredient_name": "쌀",
-                            "ingredient_unit_price": 2.4,
-                            "ingredient_price": 47900,
+                            "ingredient_unit_price": 2.59,
+                            "ingredient_price": 25900,
                             "ingredient_volume": 150.0,
                             "ingredient_unit": "g",
-                            "ingredient_url": "https://www.coupang.com/vp/products/7757584328?itemId=20912063208&vendorItemId=87979005800",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
-                            "price": 360.0
+                            "ingredient_url": "https://www.coupang.com/vp/products/7593206829?itemId=20065869703&vendorItemId=76228882840",
+                            "ingredient_img": "https://thumbnail10.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/3780795541352399-d6fc3bc5-942c-490b-a965-775f28cd16cf.jpg",
+                            "price": 388.5
                         },
                         {
                             "ingredient_name": "물",
@@ -2918,7 +2916,7 @@ export default {
                             "ingredient_volume": 800.0,
                             "ingredient_unit": "g",
                             "ingredient_url": "https://www.coupang.com/vp/products/7689270513?itemId=20877904962&vendorItemId=87945141063",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
+                            "ingredient_img": "https://thumbnail8.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/1077787963868499-c1e46ca7-d157-4de0-ad8e-063b93ac490d.jpg",
                             "price": 168.0
                         },
                         {
@@ -2941,7 +2939,7 @@ export default {
                     "youtube_uploaded_date": "2020-04-17 00:00:00",
                     "channel_name": "정호영의 오늘도 요리 Kitchen Caden",
                     "channel_img": "https://yt3.ggpht.com/ytc/AIf8zZTDNPcWD7UH_jED20D-SlhpEHw0gbiETRfxqjXQ=s88-c-k-c0x00ffffff-no-rj",
-                    "total_price": 1269.9,
+                    "total_price": 1194.8999999999999,
                     "ingredient_list": [
                         {
                             "ingredient_name": "감자",
@@ -2950,28 +2948,28 @@ export default {
                             "ingredient_volume": 300.0,
                             "ingredient_unit": "g",
                             "ingredient_url": "https://www.coupang.com/vp/products/7831991401?itemId=21302462251&vendorItemId=88362141295",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
+                            "ingredient_img": "https://thumbnail10.coupangcdn.com/thumbnails/remote/230x230ex/image/vendor_inventory/f209/fb5e60a1b20329b1c14a93f589f9f23ea962328264d952ef362a79b4f355.jpg",
                             "price": 447.0
                         },
                         {
                             "ingredient_name": "삼겹살다짐육",
-                            "ingredient_unit_price": 7.47,
-                            "ingredient_price": 22400,
+                            "ingredient_unit_price": 6.13,
+                            "ingredient_price": 30660,
                             "ingredient_volume": 50.0,
                             "ingredient_unit": "g",
-                            "ingredient_url": "https://www.coupang.com/vp/products/5386919578?itemId=8021228309&vendorItemId=75309943694",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
-                            "price": 373.5
+                            "ingredient_url": "https://www.coupang.com/vp/products/1519590114?itemId=19396190611&vendorItemId=86508323607",
+                            "ingredient_img": "https://thumbnail7.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/8664ccc5-8759-4a93-b13a-e483e54d518c8682526039184364961.png",
+                            "price": 306.5
                         },
                         {
                             "ingredient_name": "양파",
-                            "ingredient_unit_price": 1.65,
-                            "ingredient_price": 16540,
+                            "ingredient_unit_price": 1.69,
+                            "ingredient_price": 16900,
                             "ingredient_volume": 70.0,
                             "ingredient_unit": "g",
-                            "ingredient_url": "https://www.coupang.com/vp/products/6258806325?itemId=19223783161&vendorItemId=86340471165",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
-                            "price": 115.5
+                            "ingredient_url": "https://www.coupang.com/vp/products/7472965964?itemId=19503240121&vendorItemId=86018545921",
+                            "ingredient_img": "https://thumbnail9.coupangcdn.com/thumbnails/remote/230x230ex/image/vendor_inventory/1582/b4a5a3a502648f442cd515bddc80425374ad537b055415e517a20fe75812.jpg",
+                            "price": 118.3
                         },
                         {
                             "ingredient_name": "맛술",
@@ -2990,18 +2988,18 @@ export default {
                             "ingredient_volume": 30.0,
                             "ingredient_unit": "g",
                             "ingredient_url": "https://www.coupang.com/vp/products/5897832438?itemId=18171819377&vendorItemId=85321160831",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
+                            "ingredient_img": "https://thumbnail8.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/77c4fb51-65b7-43ee-955d-7deec1714bc55045824864441731918.png",
                             "price": 70.5
                         },
                         {
                             "ingredient_name": "당근",
-                            "ingredient_unit_price": 2.78,
-                            "ingredient_price": 13900,
+                            "ingredient_unit_price": 2.42,
+                            "ingredient_price": 12100,
                             "ingredient_volume": 30.0,
                             "ingredient_unit": "g",
-                            "ingredient_url": "https://www.coupang.com/vp/products/7728601536?itemId=21021502361&vendorItemId=86893492119",
+                            "ingredient_url": "https://www.coupang.com/vp/products/7534360517?itemId=19790890806&vendorItemId=86893492181",
                             "ingredient_img": "https://thumbnail7.coupangcdn.com/thumbnails/remote/230x230ex/image/vendor_inventory/c0c8/f5ce9d7cfb931230ea71e70ea36d42f85abb7e7210ba49d87f5b67cc02ff.jpg",
-                            "price": 83.39999999999999
+                            "price": 72.6
                         }
                     ],
                     "ingredient_list_without_unit": []
@@ -3013,7 +3011,7 @@ export default {
                     "youtube_uploaded_date": null,
                     "channel_name": "맛팩토리",
                     "channel_img": "https://yt3.ggpht.com/TkSbGYKPyTf9MCiEaoufP9MaHnWz4WhBoChxj3ufcZTC7h-NIgGN732ksnt4JdmilGCOWgTrH5U=s88-c-k-c0x00ffffff-no-rj",
-                    "total_price": 20766.5,
+                    "total_price": 20778.2,
                     "ingredient_list": [
                         {
                             "ingredient_name": "찜용갈비",
@@ -3032,28 +3030,28 @@ export default {
                             "ingredient_volume": 3500.0,
                             "ingredient_unit": "g",
                             "ingredient_url": "https://www.coupang.com/vp/products/7689270513?itemId=20877904962&vendorItemId=87945141063",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
+                            "ingredient_img": "https://thumbnail8.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/1077787963868499-c1e46ca7-d157-4de0-ad8e-063b93ac490d.jpg",
                             "price": 735.0
                         },
                         {
                             "ingredient_name": "소고기다시다",
-                            "ingredient_unit_price": 4.2,
-                            "ingredient_price": 16760,
+                            "ingredient_unit_price": 4.4,
+                            "ingredient_price": 8710,
                             "ingredient_volume": 20.0,
                             "ingredient_unit": "g",
-                            "ingredient_url": "https://www.coupang.com/vp/products/3630414?itemId=19721294999&vendorItemId=85193109076",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
-                            "price": 84.0
+                            "ingredient_url": "https://www.coupang.com/vp/products/3630414?itemId=20254840572&vendorItemId=3026283531",
+                            "ingredient_img": "https://thumbnail6.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/1371692968447068-b6905a5d-ec71-423e-960c-171fbc7c2e5f.jpg",
+                            "price": 88.0
                         },
                         {
                             "ingredient_name": "소금",
-                            "ingredient_unit_price": 0.75,
-                            "ingredient_price": 18840,
+                            "ingredient_unit_price": 1.52,
+                            "ingredient_price": 7580,
                             "ingredient_volume": 10.0,
                             "ingredient_unit": "g",
-                            "ingredient_url": "https://www.coupang.com/vp/products/6978355650?itemId=12717968475&vendorItemId=70610150039",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
-                            "price": 7.5
+                            "ingredient_url": "https://www.coupang.com/vp/products/7118404111?itemId=154184&vendorItemId=3000080355",
+                            "ingredient_img": "https://thumbnail10.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/77422699043342-2253a7aa-405d-4763-99c9-431b47b34762.jpg",
+                            "price": 15.2
                         }
                     ],
                     "ingredient_list_without_unit": []
@@ -3065,7 +3063,7 @@ export default {
                     "youtube_uploaded_date": "2020-05-04 00:00:00",
                     "channel_name": "엄마의손맛",
                     "channel_img": "https://yt3.ggpht.com/ytc/AIf8zZS05ncOXEkGmyQUcaJE8gF2nlv11x-XcFvKLOEETg=s88-c-k-c0x00ffffff-no-rj",
-                    "total_price": 3053.95,
+                    "total_price": 3172.7999999999997,
                     "ingredient_list": [
                         {
                             "ingredient_name": "마늘쫑",
@@ -3079,33 +3077,33 @@ export default {
                         },
                         {
                             "ingredient_name": "멸치액젓",
-                            "ingredient_unit_price": 2.0,
-                            "ingredient_price": 30610,
+                            "ingredient_unit_price": 2.3,
+                            "ingredient_price": 11260,
                             "ingredient_volume": 100.0,
                             "ingredient_unit": "g",
-                            "ingredient_url": "https://www.coupang.com/vp/products/7728625433?itemId=20761965459&vendorItemId=85192464163",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
-                            "price": 200.0
+                            "ingredient_url": "https://www.coupang.com/vp/products/7728625433?itemId=20761927235&vendorItemId=3037177082",
+                            "ingredient_img": "https://thumbnail6.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/879066650434839-962532b9-29ce-4e29-ad09-32cc2aaf34f8.jpg",
+                            "price": 229.99999999999997
                         },
                         {
                             "ingredient_name": "굵은소금",
-                            "ingredient_unit_price": 1.0,
-                            "ingredient_price": 20000,
+                            "ingredient_unit_price": 0.92,
+                            "ingredient_price": 18360,
                             "ingredient_volume": 50.0,
                             "ingredient_unit": "g",
-                            "ingredient_url": "https://www.coupang.com/vp/products/7639921549?itemId=20296510348&vendorItemId=85916280487",
-                            "ingredient_img": "https://thumbnail10.coupangcdn.com/thumbnails/remote/230x230ex/image/vendor_inventory/7b2f/bd1b494236dd2e2df7e1845856401ef1dd06509ea6e5bc918aefe9a9b04b.jpg",
-                            "price": 50.0
+                            "ingredient_url": "https://www.coupang.com/vp/products/7598091427?itemId=20092631837&vendorItemId=87875020025",
+                            "ingredient_img": "https://thumbnail7.coupangcdn.com/thumbnails/remote/230x230ex/image/vendor_inventory/32fe/800d5f0d40a1104c3754215f75d62be476b631ce33b7f80c12391baa5f8e.png",
+                            "price": 46.0
                         },
                         {
                             "ingredient_name": "고춧가루",
-                            "ingredient_unit_price": 8.7,
-                            "ingredient_price": 43500,
+                            "ingredient_unit_price": 10.9,
+                            "ingredient_price": 10900,
                             "ingredient_volume": 30.0,
                             "ingredient_unit": "g",
-                            "ingredient_url": "https://www.coupang.com/vp/products/1295382700?itemId=19133056738&vendorItemId=86252641685",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
-                            "price": 261.0
+                            "ingredient_url": "https://www.coupang.com/vp/products/5608218091?itemId=9055310202&vendorItemId=76341650663",
+                            "ingredient_img": "https://thumbnail10.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/2021/06/01/17/1/d1341756-8a54-4fd4-acea-17b14c8129f8.jpg",
+                            "price": 327.0
                         },
                         {
                             "ingredient_name": "고추장",
@@ -3114,18 +3112,18 @@ export default {
                             "ingredient_volume": 15.0,
                             "ingredient_unit": "g",
                             "ingredient_url": "https://www.coupang.com/vp/products/6900313161?itemId=346924589&vendorItemId=85717010423",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
+                            "ingredient_img": "https://thumbnail10.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/26266206601838-abb50f02-5ef9-4fc5-b98f-0ba491f2fe1b.png",
                             "price": 29.25
                         },
                         {
                             "ingredient_name": "식초",
-                            "ingredient_unit_price": 0.83,
-                            "ingredient_price": 15020,
+                            "ingredient_unit_price": 0.84,
+                            "ingredient_price": 15180,
                             "ingredient_volume": 15.0,
                             "ingredient_unit": "g",
                             "ingredient_url": "https://www.coupang.com/vp/products/840193?itemId=3900978&vendorItemId=3004663263",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
-                            "price": 12.45
+                            "ingredient_img": "https://thumbnail6.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/4076040557935910-8d249e23-c0fa-4257-9ebe-9e0cf74388c0.jpg",
+                            "price": 12.6
                         },
                         {
                             "ingredient_name": "물",
@@ -3134,28 +3132,28 @@ export default {
                             "ingredient_volume": 1000.0,
                             "ingredient_unit": "g",
                             "ingredient_url": "https://www.coupang.com/vp/products/7689270513?itemId=20877904962&vendorItemId=87945141063",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
+                            "ingredient_img": "https://thumbnail8.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/1077787963868499-c1e46ca7-d157-4de0-ad8e-063b93ac490d.jpg",
                             "price": 210.0
                         },
                         {
                             "ingredient_name": "다진마늘",
-                            "ingredient_unit_price": 3.7,
-                            "ingredient_price": 18250,
+                            "ingredient_unit_price": 3.64,
+                            "ingredient_price": 18200,
                             "ingredient_volume": 15.0,
                             "ingredient_unit": "g",
-                            "ingredient_url": "https://www.coupang.com/vp/products/6012228407?itemId=10910051311&vendorItemId=78189867054",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
-                            "price": 55.5
+                            "ingredient_url": "https://www.coupang.com/vp/products/6890784639?itemId=19929771567&vendorItemId=87029336992",
+                            "ingredient_img": "https://thumbnail10.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/23c231f2-41be-4410-8873-5544a8f8fa272857012207940814782.png",
+                            "price": 54.6
                         },
                         {
                             "ingredient_name": "참깨",
-                            "ingredient_unit_price": 7.15,
-                            "ingredient_price": 42900,
+                            "ingredient_unit_price": 8.99,
+                            "ingredient_price": 17980,
                             "ingredient_volume": 15.0,
                             "ingredient_unit": "g",
-                            "ingredient_url": "https://www.coupang.com/vp/products/1522984037?itemId=19517732482&vendorItemId=70139804471",
-                            "ingredient_img": "https://img1a.coupangcdn.com/image/coupang/search/blank1x1.gif",
-                            "price": 107.25
+                            "ingredient_url": "https://www.coupang.com/vp/products/7574514650?itemId=17716327048&vendorItemId=84881175299",
+                            "ingredient_img": "https://thumbnail10.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/766316930514427-fac38c83-125d-4d65-b995-c48d45e9ee71.jpg",
+                            "price": 134.85
                         }
                     ],
                     "ingredient_list_without_unit": []

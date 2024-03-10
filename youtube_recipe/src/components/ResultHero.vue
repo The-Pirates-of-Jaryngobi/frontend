@@ -250,6 +250,7 @@ export default {
 
     .youtube-title {
         text-align: center;
+        font-size: 1.2em;
     }
 
     .youtube-info-additional {
@@ -261,8 +262,9 @@ export default {
 
 @media (min-width: 1800px) {
     .result-hero h1 {
-        font-size: 7em; /* 큰 화면에서는 글자 크기를 조정합니다. */
+        font-size: 7em; 
     }
 }
+
 
 </style>

@@ -97,6 +97,11 @@ export default {
         min-width: 380px; /* 화면이 768px 이하일 때 인풋의 최소 가로 너비 */
         margin-bottom: 10px;
     }
+
+    .home-hero h1 {
+        font-size: 4.5em;
+        padding: 20px 0;
+    }
 }
 
 @media (max-width: 480px) {
@@ -109,6 +114,11 @@ export default {
         min-width: 236px; /* 화면이 480px 이하일 때 인풋의 최소 가로 너비 */
         margin-right: 0px;
         margin-bottom: 10px;
+    }
+
+    .home-hero h1 {
+        font-size: 4em;
+        padding: 20px 0;
     }
 }
 

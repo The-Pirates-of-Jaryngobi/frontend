@@ -8,7 +8,7 @@
             </div>
             <div>
                 <p><strong>재료 가격 기준은 무엇인가요?</strong></p><br>
-                <p>레시피에 사용된 재료들의 가격은 쿠팡 랭킹순 TOP10 중에서 가장 저렴한 재료를 선정해요. 재료들의 가격은 매일 오후 2시에 업데이트 되고 있어요.</p>
+                <p>쿠팡 랭킹순 TOP10 중에서 가장 저렴한 재료를 선정해요. 재료들의 가격은 매일 오후 2시에 업데이트 되고 있으니, 만약 상품이 품절되었다면 오후 2시 이후에 다시 검색해주세요 :)</p>
             </div>
             <div>
                 <p><strong>저작권은 문제 없나요?</strong></p><br>
@@ -23,7 +23,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 40px 10px;
+    padding: 15vh 10px;
     gap: 4em;
 }
 
@@ -67,13 +67,19 @@ h3 {
 }
 
 .faq-line {
-    padding-top: 4em;
+    padding-top: 15vh;
     border-Top: 1px solid #aaa5;
 }
 
 @media (max-width: 600px) {
     .column {
         flex-direction: column;
+    }
+}
+
+@media (min-width: 500px) {
+    .container {
+        padding: 15vh 5px;
     }
 }
 

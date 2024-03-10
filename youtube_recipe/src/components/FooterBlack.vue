@@ -7,7 +7,7 @@
         <p>Dr.meteor <span class="job-info">Tech Leading, ML</span></p>
         <p>MinhoeKim <span class="job-info">ETL, Frontend</span></p>
         <p>RomkDB <span class="job-info">Infra, Backend</span></p>
-        <p>Jaehoe-99 <span class="job-info">ETL, ELT, Backend</span></p>
+        <p>Jaeho-99 <span class="job-info">ETL, ELT, Backend</span></p>
       </div>
       <div>
         <p><strong>Data Sources</strong></p>

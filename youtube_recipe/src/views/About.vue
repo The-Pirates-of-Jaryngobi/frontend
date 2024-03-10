@@ -6,6 +6,8 @@
         <verticalLine />
         <contactUs />
         <faq />
+    </div>
+    <div class="pd">
         <thanks />
     </div>
 </template>
@@ -39,6 +41,11 @@ export default {
     align-items: center;
     padding: 20vh 10vw;
     gap: 80px;
+}
+
+.pd {
+    padding: 0 10vw;
+    margin-bottom: 30vh;
 }
 
 </style>

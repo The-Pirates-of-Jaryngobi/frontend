@@ -125,7 +125,7 @@ export default {
     white-space: normal;
     font-family: "Gasoek One", sans-serif;
     font-weight: 300;
-    font-size: 1.5em;
+    font-size: 1.2em;
     color: rgb(64, 63, 76);
 }
 
