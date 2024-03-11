@@ -9,7 +9,7 @@
     export default {
     methods: {
         contactUs() {
-            window.location.href = "mailto:jaryngobi@example.com?subject=The%20Cheapest%20Youtube%20Recipe&body=안녕하세요,%0A%0A피드백을%20입력해주세요.%0A%0감사합니다.";
+            window.location.href = "mailto:jaryngobi@example.com?subject=The%20Cheapest%20Youtube%20Recipe&body=안녕하세요,%0A%0A피드백을%20입력해주세요.%0A감사합니다.";
         },
     },
 }
@@ -39,7 +39,7 @@
 @media (max-width: 1000px) {
     .left-align h2 {
         font-size: 2em;
-        color: rgb(64, 63, 76);
+        color: #403f4c;
         width: 80%;
     }
 }

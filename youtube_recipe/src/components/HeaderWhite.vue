@@ -3,13 +3,13 @@
     <div class="header-container">
       <div class="header-gotohome text-white-shadow">
         <router-link to="/" class="router-link">
-          <img src="../assets/logo.svg" style="width: auto; height: 24px;" />
+          <img src="../assets/logo.svg" target="blank" style="width: auto; height: 24px;" />
           <span>The Cheapest Youtubu Recipe</span>
         </router-link>
       </div>
       <div class="menu">
         <router-link to="/about" class="router-link text-white-shadow">About</router-link>
-        <a href="https://github.com/orgs/The-Pirates-of-Jaryngobi/repositories" class="router-link">GitHub</a>
+        <a href="https://github.com/orgs/The-Pirates-of-Jaryngobi/repositories" target="blank" class="router-link">GitHub</a>
       </div>
     </div>
   </header>

@@ -13,6 +13,14 @@ import About from './views/About.vue';
 import ErrorPage from './views/Error.vue';
 import NoResult from './views/NoResult.vue';
 
+const scrollBehavior = (to, from, savedPosition) => {
+    if (savedPosition) {
+        return savedPosition;
+    } else {
+        return { left: 0, top: 0 };
+    }
+};
+
 const router = createRouter({
     history: createWebHistory(),
     routes: [
@@ -23,19 +31,17 @@ const router = createRouter({
             name: 'Home', 
             component: Home 
         },
-        { 
-            path: '/result/:inputData', 
+        {
+            path: '/result:menu_name',
             name: 'Result',
-            component: Result 
+            component: Result,
+            props: true,
         },
         { 
             path: '/about',
             name: 'About',
             component: About 
-            // route level code-splitting
-            // this generates a separate chunk (About.[hash].js) for this route
-            // which is lazy-loaded when the route is visited.
-            //component: () => import('../views/About.vue')
+
         },
         { 
             path: '/error', 
@@ -51,8 +57,10 @@ const router = createRouter({
             path: '/:catchAll(.*)', 
             component: ErrorPage 
         },
-    ]
+    ],
+    scrollBehavior,
 });
+
 
 // Vuetify 설정
 const vuetify = createVuetify({
