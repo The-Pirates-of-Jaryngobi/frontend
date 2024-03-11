@@ -77,10 +77,4 @@ h3 {
     }
 }
 
-@media (min-width: 500px) {
-    .container {
-        padding: 15vh 5px;
-    }
-}
-
 </style>

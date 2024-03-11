@@ -39,7 +39,7 @@
 @media (max-width: 1000px) {
     .left-align h2 {
         font-size: 2em;
-        color: rgb(64, 63, 76);
+        color: #403f4c;
         width: 80%;
     }
 }

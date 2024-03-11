@@ -8,11 +8,11 @@
                 <p>dishes</p>
             </div>
             <div class="metric">
-                <h3>4,000+</h3>
+                <h3>8,000+</h3>
                 <p>recipe videos </p>
             </div>
             <div class="metric">
-                <h3>1M</h3>
+                <h3>20K</h3>
                 <p>ingredients list</p>
             </div>
         </div>
